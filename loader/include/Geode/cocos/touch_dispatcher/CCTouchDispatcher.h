@@ -201,20 +201,10 @@ public:
      */
     CCTouchHandler* findHandler(CCTouchDelegate *pDelegate);
 
-    // @note RobTop Addition
-	void addPrioTargetedDelegate(cocos2d::CCTouchDelegate*, int, bool);
-	// @note RobTop Addition
-    bool isUsingForcePrio();
-	// @note RobTop Addition
-    void registerForcePrio(cocos2d::CCObject*, int);
-	// @note RobTop Addition
-    void unregisterForcePrio(cocos2d::CCObject*);
-
-private:
-    // @note RobTop Addition
-    void incrementForcePrio(int priority);
-    // @note RobTop Addition
-    void decrementForcePrio(int priority);
+    RT_ADD(
+        void incrementForcePrio(int priority);
+        void decrementForcePrio(int priority);
+    )
 protected:
     void forceRemoveDelegate(CCTouchDelegate *pDelegate);
     void forceAddHandler(CCTouchHandler *pHandler, CCArray* pArray);
@@ -222,7 +212,7 @@ protected:
     void rearrangeHandlers(CCArray* pArray);
     CCTouchHandler* findHandler(CCArray* pArray, CCTouchDelegate *pDelegate);
 
-public:
+protected:
     CCArray* m_pTargetedHandlers;
     CCArray* m_pStandardHandlers;
 
@@ -237,16 +227,10 @@ public:
     // 4, 1 for each type of event
     struct ccTouchHandlerHelperData m_sHandlerHelperData[ccTouchMax];
 
-protected:
-
-    // 2.2 changes
-
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(int, m_forcePrio, ForcePrio);
-    // @note RobTop Addition
-    void* m_unknown;
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(int, m_targetPrio, TargetPrio);
+    RT_ADD(
+        CC_SYNTHESIZE_NV(bool, m_bForcePrio, ForcePrio);
+        CC_SYNTHESIZE_NV(int, m_nTargetPrio, TargetPrio);
+    )
 };
 
 // end of input group

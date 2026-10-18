@@ -146,6 +146,7 @@ static void printAddr(std::ostream& stream, void const* addr, bool fullPath = tr
                     proc, static_cast<DWORD64>(reinterpret_cast<uintptr_t>(addr)), &displacement,
                     symbolInfo
                 )) {
+#ifdef GEODE_IS_WINDOWS64  // GD 2.011 port: x64 unwind-info check only
                 if (auto entry = SymFunctionTableAccess64(proc, static_cast<DWORD64>(reinterpret_cast<uintptr_t>(addr)))) {
                     auto moduleBase = SymGetModuleBase64(proc, static_cast<DWORD64>(reinterpret_cast<uintptr_t>(addr)));
                     auto runtimeFunction = static_cast<PRUNTIME_FUNCTION>(entry);
@@ -162,6 +163,7 @@ static void printAddr(std::ostream& stream, void const* addr, bool fullPath = tr
                         return;
                     }
                 }
+#endif
                 stream << " (" << std::string(symbolInfo->Name, symbolInfo->NameLen) << " + "
                        << displacement;
 
@@ -184,9 +186,11 @@ static void printAddr(std::ostream& stream, void const* addr, bool fullPath = tr
     else {
         stream << addr;
 
+#ifdef GEODE_IS_WINDOWS64  // GD 2.011 port: hook-handler unwind tables are x64-only
         if (GeodeFunctionTableAccess64(proc, reinterpret_cast<DWORD64>(addr))) {
             stream << " (Hook handler)";
         }
+#endif
     }
 }
 
@@ -199,7 +203,7 @@ static std::string getStacktrace(PCONTEXT context, Mod*& suspectedFaultyMod) {
 
     auto process = GetCurrentProcess();
     auto thread = GetCurrentThread();
-#ifdef GEODE_IS_X86
+#ifdef GEODE_IS_WINDOWS32
     stack.AddrPC.Offset = context->Eip;
     stack.AddrStack.Offset = context->Esp;
     stack.AddrFrame.Offset = context->Ebp;
@@ -215,6 +219,14 @@ static std::string getStacktrace(PCONTEXT context, Mod*& suspectedFaultyMod) {
 
     // size_t frame = 0;
     while (true) {
+#ifdef GEODE_IS_WINDOWS32
+        // GD 2.011 port: x86 walk; the stdcall Sym* routines directly (lambdas would be cdecl here)
+        if (!StackWalk64(
+                IMAGE_FILE_MACHINE_I386, process, thread, &stack, context, nullptr,
+                SymFunctionTableAccess64, SymGetModuleBase64, nullptr
+            ))
+            break;
+#else
         if (!StackWalk64(
                 IMAGE_FILE_MACHINE_AMD64, process, thread, &stack, context, nullptr,
                 +[](HANDLE hProcess, DWORD64 AddrBase) {
@@ -234,6 +246,7 @@ static std::string getStacktrace(PCONTEXT context, Mod*& suspectedFaultyMod) {
                 , nullptr
             ))
             break;
+#endif
 
         stream << " - ";
 

@@ -4,8 +4,10 @@
 #include <Geode/ui/ScrollLayer.hpp>
 #include <Geode/ui/TextArea.hpp>
 #include <Geode/ui/IconButtonSprite.hpp>
+#ifndef GEODE_IS_WINDOWS32  // GD 2.011 port: SetIDPopup / SetTextPopup are 2.2-only
 #include <Geode/binding/SetTextPopupDelegate.hpp>
 #include <Geode/binding/SetIDPopupDelegate.hpp>
+#endif
 #include <Geode/cocos/cocoa/CCObject.h>
 #include "list/ModItem.hpp"
 #include "list/ModList.hpp"
@@ -54,7 +56,7 @@ public:
     static ModsStatusNode* create();
 };
 
-class ModsLayer : public CCLayer, public SetIDPopupDelegate {
+class ModsLayer : public CCLayer GEODE_WINDOWS64(, public SetIDPopupDelegate) GEODE_ANDROID(, public SetIDPopupDelegate) GEODE_MACOS(, public SetIDPopupDelegate) GEODE_IOS(, public SetIDPopupDelegate) {
 protected:
     CCNode* m_frame;
     std::vector<CCMenuItemSpriteExtra*> m_tabs;
@@ -72,7 +74,9 @@ protected:
 
     void keyDown(enumKeyCodes key) override;
     void keyBackClicked() override;
+#ifndef GEODE_IS_WINDOWS32
     void setIDPopupClosed(SetIDPopup*, int value) override;
+#endif
     
     void onTab(CCObject* sender);
     void onOpenModsFolder(CCObject*);
@@ -93,4 +97,8 @@ public:
     static server::ServerRequest<std::vector<std::string>> checkInstalledModsForUpdates();
 
     void gotoTab(ModListSource* src);
+
+public:
+    // GD 2.011 port: target of the Geode-made "Go to Page" popup (2.0 has no SetIDPopup)
+    void goToPage2011(int page);
 };

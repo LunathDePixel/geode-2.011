@@ -107,7 +107,8 @@ protected:
         for (auto& spr : m_sprites) {
             spr->setColor({ 200, 200, 200 });
         }
-        m_currentIcon = static_cast<Icon>(sender->getTag());
+        // GD 2.0: the tag is a CCNode member, not CCObject's
+        m_currentIcon = static_cast<Icon>(static_cast<CCNode*>(sender)->getTag());
         static_cast<CCSprite*>(
             static_cast<CCMenuItemSpriteExtra*>(sender)->getNormalImage()
         )->setColor({ 0, 255, 0 });

@@ -10,8 +10,10 @@
 #include <Geode/utils/ranges.hpp>
 #include <Geode/ui/GeodeUI.hpp>
 #include <Geode/binding/Slider.hpp>
+#ifndef GEODE_IS_WINDOWS32  // GD 2.011 port: 2.2-only popups
 #include <Geode/binding/SetTextPopup.hpp>
 #include <Geode/binding/SetIDPopup.hpp>
+#endif
 #include <Geode/binding/ButtonSprite.hpp>
 #include <Geode/binding/MenuLayer.hpp>
 #include "popups/ConfirmInstall.hpp"
@@ -612,6 +614,54 @@ void ModsLayer::keyBackClicked() {
     this->onBack(nullptr);
 }
 
+void ModsLayer::goToPage2011(int num) {
+    if (num > 0) num -= 1;
+    if (m_currentSource) {
+        m_lists.at(m_currentSource)->gotoPage(num);
+    }
+}
+
+#ifdef GEODE_IS_WINDOWS32
+// GD 2.011 port: 2.0 has no SetIDPopup; a minimal Geode-made "Go to Page" popup
+class GoToPagePopup2011 : public Popup<ModsLayer*, int, int> {
+protected:
+    ModsLayer* m_layer;
+    TextInput* m_input;
+    int m_max;
+
+    bool setup(ModsLayer* layer, int current, int max) override {
+        m_layer = layer;
+        m_max = max;
+        this->setTitle("Go to Page");
+        m_input = TextInput::create(100.f, "Page");
+        m_input->setCommonFilter(CommonFilter::Uint);
+        m_input->setString(std::to_string(current));
+        m_mainLayer->addChildAtPosition(m_input, Anchor::Center, { 0, 5 });
+        auto btn = CCMenuItemSpriteExtra::create(
+            ButtonSprite::create("Go"), this, menu_selector(GoToPagePopup2011::onGo)
+        );
+        m_buttonMenu->addChildAtPosition(btn, Anchor::Bottom, { 0, 22 });
+        return true;
+    }
+
+    void onGo(CCObject*) {
+        int page = utils::numFromString<int>(m_input->getString()).unwrapOr(1);
+        m_layer->goToPage2011(std::clamp(page, 1, std::max(m_max, 1)));
+        this->onClose(nullptr);
+    }
+
+public:
+    static GoToPagePopup2011* create(ModsLayer* layer, int current, int max) {
+        auto ret = new GoToPagePopup2011();
+        if (ret->initAnchored(180.f, 120.f, layer, current, max)) {
+            ret->autorelease();
+            return ret;
+        }
+        delete ret;
+        return nullptr;
+    }
+};
+#else
 void ModsLayer::setIDPopupClosed(SetIDPopup* popup, int num) {
     if (popup->getID() == "go-to-page"_spr) {
         if (num > 0) num -= 1;
@@ -620,6 +670,7 @@ void ModsLayer::setIDPopupClosed(SetIDPopup* popup, int num) {
         }
     }
 }
+#endif
 
 void ModsLayer::updateState() {
     // Show current page number if the current source has total page count loaded
@@ -664,10 +715,14 @@ void ModsLayer::onBack(CCObject*) {
     ModListSource::clearAllCaches();
 }
 void ModsLayer::onGoToPage(CCObject*) {
+#ifdef GEODE_IS_WINDOWS32
+    GoToPagePopup2011::create(this, m_lists.at(m_currentSource)->getPage() + 1, m_currentSource->getPageCount().value())->show();
+#else
     auto popup = SetIDPopup::create(m_lists.at(m_currentSource)->getPage() + 1, 1, m_currentSource->getPageCount().value(), "Go to Page", "Go", true, 1, 60.f, false, false);
     popup->m_delegate = this;
     popup->setID("go-to-page"_spr);
     popup->show();
+#endif
 }
 void ModsLayer::onBigView(CCObject*) {
     m_bigView = !m_bigView;

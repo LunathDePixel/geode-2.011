@@ -46,3 +46,14 @@ CCScheduler* CCScheduler::get() {
 }
 
 #pragma warning(pop)
+
+#ifdef GEODE_IS_WINDOWS32
+// GD 2.011 port: 2.0 keeps the tag in CCNode; v3 calls it on CCObject* (see CCObject.h)
+int CCObject::getTag() const {
+    if (auto node = dynamic_cast<CCNode const*>(this)) return const_cast<CCNode*>(node)->getTag();
+    return -1;
+}
+void CCObject::setTag(int tag) {
+    if (auto node = dynamic_cast<CCNode*>(this)) node->setTag(tag);
+}
+#endif

@@ -68,7 +68,7 @@ static std::wstring getErrorString(DWORD error) {
     return L"Could not load Geode! Error code: " + std::to_wstring(error);
 }
 
-static DWORD errorThread(LPVOID param) {
+static DWORD WINAPI errorThread(LPVOID param) {  // GD 2.011 port: WINAPI (stdcall) matters on x86
     constexpr wchar_t REDIST_ERROR[] = L"Could not load Geode!\n"
         "This is likely due to an outdated redist package.\n"
         "Do you want to update Microsoft Visual C++ Redistributable 2022 to try to fix this issue?";

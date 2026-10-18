@@ -299,9 +299,6 @@ public:
     virtual float getRotatePerSecondVar();
     virtual void setRotatePerSecondVar(float degrees);
 
-    // @note RobTop Addition
-    virtual void setVisible(bool visible);
-
     virtual void setScale(float s);
     virtual void setRotation(float newRotation);
     virtual void setScaleX(float newScaleX);
@@ -311,52 +308,7 @@ public:
     virtual bool isBlendAdditive();
     virtual void setBlendAdditive(bool value);
 //////////////////////////////////////////////////////////////////////////
-
     
-    // @note RobTop Addition
-    float m_fFadeInTime;
-    // @note RobTop Addition
-    float m_fFadeInTimeVar;
-    // @note RobTop Addition
-    float m_fFadeOutTime;
-    // @note RobTop Addition
-    float m_fFadeOutTimeVar;
-    // @note RobTop Addition
-    float m_fFrictionPos;
-    // @note RobTop Addition
-    float m_fFrictionPosVar;
-    // @note RobTop Addition
-    float m_fFrictionSize;
-    // @note RobTop Addition
-    float m_fFrictionSizeVar;
-    // @note RobTop Addition
-    float m_fFrictionRot;
-    // @note RobTop Addition
-    float m_fFrictionRotVar;
-    // @note RobTop Addition
-    float m_fRespawn;
-    // @note RobTop Addition
-    float m_fRespawnVar;
-    // @note RobTop Addition
-    bool m_bStartSpinEqualToEnd;
-    // @note RobTop Addition
-    bool m_bStartSizeEqualToEnd;
-    // @note RobTop Addition
-    bool m_bStartRadiusEqualToEnd;
-    // @note RobTop Addition
-    bool m_bDynamicRotationIsDir;
-    // @note RobTop Addition
-    bool m_bOrderSensitive;
-    // @note RobTop Addition
-    bool m_bStartRGBVarSync;
-    // @note RobTop Addition
-    bool m_bEndRGBVarSync;
-    // @note RobTop Addition
-    bool m_bWasRemoved;
-    // @note RobTop Addition
-    bool m_bUsingSchedule;
-
-
     /** start size in pixels of each particle */
     CC_PROPERTY(float, m_fStartSize, StartSize)
     /** size variance in pixels of each particle */
@@ -449,20 +401,20 @@ public:
     http://particledesigner.71squared.com/
     @since v0.99.3
     */
-    bool initWithFile(const char *plistFile, bool);
+    bool initWithFile(const char *plistFile);
 
     /** initializes a CCQuadParticleSystem from a CCDictionary.
     @since v0.99.3
     */
-    bool initWithDictionary(CCDictionary *dictionary, bool);
+    bool initWithDictionary(CCDictionary *dictionary);
     
     /** initializes a particle system from a NSDictionary and the path from where to load the png
      @since v2.1
      */
-    bool initWithDictionary(CCDictionary *dictionary, const char *dirname, bool);
+    bool initWithDictionary(CCDictionary *dictionary, const char *dirname);
 
     //! Initializes a system with a fixed number of particles
-    virtual bool initWithTotalParticles(unsigned int numberOfParticles, bool);
+    virtual bool initWithTotalParticles(unsigned int numberOfParticles);
     //! Add a particle to the emitter
     bool addParticle();
     //! Initializes a particle
@@ -487,6 +439,8 @@ public:
 protected:
     virtual void updateBlendFunc();
 
+    // 2.1 addition: 2.0's CCParticleSystemQuad fields start 0x24 lower (no default-value block)
+    GD21_ONLY(
         // saved/loaded in loadDefaults, loadScaledDefaults and saveDefaults
 
         // @note RobTop Addition
@@ -505,134 +459,13 @@ protected:
         float m_fDefaultModeASpeedVar;
         // @note RobTop Addition
         CCPoint m_tDefaultPosVar;
+    )
 public:
-    // @note RobTop Addition
-    void saveDefaults(void);
-    // @note RobTop Addition
-    void loadDefaults(void);
-    // @note RobTop Addition
-    void loadScaledDefaults(float);
-
-    // @note RobTop Addition
-    void calculateWorldSpace();
-
-	// @note RobTop Addition
-    bool getDontCleanupOnFinish() const;
-	// @note RobTop Addition
-    void setDontCleanupOnFinish(bool);
-
-	// @note RobTop Addition
-    bool getDynamicRotationIsDir() const;
-	// @note RobTop Addition
-    void setDynamicRotationIsDir(bool);
-
-	// @note RobTop Addition
-    bool getEndRGBVarSync() const;
-	// @note RobTop Addition
-    void setEndRGBVarSync(bool);
-
-    // @note RobTop Addition
-    float getFadeInTime() const;
-	// @note RobTop Addition
-    float getFadeInTimeVar() const;
-	// @note RobTop Addition
-    float getFadeOutTime() const;
-	// @note RobTop Addition
-    float getFadeOutTimeVar() const;
-	// @note RobTop Addition
-    float getFrictionPos() const;
-	// @note RobTop Addition
-    float getFrictionPosVar() const;
-	// @note RobTop Addition
-    float getFrictionRot() const;
-	// @note RobTop Addition
-    float getFrictionRotVar() const;
-    // @note RobTop Addition
-    float getFrictionSize() const;
-	// @note RobTop Addition
-    float getFrictionSizeVar() const;
-
-	// @note RobTop Addition
-    bool getOrderSensitive() const;
-
-    // @note RobTop Addition
-    float getRespawn() const;
-	// @note RobTop Addition
-    float getRespawnVar() const;
-
-	// @note RobTop Addition
-    bool getStartRGBVarSync() const;
-	// @note RobTop Addition
-    bool getStartRadiusEqualToEnd() const;
-	// @note RobTop Addition
-    bool getStartSizeEqualToEnd() const;
-	// @note RobTop Addition
-    bool getStartSpinEqualToEnd() const;
-
-	// @note RobTop Addition
-    float getTimeElapsed();
-
-	// @note RobTop Addition
-    bool getUseUniformColorMode() const;
-
-	// @note RobTop Addition
-    bool getWasRemoved() const;
-
-	// @note RobTop Addition
-    bool getUsingSchedule() const;
-
-	// @note RobTop Addition
-    void setEndAlpha(float);
-    // @note RobTop Addition
-    void setFadeInTime(float);
-	// @note RobTop Addition
-    void setFadeInTimeVar(float);
-	// @note RobTop Addition
-    void setFadeOutTime(float);
-	// @note RobTop Addition
-    void setFadeOutTimeVar(float);
-	// @note RobTop Addition
-    void setFrictionPos(float);
-	// @note RobTop Addition
-    void setFrictionPosVar(float);
-	// @note RobTop Addition
-    void setFrictionRot(float);
-	// @note RobTop Addition
-    void setFrictionRotVar(float);
-	// @note RobTop Addition
-    void setFrictionSize(float);
-	// @note RobTop Addition
-    void setFrictionSizeVar(float);
-
-	// @note RobTop Addition
-    void setOrderSensitive(bool);
-
-    // @note RobTop Addition
-    void setRespawn(float);
-	// @note RobTop Addition
-    void setRespawnVar(float);
-
-	// @note RobTop Addition
-    void setStartAlpha(float);
-	// @note RobTop Addition
-    void setStartRGBVarSync(bool);
-	// @note RobTop Addition
-    void setStartRadiusEqualToEnd(bool);
-	// @note RobTop Addition
-    void setStartSizeEqualToEnd(bool);
-	// @note RobTop Addition
-    void setStartSpinEqualToEnd(bool);
-
-	// @note RobTop Addition
-    void setUsingSchedule(bool);
-
-	// @note RobTop Addition
-    void setWasRemoved(bool);
-
-	// @note RobTop Addition
-    void toggleUniformColorMode(bool);
-	// @note RobTop Addition
-    void updateVisible();
+    GD21_ONLY(
+        void saveDefaults(void);
+        void loadDefaults(void);
+        void loadScaledDefaults(float);
+    )
 };
 
 // end of particle_nodes group

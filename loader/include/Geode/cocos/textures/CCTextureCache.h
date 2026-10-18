@@ -56,7 +56,7 @@ class CCImage;
 class CC_DLL CCTextureCache : public CCObject
 {
     GEODE_FRIEND_MODIFY
-public:
+protected:
 
 
     CCDictionary* m_pTextures;
@@ -116,7 +116,7 @@ public:
     * @lua NA
     */
     
-	void addImageAsync(char const*, cocos2d::CCObject*, cocos2d::SEL_MenuHandler, int, cocos2d::CCTexture2DPixelFormat);
+    void addImageAsync(const char *path, CCObject *target, SEL_CallFuncO selector);
 
     /* Returns a Texture2D object given an CGImageRef image
     * If the image was not previously loaded, it will create a new CCTexture2D object and it will return it.
@@ -195,9 +195,6 @@ public:
     It's only useful when the value of CC_ENABLE_CACHE_TEXTURE_DATA is 1
     */
     static void reloadAllTextures();
-
-	void prepareAsyncLoading();
-
 };
 
 #if CC_ENABLE_CACHE_TEXTURE_DATA

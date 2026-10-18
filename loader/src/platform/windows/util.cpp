@@ -216,9 +216,13 @@ void geode::utils::game::exit() {
 
     // If this breaks down the read, uhhh blame Cvolton or something
     if (AppDelegate::get()) {
-        AppDelegate::get()->trySaveGame(true);
+        AppDelegate::get()->trySaveGame();  // GD 2.011 port: no argument in 2.0
     }
-    std::exit(0);
+    if (CCApplication::sharedApplication())
+        // GD 2.011 port: quit the way 2.0's own MenuLayer::endGame (0x51EBE0) does
+        CCDirector::sharedDirector()->end();
+    else
+        std::exit(0);
 }
 
 void geode::utils::game::restart() {

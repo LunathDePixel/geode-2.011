@@ -23,6 +23,13 @@ namespace geode {
 
     public:
         static NodeIDs* get();
+        // GD 2.011 port: GEODE_2011_DUMP_IDS=1 logs the vanilla node tree and skips the ID pass
+        static bool dumpVanilla2011(cocos2d::CCNode* layer, char const* name);
+        // GD 2.011 port: the ID providers' layouts are tuned for 2.2's screens, so the vanilla
+        // placement (world position, scale, content size) of every pre-existing node is put back
+        // after a provider runs; the IDs and the new menus stay
+        static void* snapshot2011(cocos2d::CCNode* layer);
+        static void restore2011(void* snapshot);
 
         template<IDProvidable T>
         void registerProvider(void(GEODE_CALL* fun)(T*)) {
@@ -34,8 +41,11 @@ namespace geode {
 
         template<IDProvidable T>
         bool provide(T* layer) const {
+            if (dumpVanilla2011(layer, T::CLASS_NAME)) return false;
             if (m_providers.count(T::CLASS_NAME)) {
+                auto snapshot = snapshot2011(layer);
                 m_providers.at(T::CLASS_NAME)(layer);
+                restore2011(snapshot);
                 return true;
             }
             return false;

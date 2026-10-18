@@ -51,13 +51,7 @@ public:
     /**
      * @lua NA
      */
-#ifndef GEODE_IS_ANDROID
     inline CCString() : m_sString("") {}
-#else
-    // Make sure its imported because of gd::string stuff,
-    // check android/main.cpp for more info
-    CCString();
-#endif
     /**
      * @lua NA
      */
@@ -121,7 +115,7 @@ public:
      *          it means that you needn't do a release operation unless you retain it.
      */
     // Geode change: this is kind of a hack but i think it will work
-    static inline CCString* create(gd::string const& str) {
+    static inline CCString* create(std::string const& str) {
     	return CCString::createWithData(reinterpret_cast<unsigned char const*>(str.c_str()), str.size());
     }
 

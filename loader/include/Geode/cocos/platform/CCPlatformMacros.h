@@ -426,7 +426,7 @@ public:                                                          \
      * but __has_attribute(format) is undefined,
      * leaving CC_FORMAT_PRINTF undefined by default.
      */
-#elif defined(__has_attribute) && !defined(_MSC_VER)
+#elif defined(__has_attribute)
     #if __has_attribute(format)
         #define CC_FORMAT_PRINTF(formatPos, argPos) \
             __attribute__((__format__(printf, formatPos, argPos)))
@@ -449,8 +449,35 @@ public:                                                          \
 
 /** CC_PROPERTY_NV
  * CC_PROPERTY, but getters and setters are not virtual functions.
+ *
+ * GD 2.011 port: RobTop made these accessors non-virtual for 2.1, but in 2.0's libcocos2d they are
+ * still virtual (exported as U.. members, each one a vtable slot in declaration order), so here
+ * CC_SYNTHESIZE_NV / CC_SYNTHESIZE_READONLY_NV declare virtual accessors. An accessor that is
+ * non-virtual in 2.0 too uses CC_SYNTHESIZE_NV20 / CC_SYNTHESIZE_READONLY_NV20.
+ * Verified slot by slot by research/ghidra/scripts/check_vt.py.
  */
 #define CC_SYNTHESIZE_NV(varType, varName, funName)      \
+                                                         \
+protected:                                               \
+    varType varName;                                     \
+                                                         \
+public:                                                  \
+    virtual varType get##funName(void) const { return varName; } \
+                                                         \
+public:                                                  \
+    virtual void set##funName(varType var) { varName = var; }
+
+/**
+ */
+#define CC_SYNTHESIZE_READONLY_NV(varType, varName, funName) \
+                                                             \
+protected:                                                   \
+    varType varName;                                         \
+                                                             \
+public:                                                      \
+    virtual varType get##funName(void) const { return varName; }
+
+#define CC_SYNTHESIZE_NV20(varType, varName, funName)    \
                                                          \
 protected:                                               \
     varType varName;                                     \
@@ -461,9 +488,7 @@ public:                                                  \
 public:                                                  \
     void set##funName(varType var) { varName = var; }
 
-/**
- */
-#define CC_SYNTHESIZE_READONLY_NV(varType, varName, funName) \
+#define CC_SYNTHESIZE_READONLY_NV20(varType, varName, funName) \
                                                              \
 protected:                                                   \
     varType varName;                                         \

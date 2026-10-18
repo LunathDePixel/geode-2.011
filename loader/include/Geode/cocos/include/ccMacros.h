@@ -272,6 +272,41 @@ extern unsigned int ACTUAL_CC_DLL g_uNumberOfDraws;
 #define __STR_CAT___(str1, str2) str1##str2
 #define __STR_CAT__(str1, str2) __STR_CAT___(str1, str2)
 
+/** RT_ADD
+* RobTop added this function / field. It is proprietary,
+* and the modding library will not compile properly
+* if this function / field is not found in the
+* Cocos2d headers.
+* 
+* Variadic arguments used due to enums using commas, 
+* which will not expand correctly otherwise.
+*/
+#define RT_ADD(...) __VA_ARGS__
+
+/** RT_REMOVE
+* RobTop removed this function / field. It is not
+* found in libcocos2d.dll, and can't be called / used.
+*/
+#define RT_REMOVE(name)
+
+/** GD20_ADD / GD21_ONLY (GD 2.011 port)
+* This fork targets GD 2.0 (2.011), whose libcocos2d.dll differs from 2.113's in places:
+* GD20_ADD marks a field / virtual that exists in 2.0's libcocos2d but was removed for 2.1
+* (it expands to its contents); GD21_ONLY marks a 2.1 addition that 2.0 does not have (it
+* expands to nothing). Each change is checked against both DLLs' exported vftables and field
+* accesses (research/ghidra/scripts/cocos_vtspec.py, cocos_layout.py).
+*/
+#define GD20_ADD(...) __VA_ARGS__
+#define GD21_ONLY(...)
+
+/** HJ_ADD
+ * This function / field might not actually exist in GD itself.
+ * 
+ * However, it has been added in these headers for ease-of-use
+ * or other equivalent reasons. It should not conflict with
+ * GD itself.
+*/
+#define HJ_ADD(...) __VA_ARGS__
 
 
 /** PAD

@@ -160,7 +160,7 @@ public:
 private:
     // MARMALADE: Made this protected not private, as deriving from this class is pretty useful
 //    CCSpriteFrameCache(void) : m_pSpriteFrames(NULL), m_pSpriteFramesAliases(NULL){}
-public:
+protected:
     CCDictionary* m_pSpriteFrames;
     CCDictionary* m_pSpriteFramesAliases;
     std::set<gd::string>*  m_pLoadedFileNames;

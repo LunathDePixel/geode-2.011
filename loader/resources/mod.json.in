@@ -45,6 +45,7 @@
         ],
         "files": [
             "sounds/*.ogg",
+            "gd21/*.png",
             "about.md",
             "changelog.md",
             "support.md",

@@ -53,10 +53,12 @@ class CC_DLL CCControlColourPicker : public CCControl
     GEODE_FRIEND_MODIFY
     
 public:
-    // @note RobTop Addition
-    ccColor3B const& getColorValue() const;
-    // @note RobTop Addition
-    virtual void setColorValue(ccColor3B const&);
+    RT_ADD(
+        // 2.0: own virtuals are, in order, getColorValue, setColorValue, getBackground,
+        // get/setColorTarget, get/setDelegate (colourPicker / HuePicker accessors are not virtual)
+        virtual ccColor3B const& getColorValue() const;
+        virtual void setColorValue(ccColor3B const&);
+    )
 
     GEODE_CUSTOM_CONSTRUCTOR_COCOS(CCControlColourPicker, CCControl)
     CCControlColourPicker();
@@ -66,10 +68,23 @@ protected:
     // @note RobTop Addition
     ccColor3B m_rgb;
     HSV m_hsv;
-    CC_SYNTHESIZE_RETAIN(CCControlSaturationBrightnessPicker*, m_colourPicker, colourPicker)
-    
-    CC_SYNTHESIZE_RETAIN(CCControlHuePicker*, m_huePicker, HuePicker)
-    CC_SYNTHESIZE_RETAIN(CCSprite*, m_background, Background)
+    CCControlSaturationBrightnessPicker* m_colourPicker;
+    CCControlHuePicker* m_huePicker;
+    CCSprite* m_background;
+public:
+    CCControlSaturationBrightnessPicker* getcolourPicker() const { return m_colourPicker; }
+    void setcolourPicker(CCControlSaturationBrightnessPicker* v) {
+        if (m_colourPicker != v) { CC_SAFE_RETAIN(v); CC_SAFE_RELEASE(m_colourPicker); m_colourPicker = v; }
+    }
+    CCControlHuePicker* getHuePicker() const { return m_huePicker; }
+    void setHuePicker(CCControlHuePicker* v) {
+        if (m_huePicker != v) { CC_SAFE_RETAIN(v); CC_SAFE_RELEASE(m_huePicker); m_huePicker = v; }
+    }
+    virtual CCSprite* getBackground() const { return m_background; }
+    void setBackground(CCSprite* v) {
+        if (m_background != v) { CC_SAFE_RETAIN(v); CC_SAFE_RELEASE(m_background); m_background = v; }
+    }
+protected:
 
     // @note RobTop Addition
     CC_SYNTHESIZE_NV(CCSprite*, m_colorTarget, ColorTarget)

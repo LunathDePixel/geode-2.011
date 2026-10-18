@@ -113,29 +113,17 @@ public:
     virtual void setOpacityModifyRGB(bool bValue);
     virtual bool isOpacityModifyRGB(void);
 
-    // @note RobTop Addition
-    void resumeStroke();
-    // @note RobTop Addition
-    void stopStroke();
-
-	// @note RobTop Addition
-    void enableRepeatMode(float);
-
-	// @note RobTop Addition
-    bool getDontOpacityFade() const;
-	// @note RobTop Addition
-    void setDontOpacityFade(bool);
-
-	// @note RobTop Addition
-    float getM_fMaxSeg() const;
-	// @note RobTop Addition
-    void setM_fMaxSeg(float);
-
-    // @note RobTop Addition
-	void setStroke(float);
-    // @note RobTop Addition
-	void updateFade(float);
-
+    RT_ADD(
+        void resumeStroke();
+        void stopStroke();
+    )
+    // 2.0: virtual accessors, the class's last four vtable slots
+    GD20_ADD(
+        virtual float getM_fMaxSeg() const { return m_fMaxSeg; }
+        virtual void setM_fMaxSeg(float v) { m_fMaxSeg = v; }
+        virtual bool getDontOpacityFade() const { return m_bDontOpacityFade; }
+        virtual void setDontOpacityFade(bool v) { m_bDontOpacityFade = v; }
+    )
 
     /** When fast mode is enabled, new points are added faster but with lower precision */
     inline bool isFastMode() {
@@ -179,20 +167,17 @@ protected:
     GLubyte* m_pColorPointer;
     ccTex2F* m_pTexCoords;
 
-    // @note RobTop Addition
-    bool m_bRepeatMode;
-    // @note RobTop Addition
-    float m_fRepeatSpeed;
-    // @note RobTop Addition
-    float m_fRepeatTime;
-    // @note RobTop Addition
-    bool m_idk;
-    // @note RobTop Addition
-    float m_fMaxSeg;
-    // @note RobTop Addition
-    bool m_bDontOpacityFade;
-    // @note RobTop Addition
-    CCPoint m_tPositionR;
+    // 2.0 has no repeat mode (m_fMaxSeg sits at +0x140, sizeof 0x148)
+    GD21_ONLY(
+        bool m_bRepeatMode;
+        float m_fRepeatSpeed;
+        float m_fRepeatTime;
+        bool m_idk;
+    )
+    RT_ADD(
+        float m_fMaxSeg;
+        bool m_bDontOpacityFade;
+    )
 };
 
 // end of misc_nodes group

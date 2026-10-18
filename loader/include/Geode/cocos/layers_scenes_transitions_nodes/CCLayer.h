@@ -183,12 +183,9 @@ public:
     virtual void keyBackClicked(void);
     virtual void keyMenuClicked(void);
     
-    // @note RobTop Addition
-    void keyDown(enumKeyCodes);
-
-    // 2.2 additions
-    virtual void setPreviousPriority(int);
-    virtual int getPreviousPriority();
+    RT_ADD(
+        void keyDown(enumKeyCodes);
+    )
     
     inline CCTouchScriptHandlerEntry* getScriptTouchHandlerEntry() { return m_pScriptTouchHandlerEntry; };
     inline CCScriptHandlerEntry* getScriptKeypadHandlerEntry() { return m_pScriptKeypadHandlerEntry; };
@@ -210,9 +207,6 @@ private:
     
     int m_nTouchPriority;
     ccTouchesMode m_eTouchMode;
-
-    // 2.2 additions
-    int m_uPreviousPriority; // no idea
     
     int  excuteScriptTouchHandler(int nEventType, CCTouch *pTouch);
     int  excuteScriptTouchHandler(int nEventType, CCSet *pTouches);
@@ -334,10 +328,6 @@ public:
     virtual void setColor(const ccColor3B &color);
     virtual void setOpacity(GLubyte opacity);
 
-	void addToVertices(cocos2d::CCPoint, cocos2d::CCPoint, cocos2d::CCPoint);
-	void setVertices(cocos2d::CCPoint, cocos2d::CCPoint, cocos2d::CCPoint);
-
-
 protected:
     virtual void updateColor();
 };
@@ -368,9 +358,6 @@ class CC_DLL CCLayerGradient : public CCLayerColor
 {
     GEODE_FRIEND_MODIFY
 public:
-    GEODE_CUSTOM_CONSTRUCTOR_COCOS(CCLayerGradient, CCLayerColor)
-    CCLayerGradient() {}
-
 
     /** Creates a full-screen CCLayer with a gradient between start and end. */
     static CCLayerGradient* create(const ccColor4B& start, const ccColor4B& end);
@@ -396,11 +383,6 @@ public:
     CC_PROPERTY(GLubyte, m_cStartOpacity, StartOpacity)
     CC_PROPERTY(GLubyte, m_cEndOpacity, EndOpacity)
     CC_PROPERTY_PASS_BY_REF(CCPoint, m_AlongVector, Vector)
-
-	bool getShouldPremultiply() const;
-	void setShouldPremultiply(bool);
-	void setValues(cocos2d::_ccColor3B const&, unsigned char, cocos2d::_ccColor3B const&, unsigned char, cocos2d::CCPoint const&);
-
 
     /** Whether or not the interpolation will be compressed in order to display all the colors of the gradient both in canonical and non canonical vectors
     Default: YES

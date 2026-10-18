@@ -272,8 +272,6 @@ public:
      */
     inline const GLuint getProgram() { return m_uProgram; }
 
-	void setUniformLocationWithMatrix3fv(int, float*, unsigned int);
-
 private:
     bool updateUniformLocation(GLint location, GLvoid* data, unsigned int bytes);
     const char* description();

@@ -47,7 +47,7 @@ void GenericListCell::setBorderColor(cocos2d::ccColor4B color) {
     m_borderColor = color;
 }
 
-void ListView::setupList(float) {
+void ListView::setupList() {
     if (!m_entries->count()) return;
     m_tableView->reloadData();
 

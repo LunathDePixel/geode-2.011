@@ -170,22 +170,19 @@ protected:
     */
     CCSpriteBatchNode * addSpriteWithoutQuad(CCSprite*child, unsigned int z, int aTag);
 
-    // @note RobTop Addition
-    bool getManualSortChildren(void)const;
-    // @note RobTop Addition
-    int getAtlasCapacity(void);
-public:
-    // @note RobTop Addition
-    int getUsedAtlasCapacity(void);
-    // @note RobTop Addition
-    void increaseAtlasCapacity(unsigned int);
-    // @note RobTop Addition
-    void increaseAtlasCapacity();
-protected:
-    // @note RobTop Addition
-    void manualSortAllChildren(void);
-    // @note RobTop Addition
-    void setManualSortChildren(bool);
+    RT_ADD(
+    public:
+        // 2.0: getManualSortChildren / setManualSortChildren are public virtuals (the class's last two slots)
+        virtual bool getManualSortChildren(void)const;
+        virtual void setManualSortChildren(bool);
+    protected:
+        int getAtlasCapacity(void);
+    public:
+        GD21_ONLY(int getUsedAtlasCapacity(void);)
+        void increaseAtlasCapacity(unsigned int);
+    protected:
+        void manualSortAllChildren(void);
+    );
 
 private:
     void updateAtlasIndex(CCSprite* sprite, int* curIndex);

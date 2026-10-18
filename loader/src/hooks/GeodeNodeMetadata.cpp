@@ -43,12 +43,13 @@ public:
         auto old = target->m_pUserObject;
         // faster than dynamic_cast, technically can
         // but extremely unlikely to fail
-        if (old && old->getTag() == METADATA_TAG) {
+        // GD 2.0: CCObject has no tag (it is CCNode's), so the marker lives in m_eObjType
+        if (old && old->getObjType() == static_cast<CCObjectType>(METADATA_TAG)) {
             return static_cast<GeodeNodeMetadata*>(old);
         }
         auto meta = new GeodeNodeMetadata();
         meta->autorelease();
-        meta->setTag(METADATA_TAG);
+        meta->setObjType(static_cast<CCObjectType>(METADATA_TAG));
 
         // set user object
         target->m_pUserObject = meta;

@@ -66,9 +66,9 @@ namespace geode {
         CCMenuItemSpriteExtra* m_closeBtn;
         bool m_dynamic;
 
-        ~Popup() override {
-            cocos2d::CCTouchDispatcher::get()->unregisterForcePrio(this);
-        }
+        // GD 2.011 port: 2.0 has no register/unregisterForcePrio; FLAlertLayer's destructor already
+        // calls decrementForcePrio(2), balanced by the incrementForcePrio(2) in initBase
+        ~Popup() override = default;
 
         void registerWithTouchDispatcher() override {
             cocos2d::CCTouchDispatcher::get()->addTargetedDelegate(this, -500, true);
@@ -84,7 +84,7 @@ namespace geode {
             auto winSize = cocos2d::CCDirector::get()->getWinSize();
             m_size = cocos2d::CCSize { width, height };
 
-            cocos2d::CCTouchDispatcher::get()->registerForcePrio(this, 2);
+            cocos2d::CCTouchDispatcher::get()->incrementForcePrio(2);  // GD 2.011 port: 2.0's force-priority API
 
             if (!this->initWithColor({ 0, 0, 0, 105 })) return false;
             m_mainLayer = cocos2d::CCLayer::create();

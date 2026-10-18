@@ -43,7 +43,6 @@ public:
     CCBool(bool v)
         : m_bValue(v) {}
     bool getValue() const {return m_bValue;}
-    bool setValue(bool value) { m_bValue = value; return value; }
 
     static CCBool* create(bool v)
     {

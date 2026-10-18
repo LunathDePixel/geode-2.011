@@ -83,7 +83,8 @@ public:
 
     int getHighestChildZ(void);
 
-    CCSceneDelegate* m_pDelegate;
+    // 2.0: CCScene adds no field (CCTransitionScene's first member sits at sizeof(CCNode))
+    GD21_ONLY(CCSceneDelegate* m_pDelegate;)
 };
 
 // end of scene group

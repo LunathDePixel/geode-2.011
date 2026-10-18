@@ -147,8 +147,6 @@ public:
      */
     bool initWithTextureFilename(const char* filename, const CCRect& rect, bool rotated, const CCPoint& offset, const CCSize& originalSize);
 
-	gd::string getFrameName() const;
-	void setFrameName(gd::string);
 
 protected:
     CCPoint m_obOffset;
@@ -160,8 +158,7 @@ protected:
     CCSize m_obOriginalSizeInPixels;
     CCTexture2D *m_pobTexture;
     gd::string  m_strTextureFilename;
-    // @note RobTop Addition
-    gd::string  m_strFrameName;
+    GD21_ONLY( gd::string  m_strFrameName; )   // 2.1 addition (sizeof 0x78 in 2.0)
 };
 
 // end of sprite_nodes group

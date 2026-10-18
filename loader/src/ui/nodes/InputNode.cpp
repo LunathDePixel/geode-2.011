@@ -43,11 +43,11 @@ bool InputNode::init(
     m_bgSprite->setPosition(width / 2, height / 2);
     this->addChild(m_bgSprite);
 
-    m_input = CCTextInputNode::create(width - 10.0f, height, placeholder, "Thonburi", 24, font);
+    m_input = CCTextInputNode::create(width - 10.0f, height, placeholder, 24, font);  // GD 2.011 port: 2.0 create has no caption-font argument
     m_input->setLabelPlaceholderColor({ 150, 150, 150 });
     m_input->setLabelPlaceholderScale(.75f);
     m_input->setMaxLabelScale(.85f);
-    m_input->setMaxLabelLength(maxCharCount);
+    m_input->setMaxLabelWidth(maxCharCount);  // GD 2.011 port: 2.0 name (sets m_maxLabelLength)
     m_input->setPosition(width / 2, height / 2);
     m_input->setUserObject("fix-text-input", CCBool::create(true));
     if (filter.length()) {
