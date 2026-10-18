@@ -120,9 +120,6 @@ void CC_DLL ccDrawCircle( const CCPoint& center, float radius, float angle, unsi
 // @note RobTop Addition
 void CC_DLL ccDrawFilledCircle( const CCPoint& center, float radius, float angle, unsigned int segments);
 
-// 2.2 additions
-void ccDrawCircleSegment(cocos2d::CCPoint const&, float, float, float, unsigned int, bool, float, float);
-
 /** draws a quad bezier path
  @warning This function could be pretty slow. Use it only for debugging purposes.
  @since v0.8

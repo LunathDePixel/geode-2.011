@@ -110,6 +110,13 @@ public:
 
     inline int getTag(void) { return m_nTag; }
     inline void setTag(int nTag) { m_nTag = nTag; }
+    
+    // 2.0: a virtual accessor pair, CCAction's last two vtable slots (2.1: one non-virtual setter)
+    GD20_ADD(
+        virtual float getSpeedMod() const;
+        virtual void setSpeedMod(float mod);
+    )
+    GD21_ONLY(void setSpeedMod(float mod);)
 
 public:
     /** Create an action */
@@ -141,8 +148,6 @@ class CC_DLL CCFiniteTimeAction : public CCAction
 {
     GEODE_FRIEND_MODIFY
 public:
-    GEODE_CUSTOM_CONSTRUCTOR_COCOS(CCFiniteTimeAction, CCAction)
-
     /**
      *  @js ctor
      */

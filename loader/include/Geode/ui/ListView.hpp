@@ -34,7 +34,7 @@ namespace geode {
         ListView();
         ~ListView() override;
 
-        void setupList(float) override;
+        void setupList() override;  // GD 2.011 port: 2.0 CustomListView::setupList takes no float
         TableViewCell* getListCell(char const* key) override;
         void loadCell(TableViewCell* cell, int index) override;
         void updateAllCells();

@@ -53,7 +53,8 @@ namespace geode::stl {
 }
 
 namespace gd {
-#if defined(GEODE_IS_MACOS) || defined(GEODE_IS_WINDOWS) || defined(GEODE_IS_IOS)
+// GD 2.011 port: 32-bit Windows keeps Geode's own gd::string (allocated on GD's MSVCR120 heap)
+#if defined(GEODE_IS_MACOS) || defined(GEODE_IS_WINDOWS64) || defined(GEODE_IS_IOS)
 	// rob uses libc++ now! this will prob work fine
 	using string = std::string;
 

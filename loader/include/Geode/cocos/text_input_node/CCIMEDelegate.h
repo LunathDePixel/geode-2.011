@@ -83,7 +83,7 @@ protected:
     /**
     @brief    Called by CCIMEDispatcher when text input received from the IME.
     */
-    virtual void insertText(const char * text, int len, cocos2d::enumKeyCodes) {CC_UNUSED_PARAM(text);CC_UNUSED_PARAM(len);}
+    virtual void insertText(const char * text, int len) {CC_UNUSED_PARAM(text);CC_UNUSED_PARAM(len);}
 
     /**
     @brief    Called by CCIMEDispatcher after the user clicks the backward key.

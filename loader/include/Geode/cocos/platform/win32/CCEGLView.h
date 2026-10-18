@@ -130,10 +130,6 @@ public:
      */
     static CCEGLView* create(const gd::string&);
 
-    static cocos2d::CCEGLView* createWithFullScreen(gd::string const&, bool);
-	static cocos2d::CCEGLView* createWithFullScreen(gd::string const&, bool, GLFWvidmode const&, GLFWmonitor*);
-	static cocos2d::CCEGLView* createWithRect(gd::string const&, cocos2d::CCRect, float);
-
     /**
      * @note Geode addition
      */
@@ -142,7 +138,7 @@ public:
     /**
      * @note RobTop addition
      */
-    void toggleFullScreen(bool fullscreen, bool borderless, bool fix);
+    void toggleFullScreen(bool fullscreen);
 
     /**
      * @note RobTop addition
@@ -154,42 +150,8 @@ public:
      */
     CCSize getDisplaySize();
 
-	void capture();
-	void checkErrorGL(char const*);
-
-	void enableRetina(bool);
-
-	bool getCursorLocked() const;
-	bool getGameplayActive() const;
-	bool getIsBorderless() const;
-	bool getIsFullscreen() const;
-	int getRetinaFactor() const;
-	bool getShouldHideCursor() const;
-	void iconify();
-
-    bool initWithFullScreen(gd::string const&, bool);
-	bool initWithFullscreen(gd::string const&, bool, GLFWvidmode const&, GLFWmonitor*);
-	bool initWithRect(gd::string const&, cocos2d::CCRect, float);
-
-	bool isRetinaEnabled() const;
-
-	void onGLFWWindowCloseFunCallback(GLFWwindow*);
-	void releaseCapture();
-	void showMessage(gd::string);
-
-	void toggleGameplayActive(bool);
-	void toggleLockCursor(bool);
-	void updateDesignSize(int, int);
-	void updateFrameSize();
-
-    // @note RobTop Addition
-    void pumpRawInput();
-    // @note RobTop Addition
-    void performSafeClipboardPaste();
-
-public:
-    static CCEGLView* s_pEglView;
-
+protected:
+	static CCEGLView* s_pEglView;
     bool m_bCaptured;
     // Robtop Removal
     // HWND m_hWnd;
@@ -220,25 +182,24 @@ public:
     // @note RobTop Addition
     GLFWmonitor* m_pPrimaryMonitor;
 public:
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(CCSize, m_obWindowedSize, WindowedSize);
+    RT_ADD(
+        CC_SYNTHESIZE_NV(CCSize, m_obWindowedSize, WindowedSize);
+    )
 
-    // @note RobTop Addition
-    float m_fMouseX;
-    // @note RobTop Addition
-    float m_fMouseY;
-    // @note RobTop Addition
-    bool m_bIsFullscreen;
-    // @note RobTop Addition
-    bool m_bIsBorderless;
-    // @note RobTop Addition
-    bool m_bIsFix;
-    // @note RobTop Addition
-    bool m_bShouldHideCursor;
-    // @note RobTop Addition
-    bool m_bCursorLocked;
-    // @note RobTop Addition
-    bool m_bShouldCallGLFinish;
+    RT_ADD(
+        float m_fMouseX;
+        float m_fMouseY;
+        bool m_bIsFullscreen;
+        bool m_bShouldHideCursor;
+        bool m_bShouldCallGLFinish;
+    )
+    // 2.0: virtual accessors, the slots after get/setWindowedSize
+    GD20_ADD(
+        virtual bool getIsFullscreen() const { return m_bIsFullscreen; }
+        virtual bool getShouldHideCursor() const { return m_bShouldHideCursor; }
+        virtual bool getShouldCallGLFinish() const { return m_bShouldCallGLFinish; }
+        virtual void setShouldCallGLFinish(bool v) { m_bShouldCallGLFinish = v; }
+    )
 
 protected:
     // @note RobTop Addition

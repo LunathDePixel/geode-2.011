@@ -194,6 +194,7 @@ static StackFrame getFrame(void const* addr, bool fullPath = true) {
             symbolInfo
         );
         if (result) {
+#ifdef GEODE_IS_WINDOWS64  // GD 2.011 port: x64 unwind-info check only (x86 has FPO data, not RUNTIME_FUNCTIONs)
             if (auto entry = SymFunctionTableAccess64(proc, static_cast<DWORD64>(reinterpret_cast<uintptr_t>(addr)))) {
                 auto moduleBase = SymGetModuleBase64(proc, static_cast<DWORD64>(reinterpret_cast<uintptr_t>(addr)));
                 auto runtimeFunction = static_cast<PRUNTIME_FUNCTION>(entry);
@@ -210,6 +211,7 @@ static StackFrame getFrame(void const* addr, bool fullPath = true) {
                     return frame;
                 }
             }
+#endif
 
             frame.symbol = std::string(symbolInfo->Name, symbolInfo->NameLen);
             frame.offset = displacement;
@@ -233,6 +235,7 @@ static StackFrame getFrame(void const* addr, bool fullPath = true) {
             if (!isGD && !isCocos) return frame;
 
             DWORD64 dwAddr = reinterpret_cast<uintptr_t>(addr);
+#ifdef GEODE_IS_WINDOWS64  // GD 2.011 port: RUNTIME_FUNCTION lookup is x64-only
             if (auto entry = SymFunctionTableAccess64(proc, dwAddr)) {
                 auto moduleBase = SymGetModuleBase64(proc, dwAddr);
                 auto runtimeFunction = static_cast<PRUNTIME_FUNCTION>(entry);
@@ -262,6 +265,7 @@ static StackFrame getFrame(void const* addr, bool fullPath = true) {
                     return frame;
                 }
             }
+#endif
 
             // fallback (usually leaf functions)
             if (isGD) {
@@ -303,6 +307,14 @@ std::vector<StackFrame> CrashContext::getStacktrace() {
 
     // size_t frame = 0;
     while (true) {
+#ifdef GEODE_IS_WINDOWS32
+        // GD 2.011 port: x86 walk; the stdcall Sym* routines directly (lambdas would be cdecl here)
+        if (!StackWalk64(
+                IMAGE_FILE_MACHINE_I386, process, thread, &stack, ctx, nullptr,
+                SymFunctionTableAccess64, SymGetModuleBase64, nullptr
+            ))
+            break;
+#else
         if (!StackWalk64(
                 IMAGE_FILE_MACHINE_AMD64, process, thread, &stack, ctx, nullptr,
                 +[](HANDLE hProcess, DWORD64 AddrBase) {
@@ -322,6 +334,7 @@ std::vector<StackFrame> CrashContext::getStacktrace() {
                 , nullptr
             ))
             break;
+#endif
 
         void* addr = reinterpret_cast<void*>(stack.AddrPC.Offset);
         frames.push_back(getFrame(addr));

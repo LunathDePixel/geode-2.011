@@ -189,6 +189,12 @@ public:
     CCScrollViewDirection getDirection() { return m_eDirection; }
     virtual void setDirection(CCScrollViewDirection eDirection) { m_eDirection = eDirection; }
 
+    // 2.0: virtual accessors, the slots after setDirection (byte at +0x18d)
+    GD20_ADD(
+        virtual bool getDisableAnimation() const { return m_bDisableAnimation; }
+        virtual void setDisableAnimation(bool v) { m_bDisableAnimation = v; }
+    )
+
     CCScrollViewDelegate* getDelegate() { return m_pDelegate; }
     void setDelegate(CCScrollViewDelegate* pDelegate) { m_pDelegate = pDelegate; }
 
@@ -337,6 +343,7 @@ public:
      */
     CCRect m_tParentScissorRect;
     bool m_bScissorRestored;
+    GD20_ADD(bool m_bDisableAnimation;)
 public:
     enum ScrollViewScriptEventType
     {

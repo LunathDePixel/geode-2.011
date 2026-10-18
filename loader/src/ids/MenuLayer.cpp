@@ -100,15 +100,28 @@ $register_ids(MenuLayer) {
 
         // move daily chest to its own menu
 
-        if (auto dailyChest = setIDSafe(menu, -1, "daily-chest-button")) {
-            auto menu = detachAndCreateMenu(
-                this,
-                "right-side-menu",
-                ColumnLayout::create(),
-                dailyChest
-            );
-            menu->setContentSize({ 65.f, 180.f });
-            menu->updateLayout();
+        // GD 2.011 has no daily chest (2.1): the bottom menu has only the 4 buttons above, and index -1
+        // would grab the newgrounds button. Mods still expect "right-side-menu", so create it empty
+        // where 2.1's chest sits.
+        if (menu->getChildrenCount() > 4) {
+            if (auto dailyChest = setIDSafe(menu, 4, "daily-chest-button")) {
+                auto menu = detachAndCreateMenu(
+                    this,
+                    "right-side-menu",
+                    ColumnLayout::create(),
+                    dailyChest
+                );
+                menu->setContentSize({ 65.f, 180.f });
+                menu->updateLayout();
+            }
+        }
+        else {
+            auto rightMenu = CCMenu::create();
+            rightMenu->setID("right-side-menu");
+            rightMenu->setPosition(winSize.width - 40.f, winSize.height / 2 - 20.f);
+            rightMenu->setLayout(ColumnLayout::create());
+            rightMenu->setContentSize({ 65.f, 180.f });
+            this->addChild(rightMenu);
         }
 
         menu->setContentSize({ winSize.width - 220.f, 65.f });

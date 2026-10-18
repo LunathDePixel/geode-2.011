@@ -191,6 +191,27 @@ void Loader::Impl::updateResources(bool forceReload) {
     // we have to call it in both places since setup is only called once ever, but updateResources is called
     // on every texture reload
     CCFileUtils::get()->updatePaths();
+    // GD 2.011 port: frames the loader UI uses that only exist in 2.1+'s sheets, shipped as loose
+    // files (port/tools/extract_gd21_frames.py) and registered under their original names.
+    // The comment-list borders and plain back arrow let mods written for 2.1+ create them by name.
+    for (auto name : {
+        "gj_folderBtn_001.png", "gj_findBtn_001.png", "gj_findBtnOff_001.png", "GJ_smallModeIcon_001.png",
+        "GJ_commentSide2_001.png", "GJ_commentTop2_001.png", "backArrowPlain_01_001.png"
+    }) {
+        if (CCSpriteFrameCache::get()->spriteFrameByName(name)) continue;
+        // the quality variant matching the game's texture quality, by absolute path
+        auto scale = CCDirector::get()->getContentScaleFactor();
+        auto file = std::string(name);
+        file.insert(file.size() - 4, scale >= 4.f ? "-uhd" : scale >= 2.f ? "-hd" : "");
+        auto path = (dirs::getGeodeResourcesDir() / "geode.loader" / file).string();
+        if (auto tex = CCTextureCache::get()->addImage(path.c_str(), false)) {
+            auto rect = CCRect(0, 0, tex->getContentSize().width, tex->getContentSize().height);
+            CCSpriteFrameCache::get()->addSpriteFrame(CCSpriteFrame::createWithTexture(tex, rect), name);
+        }
+        else {
+            log::warn("Missing 2.1 frame {}", name);
+        }
+    }
 }
 
 std::vector<Mod*> Loader::Impl::getAllMods() {

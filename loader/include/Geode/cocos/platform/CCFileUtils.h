@@ -452,7 +452,14 @@ protected:
      */
     virtual CCArray* createCCArrayWithContentsOfFile(const gd::string& filename);
 
+    // 2.0: the class's last two vtable slots (exported virtuals); the string sits at +0x40
+    GD20_ADD(
 public:
+    virtual gd::string getAndroidPath() const;
+    virtual void setAndroidPath(gd::string);
+protected:
+    )
+
     /** Dictionary used to lookup filenames based on a key.
      *  It is used internally by the following methods:
      *
@@ -489,10 +496,8 @@ public:
      */
     gd::map<gd::string, gd::string> m_fullPathCache;
 
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(gd::string, m_strAndroidPath, AndroidPath);
+    GD20_ADD(gd::string m_strAndroidPath;)   // +0x40 (getAndroidPath copies it)
 
-protected:
     /**
      *  The singleton pointer of CCFileUtils.
      */

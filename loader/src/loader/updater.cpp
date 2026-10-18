@@ -304,6 +304,10 @@ Result<> updater::installLoaderUpdate(utils::web::WebResponse response, std::str
 }
 
 void updater::checkForLoaderUpdates() {
+    // GD 2.011 port: official loader releases are built for 2.2 and would replace this port's
+    // Geode.dll on the next restart (via GeodeUpdater), so self-updating is disabled
+    log::info("Loader self-update is disabled in the GD 2.011 port");
+    return;
     // Check for updates in the background
     async::spawn(
         server::getLatestLoaderVersion(),

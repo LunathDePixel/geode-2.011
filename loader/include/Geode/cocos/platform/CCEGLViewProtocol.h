@@ -162,6 +162,9 @@ public:
      */
     virtual void handleTouchesCancel(int num, int ids[], float xs[], float ys[], double timestamp);
 
+    // exported virtual, the protocol's last slot (missing from the 2.113-era header)
+    virtual void pollInputEvents();
+
     /**
      * Get the opengl view port rectangle.
      */
@@ -176,15 +179,6 @@ public:
      * Get scale factor of the vertical direction.
      */
     float getScaleY() const;
-
-	virtual void pollInputEvents();
-
-    // @note RobTop Addition
-    double getPlatformTimestamp();
-
-protected:
-	void updateDesignResolutionSize();
-
 private:
     void getSetOfTouchesEndOrCancel(CCSet& set, int num, int ids[], float xs[], float ys[], double timestamp);
 

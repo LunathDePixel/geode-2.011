@@ -350,10 +350,11 @@ public:
     virtual void setBatchNode(CCSpriteBatchNode *pobSpriteBatchNode);
 
     /// @} end of BatchNode methods
-
-    // @note RobTop Addition
-    virtual void refreshTextureRect(void);
-
+    
+    GD21_ONLY(
+        virtual void refreshTextureRect(void);
+    )
+    
     /// @{
     /// @name Texture methods
 
@@ -572,26 +573,20 @@ public:
     bool m_bFlipX;                              /// Whether the sprite is flipped horizaontally or not.
     bool m_bFlipY;                              /// Whether the sprite is flipped vertically or not.
 
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(bool, m_bDontDraw, DontDraw);
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(bool, m_bUseVertexMod, UseVertexMod);
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(float, m_fTlVertexMod, TlVertexMod);
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(float, m_fTrVertexMod, TrVertexMod);
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(float, m_fBlVertexMod, BlVertexMod);
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(float, m_fBrVertexMod, BrVertexMod);
-    // @note RobTop Addition
-    float m_fTextureLeft;
-    // @note RobTop Addition
-    float m_fTextureRight;
-    // @note RobTop Addition
-    float m_fTextureBottom;
-    // @note RobTop Addition
-    float m_fTextureTop;
+    RT_ADD(
+        // 2.0: virtual (getDontDraw/setDontDraw are CCSprite's last two vtable slots)
+        CC_SYNTHESIZE(bool, m_bDontDraw, DontDraw);
+    )
+    // 2.0's CCSprite ends after m_bDontDraw (CCLabelTTF's first field is at 0x1bc)
+    GD21_ONLY(
+        CC_SYNTHESIZE_NV(float, m_fTlVertexMod, TlVertexMod);
+        CC_SYNTHESIZE_NV(float, m_fTrVertexMod, TrVertexMod);
+        CC_SYNTHESIZE_NV(float, m_fBlVertexMod, BlVertexMod);
+        CC_SYNTHESIZE_NV(float, m_fBrVertexMod, BrVertexMod);
+        PAD(16);
+        bool m_bUnknown;
+        int m_nUnknown;
+    )
 };
 
 

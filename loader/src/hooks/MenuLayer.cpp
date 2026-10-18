@@ -342,6 +342,8 @@ struct CustomMenuLayer : Modify<CustomMenuLayer, MenuLayer> {
     }
 
     void fixSocialMenu() {
+        // GD 2.011 port: 2.0's social menu has no twitch / discord buttons and v1 never rearranged it
+        return;
         // I did NOT have fun doing this
         auto socialMenu = static_cast<CCMenu*>(this->getChildByID("social-media-menu"));
         socialMenu->ignoreAnchorPointForPosition(false);

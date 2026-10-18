@@ -86,24 +86,15 @@ public:
     // Lua reference id
     int                 m_nLuaID;
 public:
-    // the object's tag
-    int m_nTag;
+    // the object's tag (2.1 moved it here from CCNode)
+    GD21_ONLY(int m_nTag;)
     // count of references
     unsigned int        m_uReference;
     // count of autorelease
     unsigned int        m_uAutoReleaseCount;
 
     CCObjectType m_eObjType;
-
-    int m_uIndexInArray; // used in some ccarray stuff, I don't remember what it does rn
-
-    // 2.2 additions
-
-    int m_uUnknown; // -1 by default
-    int m_unknown2;
-    int m_nZOrder; // moved from CCNode, why rob
-    int m_uOrderOfArrival; // moved from CCNode, why rob
-    int m_unknown5;
+    GD21_ONLY(int m_nUnknown;)
 public:
 	GEODE_CUSTOM_CONSTRUCTOR_BEGIN(CCObject)
     CCObject(void);
@@ -126,23 +117,32 @@ public:
 
     virtual void update(float dt) {CC_UNUSED_PARAM(dt);};
 
+    // 2.0: virtual, right after update (2.1 made them inline non-virtuals)
+    GD20_ADD(virtual CCObjectType getObjType() const;)
+    GD20_ADD(virtual void setObjType(CCObjectType type);)
+
     virtual void encodeWithCoder(DS_Dictionary*);
 
     static CCObject* createWithCoder(DS_Dictionary*);
 
     virtual bool canEncode();
 
-    inline CCObjectType getObjType() const {
+    GD21_ONLY(inline CCObjectType getObjType() const {
         return m_eObjType;
-    }
+    })
 
-    virtual int getTag() const;
+    // 2.0: the tag lives in CCNode (CCNode::getTag / setTag)
+    GD21_ONLY(virtual int getTag() const;)
 
-    virtual void setTag(int nTag);
+    GD21_ONLY(virtual void setTag(int nTag);)
+    // GD 2.011 port (v3 API): v3 code calls getTag/setTag on CCObject* (menu senders). Non-virtual
+    // Geode helpers that forward to CCNode's tag; no layout change, -1 / no-op for non-nodes
+    GD20_ADD(GEODE_DLL int getTag() const;)
+    GD20_ADD(GEODE_DLL void setTag(int nTag);)
 
-    inline void setObjType(CCObjectType type) {
+    GD21_ONLY(inline void setObjType(CCObjectType type) {
         m_eObjType = type;
-    }
+    })
 
     friend class CCAutoreleasePool;
 };

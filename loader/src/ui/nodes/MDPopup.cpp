@@ -72,7 +72,7 @@ bool MDPopup::init(
 
 void MDPopup::onBtn(CCObject* sender) {
     if (m_impl->onClick) {
-        m_impl->onClick(sender->getTag());
+        m_impl->onClick(static_cast<CCNode*>(sender)->getTag());
     }
     this->onClose(nullptr);
 }

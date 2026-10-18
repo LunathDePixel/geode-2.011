@@ -36,7 +36,7 @@ public:
         m_secondaryCellColor(ccc3(0xc2, 0x72, 0x3e)), m_cellOpacity(0xff),
         m_cellBorderColor(ccc4(0x00, 0x00, 0x00, 0x4B)) {}
 
-    void setupList(float);
+    void setupList();
     TableViewCell* getListCell(char const* key);
     void loadCell(TableViewCell* cell, int index);
     void setPrimaryCellColor(cocos2d::ccColor3B color);
@@ -65,7 +65,7 @@ void GenericListCell::Impl::setSecondaryColor(cocos2d::ccColor3B color) { m_seco
 void GenericListCell::Impl::setOpacity(GLubyte opacity) { m_opacity = opacity; }
 void GenericListCell::Impl::setBorderColor(cocos2d::ccColor4B color) { m_borderColor = color; }
 
-void ListView::Impl::setupList(float) {
+void ListView::Impl::setupList() {  // GD 2.011 port: 2.0 CustomListView::setupList takes no float
     if (!m_self->m_entries->count()) return;
     m_self->m_tableView->reloadData();
 
@@ -163,8 +163,8 @@ void GenericListCell::setBorderColor(cocos2d::ccColor4B color) {
 ListView::ListView() : m_impl(std::make_unique<ListView::Impl>(this)) {}
 ListView::~ListView() = default;
 
-void ListView::setupList(float arg) { 
-    m_impl->setupList(arg); 
+void ListView::setupList() {
+    m_impl->setupList();
 }
 TableViewCell* ListView::getListCell(char const* key) { 
     return m_impl->getListCell(key); 

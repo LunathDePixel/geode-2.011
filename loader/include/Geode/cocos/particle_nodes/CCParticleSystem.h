@@ -299,9 +299,6 @@ public:
     virtual float getRotatePerSecondVar();
     virtual void setRotatePerSecondVar(float degrees);
 
-    // @note RobTop Addition
-    virtual void setVisible(bool visible);
-
     virtual void setScale(float s);
     virtual void setRotation(float newRotation);
     virtual void setScaleX(float newScaleX);
@@ -311,52 +308,7 @@ public:
     virtual bool isBlendAdditive();
     virtual void setBlendAdditive(bool value);
 //////////////////////////////////////////////////////////////////////////
-
-
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(float, m_fFadeInTime, FadeInTime);
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(float, m_fFadeInTimeVar, FadeInTimeVar);
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(float, m_fFadeOutTime, FadeOutTime);
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(float, m_fFadeOutTimeVar, FadeOutTimeVar);
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(float, m_fFrictionPos, FrictionPos);
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(float, m_fFrictionPosVar, FrictionPosVar);
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(float, m_fFrictionSize, FrictionSize);
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(float, m_fFrictionSizeVar, FrictionSizeVar);
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(float, m_fFrictionRot, FrictionRot);
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(float, m_fFrictionRotVar, FrictionRotVar);
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(float, m_fRespawn, Respawn);
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(float, m_fRespawnVar, RespawnVar);
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(bool, m_bStartSpinEqualToEnd, StartSpinEqualToEnd);
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(bool, m_bStartSizeEqualToEnd, StartSizeEqualToEnd);
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(bool, m_bStartRadiusEqualToEnd, StartRadiusEqualToEnd);
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(bool, m_bDynamicRotationIsDir, DynamicRotationIsDir);
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(bool, m_bOrderSensitive, OrderSensitive);
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(bool, m_bStartRGBVarSync, StartRGBVarSync);
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(bool, m_bEndRGBVarSync, EndRGBVarSync);
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(bool, m_bWasRemoved, WasRemoved);
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(bool, m_bUsingSchedule, UsingSchedule);
-
-
+    
     /** start size in pixels of each particle */
     CC_PROPERTY(float, m_fStartSize, StartSize)
     /** size variance in pixels of each particle */
@@ -450,20 +402,20 @@ public:
     http://particledesigner.71squared.com/
     @since v0.99.3
     */
-    bool initWithFile(const char *plistFile, bool);
+    bool initWithFile(const char *plistFile);
 
     /** initializes a CCQuadParticleSystem from a CCDictionary.
     @since v0.99.3
     */
-    bool initWithDictionary(CCDictionary *dictionary, bool);
-
+    bool initWithDictionary(CCDictionary *dictionary);
+    
     /** initializes a particle system from a NSDictionary and the path from where to load the png
      @since v2.1
      */
-    bool initWithDictionary(CCDictionary *dictionary, const char *dirname, bool);
+    bool initWithDictionary(CCDictionary *dictionary, const char *dirname);
 
     //! Initializes a system with a fixed number of particles
-    virtual bool initWithTotalParticles(unsigned int numberOfParticles, bool);
+    virtual bool initWithTotalParticles(unsigned int numberOfParticles);
     //! Add a particle to the emitter
     bool addParticle();
     //! Initializes a particle
@@ -487,17 +439,9 @@ public:
 
 protected:
     virtual void updateBlendFunc();
-public:
-    // @note RobTop Addition
-    bool m_bWorldPosUninitialized;
-    // @note RobTop Addition
-    CCPoint m_tWorldPos;
-    // @note RobTop Addition
-    ccColor4F m_tUniformColor;
-    // @note RobTop Addition
-    ccColor4F m_tUniformDeltaColor;
-    // @note RobTop Addition
-    CC_SYNTHESIZE_READONLY_NV(bool, m_bUseUniformColorMode, UseUniformColorMode);
+
+    // 2.1 addition: 2.0's CCParticleSystemQuad fields start 0x24 lower (no default-value block)
+    GD21_ONLY(
         // saved/loaded in loadDefaults, loadScaledDefaults and saveDefaults
 
         // @note RobTop Addition
@@ -518,35 +462,13 @@ public:
         float m_fDefaultModeASpeedVar;
         // @note RobTop Addition
         CCPoint m_tDefaultPosVar;
-        // @note RobTop Addition
-        int m_nCustomParticleIndex;
+    )
 public:
-    // @note RobTop Addition
-    void saveDefaults(void);
-    // @note RobTop Addition
-    void loadDefaults(void);
-    // @note RobTop Addition
-    void loadScaledDefaults(float);
-
-    // @note RobTop Addition
-    void calculateWorldSpace();
-
-	// @note RobTop Addition
-    float getTimeElapsed();
-
-	// @note RobTop Addition
-    void setEndAlpha(float alpha) { m_tEndColor.a = alpha; }
-
-	// @note RobTop Addition
-    void setStartAlpha(float alpha) { m_tStartColor.a = alpha; }
-
-	// @note RobTop Addition
-    void toggleUniformColorMode(bool useUniformColorMode) { m_bUseUniformColorMode = useUniformColorMode; }
-	// @note RobTop Addition
-    void updateVisible();
-
-    // @note RobTop Addition
-    int getParticleDrawCost();
+    GD21_ONLY(
+        void saveDefaults(void);
+        void loadDefaults(void);
+        void loadScaledDefaults(float);
+    )
 };
 
 // end of particle_nodes group

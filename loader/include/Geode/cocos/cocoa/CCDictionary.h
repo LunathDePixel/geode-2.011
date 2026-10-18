@@ -409,7 +409,7 @@ public:
     virtual void acceptVisitor(CCDataVisitor &visitor);
 
 	char const* charForKey(gd::string const&);
-	gd::string getFirstKey();
+	GD21_ONLY(gd::string getFirstKey();)
 
     /**
      * Turns this dictionary into a `CCDictionaryExt<K, V>`, making it way more convenient to use.

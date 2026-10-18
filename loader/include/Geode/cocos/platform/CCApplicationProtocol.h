@@ -76,14 +76,12 @@ public:
     */
     virtual void applicationWillEnterForeground() {}
 
-    // @note RobTop Addition
-    virtual void applicationWillBecomeActive() {}
-    // @note RobTop Addition
-    virtual void applicationWillResignActive() {}
-    // @note RobTop Addition
-    virtual void trySaveGame(bool) {}
-    // @note RobTop Addition
-    virtual void gameDidSave() {}
+    RT_ADD(
+        virtual void applicationWillBecomeActive() {}
+        virtual void applicationWillResignActive() {}
+        virtual void trySaveGame() {}
+        virtual void gameDidSave() {}
+    )
 
     /**
     @brief    Callback by CCDirector for limit FPS.

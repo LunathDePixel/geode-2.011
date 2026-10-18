@@ -45,7 +45,6 @@ class CC_DLL CCActionCamera : public CCActionInterval //<NSCopying>
 {
     GEODE_FRIEND_MODIFY
 public:
-    GEODE_CUSTOM_CONSTRUCTOR_COCOS(CCActionCamera, CCActionInterval)
     /**
      *  @js ctor
      */

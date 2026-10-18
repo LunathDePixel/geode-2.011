@@ -71,9 +71,9 @@ using namespace geode::prelude;
 
 // Popup impl
 
-Popup::~Popup() {
-    CCTouchDispatcher::get()->unregisterForcePrio(this);
-}
+// GD 2.011 port: 2.0 has no register/unregisterForcePrio; FLAlertLayer's destructor already
+// calls decrementForcePrio(2), balanced by the incrementForcePrio(2) in init
+Popup::~Popup() = default;
 
 void Popup::registerWithTouchDispatcher() {
     CCTouchDispatcher::get()->addTargetedDelegate(this, -500, true);
@@ -83,7 +83,7 @@ bool Popup::init(
     float width, float height, char const* bg, CCRect bgRect
 ) {
     m_size = CCSize{ width, height };
-    CCTouchDispatcher::get()->registerForcePrio(this, 2);
+    CCTouchDispatcher::get()->incrementForcePrio(2);  // GD 2.011 port: 2.0's force-priority API
 
     if (!this->initWithColor({ 0, 0, 0, 105 })) return false;
     
@@ -206,7 +206,8 @@ public:
         auto inst = new QuickPopup;
         inst->m_selected = std::move(selected);
         inst->m_cancelledByEscape = cancelledByEscape;
-        if (inst->init(inst, title, std::move(content), btn1, btn2, width, false, .0f, 1.0f)) {
+        // GD 2.011 port: no textScale argument in 2.0
+        if (inst->init(inst, title, std::move(content), btn1, btn2, width, false, .0f)) {
             inst->autorelease();
             return inst;
         }

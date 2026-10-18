@@ -199,7 +199,7 @@ public:
      *  @js NA
      *  @lua NA
      */
-    virtual bool initWithTotalParticles(unsigned int numberOfParticles, bool);
+    virtual bool initWithTotalParticles(unsigned int numberOfParticles);
     /**
      * @js NA
      */
@@ -233,13 +233,7 @@ public:
     void listenBackToForeground(CCObject *obj);
 
     static CCParticleSystemQuad * create();
-    static CCParticleSystemQuad * createWithTotalParticles(unsigned int numberOfParticles, bool);
-
-	GLubyte getOpacity() { return m_uOpacity; }
-	void setOpacity(GLubyte opacity) { m_uOpacity = opacity; }
-
-	void updateTexCoords();
-
+    static CCParticleSystemQuad * createWithTotalParticles(unsigned int numberOfParticles);
 private:
 #if CC_TEXTURE_ATLAS_USE_VAO
     void setupVBOandVAO();

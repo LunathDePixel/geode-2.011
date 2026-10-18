@@ -22,13 +22,13 @@ namespace {
 
 struct SaveLoader : Modify<SaveLoader, AppDelegate> {
     GEODE_FORWARD_COMPAT_DISABLE_HOOKS("save moved to CCApplication::gameDidSave()")
-    void trySaveGame(bool p0) {
+    void trySaveGame() {  // GD 2.011 port: no argument in 2.0
         saveModData();
-        return AppDelegate::trySaveGame(p0);
+        return AppDelegate::trySaveGame();
     }
 };
 
-#ifdef GEODE_IS_WINDOWS
+#if defined(GEODE_IS_WINDOWS) && GEODE_COMP_GD_VERSION >= 22000  // GD 2.011 port: gameDidSave is a 2.2 cocos export
 
 struct FallbackSaveLoader : Modify<FallbackSaveLoader, CCApplication> {
     GEODE_FORWARD_COMPAT_ENABLE_HOOKS("")

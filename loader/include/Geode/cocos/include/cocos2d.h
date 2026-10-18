@@ -287,7 +287,6 @@ THE SOFTWARE.
 #include "../textures/CCTextureAtlas.h"
 #include "../textures/CCTextureCache.h"
 #include "../textures/CCTexturePVR.h"
-#include "../textures/CCTextureETC.h"
 
 // tilemap_parallax_nodes
 #include "../tilemap_parallax_nodes/CCParallaxNode.h"

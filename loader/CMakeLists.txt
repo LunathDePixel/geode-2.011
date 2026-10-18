@@ -80,6 +80,14 @@ file(GLOB SOURCES CONFIGURE_DEPENDS
 	src/c++stl/*.cpp
 	hash/hash.cpp
 )
+# GD 2.011 port: pickup triggers are 2.1-only (GJBaseGameLayer::collectItem/collectedObject)
+list(FILTER SOURCES EXCLUDE REGEX ".*/src/hooks/PickupFix\\.cpp$")
+# GD 2.011 port: WindowsFontCacheFix patches CALLs at hard-coded 2.2 libcocos2d offsets (lands in
+# 2.0's pugixml code and corrupts the first save load)
+list(FILTER SOURCES EXCLUDE REGEX ".*/src/hooks/(WindowsFontCacheFix|MessageBoxFix)\\.cpp$")
+# (MessageBoxFix: same problem, its import-table and call-site offsets are 2.204 libcocos2d's)
+# GD 2.011 port: 2.2-only fixes (profile-link names; LevelPage::onPlay has no 2.011 binding yet)
+list(FILTER SOURCES EXCLUDE REGEX ".*/src/hooks/(ProfilePageFix|ImpostorPlayLayerFix)\\.cpp$")
 
 # Obj-c sources
 if ("${CMAKE_SYSTEM_NAME}" STREQUAL "iOS" OR IOS)

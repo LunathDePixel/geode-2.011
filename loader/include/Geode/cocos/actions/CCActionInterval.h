@@ -62,9 +62,6 @@ class CC_DLL CCActionInterval : public CCFiniteTimeAction
 {
     GEODE_FRIEND_MODIFY
 public:
-    GEODE_CUSTOM_CONSTRUCTOR_COCOS(CCActionInterval, CCFiniteTimeAction)
-    CCActionInterval() {}
-
     /** how many seconds had elapsed since the actions started to run. */
     inline float getElapsed(void) { return m_elapsed; }
 
@@ -83,6 +80,9 @@ public:
     /** returns a reversed action */
     virtual CCActionInterval* reverse(void);
 
+    // 2.0: virtual getter, the slot right after reverse()
+    GD20_ADD(virtual bool getM_bFirstTick() const;)
+
 public:
 
     /** creates the action */
@@ -92,9 +92,6 @@ public:
     //extension in CCGridAction
     void setAmplitudeRate(float amp);
     float getAmplitudeRate(void);
-
-    // 2.2 addition
-    bool getM_bFirstTick() const { return m_bFirstTick; } // rob were you like high on something when you wrote this
 
 public:
     float m_elapsed;

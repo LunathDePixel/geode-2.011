@@ -44,7 +44,7 @@ struct TextInputNodeFix : Modify<TextInputNodeFix, CCTextInputNode> {
         }
 
         this->onClickTrackNode(true);
-        this->updateCursorPosition(touchPos, {{0, 0}, size});
+        // GD 2.011 port: 2.0's text field has no cursor positioning (updateCursorPosition is 2.1+)
 
         return true;
     }

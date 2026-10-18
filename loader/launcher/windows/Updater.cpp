@@ -156,7 +156,7 @@ int main(int argc, char* argv[]) {
 
     if (std::filesystem::exists(geodeDir) && std::filesystem::exists(updatesDir)) {
         bool updateSuccess = true;
-        updateSuccess &= updateFile("XInput1_4.dll");
+        // GD 2.011 port: never replace the launcher from an update (official ones target 2.2)
         updateSuccess &= updateFile("Geode.dll");
         updateSuccess &= updateFile("Geode.pdb");
         updateResources();

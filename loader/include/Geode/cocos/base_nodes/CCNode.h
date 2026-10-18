@@ -447,8 +447,13 @@ public:
      */
     virtual const CCSize& getContentSize() const;
 
-    // @note RobTop Addition
-    virtual CCSize getScaledContentSize(void);
+    GD21_ONLY(virtual CCSize getScaledContentSize(void); )
+    // 2.0's libcocos2d has no getScaledContentSize; Geode code relies on it, so provide the same
+    // result as a non-virtual inline (does not touch the vtable)
+    GD20_ADD(inline CCSize getScaledContentSize(void) {
+        auto const& size = this->getContentSize();
+        return CCSize(size.width * this->getScaleX(), size.height * this->getScaleY());
+    })
 
     /**
      * Sets whether the node is visible
@@ -810,8 +815,7 @@ public:
      * }
      * @returns A interger that identifies the node.
      */
-    // Robtop Removal
-    // virtual int getTag() const;
+    GD20_ADD(  virtual int getTag() const; )      // 2.0: CCNode virtual (2.1 moved it to CCObject)
     /**
      * Changes the tag that is used to identify the node easily.
      *
@@ -819,9 +823,8 @@ public:
      *
      * @param A interger that indentifies the node.
      */
-    // Robtop Removal
-    // virtual void setTag(int nTag);
-
+    GD20_ADD(  virtual void setTag(int nTag);  )
+    
     /**
      * Returns a custom user data pointer
      *
@@ -1705,7 +1708,7 @@ public:
     virtual const CCAffineTransform nodeToParentTransform(void);
 
     // 2.2 additions
-    virtual const CCAffineTransform nodeToParentTransformFast();
+    GD21_ONLY(virtual const CCAffineTransform nodeToParentTransformFast();)  // GD 2.011 port: 2.1+ virtual
 
     /**
      * Returns the matrix that transform parent's space coordinates to the node's (local) space coordinates.
@@ -1721,7 +1724,7 @@ public:
     virtual CCAffineTransform nodeToWorldTransform(void);
 
     // 2.2 additions
-    virtual CCAffineTransform nodeToWorldTransformFast();
+    GD21_ONLY(virtual CCAffineTransform nodeToWorldTransformFast();)  // GD 2.011 port: 2.1+ virtual
 
     /**
      * Returns the inverse world affine transform matrix. The matrix is in Pixels.
@@ -1852,7 +1855,7 @@ public:
     CCNode& operator=(const CCNode&);
 
     // 2.2 additions
-    virtual void updateTweenActionInt(float, int);
+    GD21_ONLY(virtual void updateTweenActionInt(float, int);)  // GD 2.011 port: 2.1+ virtual
 
 	inline cocos2d::CCAffineTransform getTransformTemp() { return m_sTransform; }
 
@@ -1915,15 +1918,13 @@ public:
     CCGridBase *m_pGrid;                ///< a grid
 
     // 2.2 additions
-    // Robtop Removal
-    // int m_nZOrder;                     ///< z-order value that affects the draw order
-
+    int m_nZOrder;  /* GD 2.011 port: still in CCNode in 2.0 (2.1 moved it to CCObject) */                     ///< z-order value that affects the draw order
+    
     CCArray *m_pChildren;               ///< array of children nodes
     CCNode *m_pParent;                  ///< weak reference to parent node
-
-    // Robtop Removal
-    // int m_nTag;                         ///< a tag. Can be any number you assigned just to identify this node
-
+    
+    GD20_ADD(  int m_nTag; )                          ///< (2.0: still here, not in CCObject) a tag. Can be any number you assigned just to identify this node
+    
     void *m_pUserData;                  ///< A user assingned void pointer, Can be point to any cpp object
     CCObject *m_pUserObject;            ///< A user assigned CCObject
 
@@ -1932,9 +1933,8 @@ public:
     ccGLServerState m_eGLServerState;   ///< OpenGL servier side state
 
     // 2.2 additions
-    // Robtop Removal
-    // unsigned int m_uOrderOfArrival;     ///< used to preserve sequence while sorting children with the same zOrder
-
+    unsigned int m_uOrderOfArrival;  /* GD 2.011 port: still in CCNode in 2.0 */     ///< used to preserve sequence while sorting children with the same zOrder
+    
     CCScheduler *m_pScheduler;          ///< scheduler used to schedule timers and updates
 
     CCActionManager *m_pActionManager;  ///< a pointer to ActionManager singleton, which is used to handle all the actions
@@ -1954,6 +1954,9 @@ public:
     bool m_bInverseDirty;               ///< transform dirty flag
     bool m_bAdditionalTransformDirty;   ///< The flag to check whether the additional transform is dirty
 
+    // 2.2 additions
+    GD21_ONLY(PAD(10);) // GD 2.011 port: not in 2.0's layout
+    
     bool m_bVisible;                    ///< is this node visible
 
     bool m_bIgnoreAnchorPointForPosition; ///< true if the Anchor Point will be (0,0) when you position the CCNode, false otherwise.
@@ -1967,9 +1970,9 @@ public:
 
     CCComponentContainer *m_pComponentContainer;        ///< Dictionary of components
 
-    // 2.2 additions
-    bool m_bUseChildIndex;
-    bool m_bUnkBool2;
+    // 2.2 additions (not in 2.0)
+    GD21_ONLY(bool m_bUseChildIndex;)
+    GD21_ONLY(bool m_bUnkBool2;)
 };
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS) || (CC_TARGET_PLATFORM == CC_PLATFORM_MAC)

@@ -86,38 +86,7 @@ public:
 
     virtual bool init();
     virtual void draw();
-
-#if GEODE_COMP_GD_VERSION > 22000
-    /** draw a dot at a position, with a given radius and color */
-    bool drawDot(const CCPoint &pos, float radius, const ccColor4F &color);
-
-    /** draw a segment with a radius and color */
-    bool drawSegment(const CCPoint &from, const CCPoint &to, float radius, const ccColor4F &color);
-
-    /** draw a polygon with a fill color and line color
-     * @code
-     * when this funciton bound to js,the input params are changed
-     * js:var drawPolygon(var verts, var fillColor,var borderWidth,var borderColor)
-     * @endcode
-     */
-    bool drawPolygon(CCPoint *verts, unsigned int count, const ccColor4F &fillColor, float borderWidth, const ccColor4F &borderColor, cocos2d::BorderAlignment alignment = BorderAlignment::Outside);
-
-    bool drawCircle(cocos2d::CCPoint const&, float, cocos2d::_ccColor4F const&, float, cocos2d::_ccColor4F const&, unsigned int);
-    void drawCubicBezier(cocos2d::CCPoint const&, cocos2d::CCPoint const&, cocos2d::CCPoint const&, cocos2d::CCPoint const&, unsigned int, cocos2d::_ccColor4F const&, float);
-    void drawPreciseCubicBezier(cocos2d::CCPoint const&, cocos2d::CCPoint const&, cocos2d::CCPoint const&, cocos2d::CCPoint const&, unsigned int, cocos2d::_ccColor4F const&, float);
-    bool drawLines(cocos2d::CCPoint*, unsigned int, float, cocos2d::_ccColor4F const&);
-    bool drawRect(cocos2d::CCPoint const&, cocos2d::CCPoint const&, cocos2d::_ccColor4F const&, float, cocos2d::_ccColor4F const&, cocos2d::BorderAlignment alignment = BorderAlignment::Outside);
-    bool drawRect(cocos2d::CCRect const&, cocos2d::_ccColor4F const&, float, cocos2d::_ccColor4F const&, cocos2d::BorderAlignment alignment = BorderAlignment::Outside);
-    void disableDrawArea();
-    void enableDrawArea(cocos2d::CCRect& rect);
-
-    bool is_circle_on_screen(cocos2d::CCRect const&, cocos2d::CCPoint const&, float);
-    bool is_segment_on_screen(cocos2d::CCRect const&, cocos2d::CCPoint const&, cocos2d::CCPoint const&);
-
-    void drawArchLikeHalfCircle(cocos2d::CCPoint const&, cocos2d::CCPoint const&, float, unsigned int, cocos2d::_ccColor4F const&, float);
-    void drawCubicBezierDashed(cocos2d::CCPoint const&, cocos2d::CCPoint const&, cocos2d::CCPoint const&, cocos2d::CCPoint const&, unsigned int, cocos2d::ccColor4F const&, float, unsigned int, unsigned int);
-    bool drawSegmentEx(cocos2d::CCPoint const&, cocos2d::CCPoint const&, float, cocos2d::_ccColor4F const&, bool, bool);
-#else
+    
     /** draw a dot at a position, with a given radius and color */
     void drawDot(const CCPoint &pos, float radius, const ccColor4F &color);
 
@@ -131,14 +100,7 @@ public:
      * @endcode
      */
     void drawPolygon(CCPoint *verts, unsigned int count, const ccColor4F &fillColor, float borderWidth, const ccColor4F &borderColor);
-
-	void drawCircle(cocos2d::CCPoint const&, float, cocos2d::_ccColor4F const&, float, cocos2d::_ccColor4F const&, unsigned int);
-	void drawCubicBezier(cocos2d::CCPoint const&, cocos2d::CCPoint const&, cocos2d::CCPoint const&, cocos2d::CCPoint const&, unsigned int, cocos2d::_ccColor4F const&);
-	void drawPreciseCubicBezier(cocos2d::CCPoint const&, cocos2d::CCPoint const&, cocos2d::CCPoint const&, cocos2d::CCPoint const&, unsigned int, cocos2d::_ccColor4F const&);
-	void drawLines(cocos2d::CCPoint*, unsigned int, float, cocos2d::_ccColor4F const&);
-	void drawRect(cocos2d::CCPoint const&, cocos2d::CCPoint const&, cocos2d::_ccColor4F const&, float, cocos2d::_ccColor4F const&);
-#endif
-
+    
     /** Clear the geometry in the node's buffer. */
     void clear();
     /**

@@ -159,7 +159,7 @@ public:
     /**
      * Rob modification
      * Add a certain object */
-    void addObjectNew(CCObject* object);
+    GD21_ONLY(void addObjectNew(CCObject* object);)
     /** Add all elements of an existing array */
     void addObjectsFromArray(CCArray* otherArray);
     /** Insert a certain object at a certain index */
@@ -190,13 +190,7 @@ public:
      * Fast way to remove an element with a certain index
      * @note RobTop addition
      */
-    void fastRemoveObjectAtIndexNew(unsigned int index);
-
-	void fastRemoveObjectAtIndexChild(unsigned int);
-
-	void recreateNewIndexes();
-	void removeObjectAtIndexChild(unsigned int, bool);
-
+    GD21_ONLY(void fastRemoveObjectAtIndexNew(unsigned int index);)
 
     // Rearranging Content
 

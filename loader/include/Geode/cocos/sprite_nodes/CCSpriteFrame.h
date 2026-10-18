@@ -166,8 +166,7 @@ public:
     CCSize m_obOriginalSizeInPixels;
     CCTexture2D *m_pobTexture;
     gd::string  m_strTextureFilename;
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(gd::string, m_strFrameName, FrameName);
+    GD21_ONLY( gd::string  m_strFrameName; )   // 2.1 addition (sizeof 0x78 in 2.0)
 };
 
 // end of sprite_nodes group
