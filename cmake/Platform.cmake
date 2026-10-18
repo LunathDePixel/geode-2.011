@@ -61,6 +61,35 @@ elseif (GEODE_TARGET_PLATFORM STREQUAL "MacOS")
 	else()
 		set(GEODE_TARGET_PLATFORM_SHORT "mac")
 	endif()
+elseif (GEODE_TARGET_PLATFORM STREQUAL "Win32")
+	# GD 2.011 port: 32-bit Windows (v2's block), with a static Schannel libcurl 8.10.1
+	# (port/deps/build_curl32.bat) since GD 2.011's own libcurl.dll is 7.26.0
+	set_target_properties(${PROJECT_NAME} PROPERTIES
+		SYSTEM_NAME Win32
+		GENERATOR_PLATFORM x86
+	)
+
+	target_compile_definitions(${PROJECT_NAME} INTERFACE NOMINMAX)
+
+	target_link_libraries(${PROJECT_NAME} INTERFACE
+		${GEODE_LOADER_PATH}/include/link/win32/libcocos2d.lib
+		${GEODE_LOADER_PATH}/include/link/win32/libExtensions.lib
+		${GEODE_LOADER_PATH}/include/link/win32/libcurl.lib
+		${GEODE_LOADER_PATH}/include/link/win32/glew32.lib
+		${GEODE_LOADER_PATH}/include/link/win32/gdstring.lib
+		${GEODE_LOADER_PATH}/include/link/win32/fmod.lib
+		opengl32 ws2_32 crypt32 bcrypt secur32 wldap32 iphlpapi advapi32 normaliz
+	)
+
+	set(GEODE_OUTPUT_NAME "Geode")
+	set(GEODE_PLATFORM_BINARY "Geode.lib")
+	set(GEODE_MOD_BINARY_SUFFIX ".dll" CACHE STRING "" FORCE)
+
+	if (NOT ${PROJECT_NAME} STREQUAL ${CMAKE_PROJECT_NAME})
+		set(GEODE_TARGET_PLATFORM_SHORT "win" PARENT_SCOPE)
+	else()
+		set(GEODE_TARGET_PLATFORM_SHORT "win")
+	endif()
 elseif (GEODE_TARGET_PLATFORM STREQUAL "Win64")
 	set_target_properties(${PROJECT_NAME} PROPERTIES
 		SYSTEM_NAME Win64
