@@ -131,8 +131,7 @@ protected:
     CCNode    *m_pTarget;
     /** The action tag. An identifier of the action */
     int     m_nTag;
-    // @note RobTop Addition
-    float m_fSpeedMod;
+    RT_ADD(float m_fSpeedMod;)
 };
 
 /** 

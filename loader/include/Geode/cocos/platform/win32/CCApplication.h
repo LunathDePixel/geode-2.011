@@ -23,11 +23,8 @@ public:
     /**
     @brief    Run the message loop.
     */
-    // Robtop Removal
-    // virtual int run();
-
-    // @note RobTop Addition
-    virtual void gameDidSave();
+    RT_REMOVE(  virtual int run();  )
+    RT_ADD(     virtual void gameDidSave(); )
 
     /**
     @brief    Get current applicaiton instance.

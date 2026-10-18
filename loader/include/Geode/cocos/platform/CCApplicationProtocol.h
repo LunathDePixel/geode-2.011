@@ -100,8 +100,7 @@ public:
      */
     virtual TargetPlatform getTargetPlatform() { return kTargetWindows; }
 
-    // @note RobTop Addition
-    virtual void openURL(const char* url) {}
+    RT_ADD( virtual void openURL(const char* url) {} )
 };
 
 // end of platform group

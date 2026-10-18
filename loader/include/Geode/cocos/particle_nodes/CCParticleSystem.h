@@ -236,8 +236,12 @@ protected:
     /** weak reference to the CCSpriteBatchNode that renders the CCSprite */
     CC_PROPERTY(CCParticleBatchNode*, m_pBatchNode, BatchNode);
 
-    // @note RobTop Addition: Made non virtual
-    CC_SYNTHESIZE_NV(unsigned int, m_uAtlasIndex, AtlasIndex);
+    RT_REMOVE(
+        CC_SYNTHESIZE(unsigned int, m_uAtlasIndex, AtlasIndex);
+    )
+    RT_ADD(
+        CC_SYNTHESIZE_NV(unsigned int, m_uAtlasIndex, AtlasIndex);
+    )
 
     //true if scaled or rotated
     bool m_bTransformSystemDirty;
@@ -265,9 +269,6 @@ protected:
 
 //////////////////////////////////////////////////////////////////////////
 public:
-	// @note RobTop Addition
-    virtual void updateEmissionRate();
-
     // mode A
     virtual const CCPoint& getGravity();
     virtual void setGravity(const CCPoint& g);
@@ -423,8 +424,9 @@ public:
     void stopSystem();
     //! Kill all living particles.
     void resetSystem();
-    // @note RobTop Addition
-    void resumeSystem();
+    RT_ADD(
+        void resumeSystem();
+    )
     //! whether or not the system is full
     bool isFull();
 
@@ -443,21 +445,14 @@ protected:
     GD21_ONLY(
         // saved/loaded in loadDefaults, loadScaledDefaults and saveDefaults
 
-        // @note RobTop Addition
         float m_fDefaultStartSize;
-        // @note RobTop Addition
         float m_fDefaultStartSizeVar;
         // saved as m_fEndSize but not loaded,
         // probably was supposed to be m_fDefaultEndSizeVar and saved and loaded as m_fEndSizeVar but was scrapped?
-        // @note RobTop Addition
         float m_fDefaultEndSize2;
-        // @note RobTop Addition
         float m_fDefaultEndSize;
-        // @note RobTop Addition
         float m_fDefaultModeASpeed;
-        // @note RobTop Addition
         float m_fDefaultModeASpeedVar;
-        // @note RobTop Addition
         CCPoint m_tDefaultPosVar;
     )
 public:
