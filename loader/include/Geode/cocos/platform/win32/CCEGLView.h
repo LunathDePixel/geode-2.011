@@ -38,12 +38,11 @@ typedef LRESULT (*CUSTOM_WND_PROC)(UINT message, WPARAM wParam, LPARAM lParam, B
 
 class CCEGL;
 
-// @note RobTop Addition: added CCObject inheritance
-class CC_DLL CCEGLView : public CCEGLViewProtocol, public CCObject
+class CC_DLL CCEGLView : public CCEGLViewProtocol RT_ADD(, public CCObject)
 {
     GEODE_FRIEND_MODIFY
 protected:
-    virtual ~CCEGLView();
+    RT_ADD( virtual ~CCEGLView(); )
 public:
     CCEGLView();
 
@@ -57,13 +56,14 @@ public:
 
     CCEGLView(geode::CutoffConstructorType, size_t fill) : CCEGLView() {}
 
+    RT_REMOVE(  virtual ~CCEGLView();   )
+
     /* override functions */
     virtual bool isOpenGLReady();
     virtual void end();
     virtual void swapBuffers();
     virtual void setFrameSize(float width, float height);
-	// Robtop Removal
-    // virtual void setEditorFrameSize(float width, float height,HWND hWnd);
+	RT_REMOVE(  virtual void setEditorFrameSize(float width, float height,HWND hWnd);   )
     virtual void setIMEKeyboardState(bool bOpen);
     void updateWindow(int width, int height);
     void pollEvents(void);
@@ -72,42 +72,33 @@ public:
     void setWndProc(CUSTOM_WND_PROC proc);
 
 protected:
-    // Robtop Removal
-    // virtual bool Create();
+    RT_REMOVE(  virtual bool Create();  )
     void setupWindow(cocos2d::CCRect rect);
-    // @note RobTop Addition
-    bool initGlew();
+    RT_ADD(bool initGlew();)
 
 public:
-    // Robtop Removal
-    // bool initGL();
-    // Robtop Removal
-    // void destroyGL();
+    RT_REMOVE(bool initGL();)
+    RT_REMOVE(void destroyGL();)
 
-    // Robtop Removal
-    // virtual LRESULT WindowProc(UINT message, WPARAM wParam, LPARAM lParam);
+    RT_REMOVE(  virtual LRESULT WindowProc(UINT message, WPARAM wParam, LPARAM lParam); )
 
 	void setHWnd(HWND hWnd);
     // win32 platform function
-    // Robtop Removal
-    // HWND getHWnd();
-    // Robtop Removal
-    // virtual void resize(int width, int height);
-    // @note RobTop Addition
-     void resizeWindow(int width, int height);
-
-    /*
+    RT_REMOVE( HWND getHWnd(); )
+    RT_REMOVE(  virtual void resize(int width, int height); )
+    RT_ADD(     void resizeWindow(int width, int height);   )
+	
+    /* 
      * Set zoom factor for frame. This method is for debugging big resolution (e.g.new ipad) app on desktop.
      */
     void setFrameZoomFactor(float fZoomFactor);
 	float getFrameZoomFactor();
-    // @note RobTop Addition: made non virtual
-    void centerWindow();
-    // @note RobTop Addition
-    bool windowShouldClose();
-    // @note RobTop Addition
-    void showCursor(bool state);
+    RT_REMOVE(  virtual void centerWindow();    )
+    RT_ADD(     void centerWindow();            )
+    RT_ADD(     bool windowShouldClose();       )
 
+    RT_ADD(     void showCursor(bool state);    )
+	    
     typedef void (*LPFN_ACCELEROMETER_KEYHOOK)( UINT message,WPARAM wParam, LPARAM lParam );
     void setAccelerometerKeyHook( LPFN_ACCELEROMETER_KEYHOOK lpfnAccelerometerKeyHook );
 
@@ -153,34 +144,28 @@ public:
 protected:
 	static CCEGLView* s_pEglView;
     bool m_bCaptured;
-    // Robtop Removal
-    // HWND m_hWnd;
-    // Robtop Removal
-    // HDC  m_hDC;
-    // Robtop Removal
-    // HGLRC m_hRC;
-    // Robtop Removal
-    // LPFN_ACCELEROMETER_KEYHOOK m_lpfnAccelerometerKeyHook;
+    RT_REMOVE(
+    HWND m_hWnd;
+    HDC  m_hDC;
+    HGLRC m_hRC;
+    LPFN_ACCELEROMETER_KEYHOOK m_lpfnAccelerometerKeyHook;
+    )
     bool m_bSupportTouch;
-    // @note RobTop Addition
-    bool m_bInRetinaMonitor;
-    // @note RobTop Addition
-    bool m_bRetinaEnabled;
-    // @note RobTop Addition
-    int m_nRetinaFactor;
-    // @note RobTop Addition
-    bool m_bCursorHidden;
-    // @note may be before m_bCursorHidden
-    int m_unkSize4;
-    // Robtop Removal
-    // LPCWSTR m_menu;
-    // Robtop Removal
-    // CUSTOM_WND_PROC m_wndproc;
+    RT_ADD(
+        bool m_bInRetinaMonitor;
+        bool m_bRetinaEnabled;
+        int m_nRetinaFactor;
+        bool m_bCursorHidden;
+    )
+    RT_REMOVE(
+    LPCWSTR m_menu;
+    CUSTOM_WND_PROC m_wndproc;
+    )
     float m_fFrameZoomFactor;
-    // @note RobTop Addition
-    GLFWwindow* m_pMainWindow;
-    // @note RobTop Addition
-    GLFWmonitor* m_pPrimaryMonitor;
+    RT_ADD(
+        GLFWwindow* m_pMainWindow;
+        GLFWmonitor* m_pPrimaryMonitor;
+    )
 public:
     RT_ADD(
         CC_SYNTHESIZE_NV(CCSize, m_obWindowedSize, WindowedSize);
@@ -202,32 +187,20 @@ public:
     )
 
 protected:
-    // @note RobTop Addition
-    void onGLFWCharCallback(GLFWwindow* window, unsigned int entered);
-    // @note RobTop Addition
-    void onGLFWCursorEnterFunCallback(GLFWwindow* window, int entered);
-    // @note RobTop Addition
-    void onGLFWDeviceChangeFunCallback(GLFWwindow* window);
-    // @note RobTop Addition
-    void onGLFWError(int code, const char* description);
-    // @note RobTop Addition
-    void onGLFWframebuffersize(GLFWwindow* window, int width, int height);
-    // @note RobTop Addition
-    void onGLFWMouseMoveCallBack(GLFWwindow* window, double x, double y);
-    // @note RobTop Addition
-    void onGLFWMouseCallBack(GLFWwindow* window, int button, int action, int mods);
-    // @note RobTop Addition
-    void onGLFWKeyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
-    // @note RobTop Addition
-    void onGLFWMouseScrollCallback(GLFWwindow* window, double xoffset, double yoffset);
-    // @note RobTop Addition
-    void onGLFWWindowIconifyFunCallback(GLFWwindow* window, int iconified);
-    // @note RobTop Addition
-    void onGLFWWindowPosCallback(GLFWwindow* window, int x, int y);
-    // @note RobTop Addition
-    void onGLFWWindowSizeFunCallback(GLFWwindow* window, int width, int height);
-    // @note RobTop Addition
-    void onGLFWWindowFocus(GLFWwindow* window, int focused);
+    RT_ADD(
+        void onGLFWCharCallback(GLFWwindow* window, unsigned int entered);
+        void onGLFWCursorEnterFunCallback(GLFWwindow* window, int entered);
+        void onGLFWDeviceChangeFunCallback(GLFWwindow* window);
+        void onGLFWError(int code, const char* description);
+        void onGLFWframebuffersize(GLFWwindow* window, int width, int height);
+        void onGLFWMouseMoveCallBack(GLFWwindow* window, double x, double y);
+        void onGLFWMouseCallBack(GLFWwindow* window, int button, int action, int mods);
+        void onGLFWKeyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
+        void onGLFWMouseScrollCallback(GLFWwindow* window, double xoffset, double yoffset);
+        void onGLFWWindowIconifyFunCallback(GLFWwindow* window, int iconified);
+        void onGLFWWindowPosCallback(GLFWwindow* window, int x, int y);
+        void onGLFWWindowSizeFunCallback(GLFWwindow* window, int width, int height);
+    )
 };
 
 NS_CC_END

@@ -68,17 +68,17 @@ public:
 
 
     // @note RobTop Addition
-    bool            m_bUseArea;
+    GD21_ONLY(bool            m_bUseArea;)  // GD 2.011 port: 2.2 field
     // @note RobTop Addition
-    CCRect          m_rDrawArea;
+    GD21_ONLY(CCRect          m_rDrawArea;)  // GD 2.011 port: 2.2 field
     // @note RobTop Addition
-    float           m_fMinAreaX;
+    GD21_ONLY(float           m_fMinAreaX;)  // GD 2.011 port: 2.2 field
     // @note RobTop Addition
-    float           m_fMaxAreaX;
+    GD21_ONLY(float           m_fMaxAreaX;)  // GD 2.011 port: 2.2 field
     // @note RobTop Addition
-    float           m_fMaxAreaY;
+    GD21_ONLY(float           m_fMaxAreaY;)  // GD 2.011 port: 2.2 field
     // @note RobTop Addition
-    float           m_fMinAreaY;
+    GD21_ONLY(float           m_fMinAreaY;)  // GD 2.011 port: 2.2 field
 
 public:
     static CCDrawNode* create();

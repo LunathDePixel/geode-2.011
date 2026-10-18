@@ -278,10 +278,10 @@ public:
     inline ccBlendFunc getBlendFunc(void) { return m_sBlendFunc; }
     /// @}
 
-    // @note RobTop Addition
-    virtual void setChildColor(const ccColor3B&);
-    // @note RobTop Addition
-    virtual void setChildOpacity(GLubyte);
+    RT_ADD(
+        virtual void setChildColor(const ccColor3B&);
+        virtual void setChildOpacity(GLubyte);
+    )
 
     /// @{
     /// @name Functions inherited from CCNode
@@ -525,8 +525,8 @@ public:
 
 protected:
     void updateColor(void);
-    // @note RobTop Addition: Changed the param from CCRect to const CCRect&
-    virtual void setTextureCoords(const CCRect& rect);
+    RT_REMOVE(  virtual void setTextureCoords(CCRect rect);         )
+    RT_ADD(     virtual void setTextureCoords(const CCRect& rect);  )
     virtual void updateBlendFunc(void);
     virtual void setReorderChildDirtyRecursively(void);
     virtual void setDirtyRecursively(bool bValue);

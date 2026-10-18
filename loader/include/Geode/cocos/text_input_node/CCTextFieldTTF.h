@@ -93,8 +93,9 @@ public:
         return false;
     }
 
-    // @note RobTop Addition
-    virtual void textChanged() {}
+    RT_ADD(
+    	virtual void textChanged() {}
+    )
 };
 
 /**
@@ -182,8 +183,6 @@ protected:
 public:
     class LengthStack;
     LengthStack * m_pLens;
-public:
-    int m_uCursorPos;
 };
 
 // end of input group

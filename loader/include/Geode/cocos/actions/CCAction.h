@@ -131,8 +131,7 @@ public:
     CCNode    *m_pTarget;
     /** The action tag. An identifier of the action */
     int     m_nTag;
-    // @note RobTop Addition
-    CC_SYNTHESIZE_NV(float, m_fSpeedMod, SpeedMod);
+    RT_ADD(float m_fSpeedMod;)
 };
 
 /**
