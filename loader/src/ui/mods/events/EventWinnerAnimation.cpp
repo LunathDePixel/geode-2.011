@@ -2,6 +2,7 @@
 #include <Geode/binding/CCLightFlash.hpp>
 #include <Geode/binding/GameToolbox.hpp>
 #include <Geode/binding/FMODAudioEngine.hpp>
+#include <Geode/binding/GameSoundManager.hpp>
 #include <Geode/binding/CCCircleWave.hpp>
 #include <Geode/binding/ButtonSprite.hpp>
 #include <Geode/binding/CCMenuItemSpriteExtra.hpp>
@@ -78,6 +79,7 @@ bool EventWinnerAnimation::init() {
     logo->setZOrder(1);
     this->addChildAtPosition(logo, Anchor::Center);
 
+#ifndef GEODE_IS_WINDOWS32  // GD 2.011 port: CCLightFlash::create has no 2.0 address (inlined)
     auto flash = CCLightFlash::create();
     auto size = cocos2d::CCDirector::sharedDirector()->getWinSize();
     float screenDiagonalSize = sqrtf(size.width * size.width + size.height * size.height) + 30.f;
@@ -104,11 +106,17 @@ bool EventWinnerAnimation::init() {
         /* delay */ 1.1f
     );
     this->addChild(flash);
+#endif
 
+#ifdef GEODE_IS_WINDOWS32
+    // GD 2.011 port: no GameToolbox::particleFromString in 2.0; a stock effect instead
+    auto particles = CCParticleSystemQuad::create("explodeEffect.plist");
+#else
     auto particles = GameToolbox::particleFromString(
         "30a-1a1.09a0.3a30a-1a180a29a0a0a0a0a0a0a0a0a0a2a1a0a27a1a0a1a0a1a0a1a0a1a1a0a27a1a0a1a0a1a0a1a0a0a0a0a0a0a0a0a0a0a0a0a2a1a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0",
         nullptr, false
     );
+#endif
     particles->setScale(2.f);
     this->addChildAtPosition(particles, Anchor::Center);
 
@@ -129,7 +137,9 @@ bool EventWinnerAnimation::init() {
     this->runAction(CCSequence::create(
         CCDelayTime::create(2.f),
         CallFuncExt::create([=, this]() {
+#ifndef GEODE_IS_WINDOWS32
             flash->removeFromParent();
+#endif
             cloud->removeFromParent();
 
             particles->setStartColor(to4F(ccc4(255, 156, 181, 255)));
@@ -147,14 +157,14 @@ bool EventWinnerAnimation::init() {
             ));
             this->addChildAtPosition(screenFlash, Anchor::Center);
 
-            auto explosion = CCParticleSystemQuad::create("explodeEffect.plist", false);
+            auto explosion = CCParticleSystemQuad::create("explodeEffect.plist" GEODE_WINDOWS64(, false));
             explosion->setPositionType(kCCPositionTypeGrouped);
             explosion->setAutoRemoveOnFinish(true);
             explosion->setStartColor(to4F(ccc4(255, 255, 255, 255)));
             explosion->resetSystem();
             this->addChildAtPosition(explosion, Anchor::Center);
 
-            auto circleWave = CCCircleWave::create(10, 90, .5f, false);
+            auto circleWave = CCCircleWave::create(10, 90, .5f, false GEODE_WINDOWS32(, true));  // GD 2.011 port: only the 5-arg create in 2.0
             circleWave->m_color = ccc3(255, 255, 255);
             this->addChildAtPosition(circleWave, Anchor::Center);
 
@@ -236,7 +246,11 @@ bool EventWinnerAnimation::init() {
         nullptr
     ));
 
+#ifdef GEODE_IS_WINDOWS32
+    GameSoundManager::sharedManager()->playEffect("endStart_02.ogg", 1.f, 0.f, 1.f);  // GD 2.011 port
+#else
     FMODAudioEngine::get()->playEffect("endStart_02.ogg");
+#endif
 
     return true;
 }

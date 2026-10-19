@@ -88,6 +88,11 @@ list(FILTER SOURCES EXCLUDE REGEX ".*/src/hooks/(WindowsFontCacheFix|MessageBoxF
 # (MessageBoxFix: same problem, its import-table and call-site offsets are 2.204 libcocos2d's)
 # GD 2.011 port: 2.2-only fixes (profile-link names; LevelPage::onPlay has no 2.011 binding yet)
 list(FILTER SOURCES EXCLUDE REGEX ".*/src/hooks/(ProfilePageFix|ImpostorPlayLayerFix)\\.cpp$")
+# GD 2.011 port (v5): 2.2's input pipeline -- raw-input/GLFW callback replacement, extra keycodes
+# through the 2.2 dispatchKeyboardMSG, the 2.2 keybinds menu, FMOD Studio's ChannelControl, and
+# CCDrawNode's 2.2 draw-area field. None of these exist in 2.0.
+list(FILTER SOURCES EXCLUDE REGEX ".*/src/platform/windows/input\\.cpp$")
+list(FILTER SOURCES EXCLUDE REGEX ".*/src/hooks/(AddExtraKeys|KeybindHooks|FMODFix|CCDrawNodeDrawAreaFix)\\.cpp$")
 
 # Obj-c sources
 if ("${CMAKE_SYSTEM_NAME}" STREQUAL "iOS" OR IOS)
@@ -122,6 +127,8 @@ if (WIN32)
 	file(GLOB WIN_SOURCES CONFIGURE_DEPENDS 
 		src/platform/windows/*.cpp
 	)
+	# GD 2.011 port (v5): 2.2's raw-input/GLFW callback replacement; 2.0 has none of it
+	list(FILTER WIN_SOURCES EXCLUDE REGEX ".*/src/platform/windows/input\\.cpp$")
 	list(APPEND SOURCES ${WIN_SOURCES})
 
 elseif("${CMAKE_SYSTEM_NAME}" STREQUAL "iOS" OR IOS)

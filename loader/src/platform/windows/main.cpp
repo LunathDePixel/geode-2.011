@@ -197,7 +197,7 @@ int WINAPI gdMainHook(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmd
         }
     }
 
-    return reinterpret_cast<decltype(&wWinMain)>(g_winMainTrampoline)(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
+    return reinterpret_cast<decltype(&wWinMain)>(mainTrampolineAddr)(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
 }
 
 // incase we're desperate again

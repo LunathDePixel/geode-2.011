@@ -762,13 +762,14 @@ void ModsLayer::goToPage2011(int num) {
 
 #ifdef GEODE_IS_WINDOWS32
 // GD 2.011 port: 2.0 has no SetIDPopup; a minimal Geode-made "Go to Page" popup
-class GoToPagePopup2011 : public Popup<ModsLayer*, int, int> {
+class GoToPagePopup2011 : public Popup {
 protected:
     ModsLayer* m_layer;
     TextInput* m_input;
     int m_max;
 
-    bool setup(ModsLayer* layer, int current, int max) override {
+    bool init(ModsLayer* layer, int current, int max) {
+        if (!Popup::init(180.f, 120.f)) return false;
         m_layer = layer;
         m_max = max;
         this->setTitle("Go to Page");
@@ -792,7 +793,7 @@ protected:
 public:
     static GoToPagePopup2011* create(ModsLayer* layer, int current, int max) {
         auto ret = new GoToPagePopup2011();
-        if (ret->initAnchored(180.f, 120.f, layer, current, max)) {
+        if (ret->init(layer, current, max)) {
             ret->autorelease();
             return ret;
         }

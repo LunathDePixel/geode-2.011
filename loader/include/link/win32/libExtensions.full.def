@@ -1,0 +1,780 @@
+LIBRARY libExtensions.dll
+EXPORTS
+    ??0AssetsManager@extension@cocos2d@@QAE@ABV012@@Z
+    ??0AssetsManager@extension@cocos2d@@QAE@PBD00@Z
+    ??0AssetsManagerDelegateProtocol@extension@cocos2d@@QAE@ABV012@@Z
+    ??0AssetsManagerDelegateProtocol@extension@cocos2d@@QAE@XZ
+    ??0CCArrayForObjectSorting@extension@cocos2d@@QAE@ABV012@@Z
+    ??0CCArrayForObjectSorting@extension@cocos2d@@QAE@XZ
+    ??0CCColor3bObject@extension@cocos2d@@QAE@ABV012@@Z
+    ??0CCColor3bObject@extension@cocos2d@@QAE@U_ccColor3B@2@@Z
+    ??0CCControl@extension@cocos2d@@QAE@ABV012@@Z
+    ??0CCControl@extension@cocos2d@@QAE@XZ
+    ??0CCControlButton@extension@cocos2d@@QAE@ABV012@@Z
+    ??0CCControlButton@extension@cocos2d@@QAE@XZ
+    ??0CCControlColourPicker@extension@cocos2d@@QAE@ABV012@@Z
+    ??0CCControlColourPicker@extension@cocos2d@@QAE@XZ
+    ??0CCControlHuePicker@extension@cocos2d@@QAE@ABV012@@Z
+    ??0CCControlHuePicker@extension@cocos2d@@QAE@XZ
+    ??0CCControlPotentiometer@extension@cocos2d@@QAE@ABV012@@Z
+    ??0CCControlPotentiometer@extension@cocos2d@@QAE@XZ
+    ??0CCControlSaturationBrightnessPicker@extension@cocos2d@@QAE@ABV012@@Z
+    ??0CCControlSaturationBrightnessPicker@extension@cocos2d@@QAE@XZ
+    ??0CCControlSlider@extension@cocos2d@@QAE@ABV012@@Z
+    ??0CCControlSlider@extension@cocos2d@@QAE@XZ
+    ??0CCControlStepper@extension@cocos2d@@QAE@ABV012@@Z
+    ??0CCControlStepper@extension@cocos2d@@QAE@XZ
+    ??0CCControlSwitch@extension@cocos2d@@QAE@ABV012@@Z
+    ??0CCControlSwitch@extension@cocos2d@@QAE@XZ
+    ??0CCEditBox@extension@cocos2d@@QAE@ABV012@@Z
+    ??0CCEditBox@extension@cocos2d@@QAE@XZ
+    ??0CCEditBoxDelegate@extension@cocos2d@@QAE@ABV012@@Z
+    ??0CCEditBoxDelegate@extension@cocos2d@@QAE@XZ
+    ??0CCEditBoxImpl@extension@cocos2d@@QAE@ABV012@@Z
+    ??0CCEditBoxImpl@extension@cocos2d@@QAE@PAVCCEditBox@12@@Z
+    ??0CCEditBoxImplWin@extension@cocos2d@@QAE@ABV012@@Z
+    ??0CCEditBoxImplWin@extension@cocos2d@@QAE@PAVCCEditBox@12@@Z
+    ??0CCHttpClient@extension@cocos2d@@AAE@XZ
+    ??0CCHttpClient@extension@cocos2d@@QAE@ABV012@@Z
+    ??0CCHttpRequest@extension@cocos2d@@QAE@ABV012@@Z
+    ??0CCHttpRequest@extension@cocos2d@@QAE@XZ
+    ??0CCHttpResponse@extension@cocos2d@@QAE@ABV012@@Z
+    ??0CCHttpResponse@extension@cocos2d@@QAE@PAVCCHttpRequest@12@@Z
+    ??0CCInvocation@extension@cocos2d@@QAE@ABV012@@Z
+    ??0CCInvocation@extension@cocos2d@@QAE@PAVCCObject@2@P832@AEX0I@ZI@Z
+    ??0CCScale9Sprite@extension@cocos2d@@QAE@ABV012@@Z
+    ??0CCScale9Sprite@extension@cocos2d@@QAE@XZ
+    ??0CCScrollView@extension@cocos2d@@QAE@ABV012@@Z
+    ??0CCScrollView@extension@cocos2d@@QAE@XZ
+    ??0CCScrollViewDelegate@extension@cocos2d@@QAE@ABV012@@Z
+    ??0CCScrollViewDelegate@extension@cocos2d@@QAE@XZ
+    ??0CCSortableObject@extension@cocos2d@@QAE@ABV012@@Z
+    ??0CCSortableObject@extension@cocos2d@@QAE@XZ
+    ??0CCTableView@extension@cocos2d@@QAE@ABV012@@Z
+    ??0CCTableView@extension@cocos2d@@QAE@XZ
+    ??0CCTableViewCell@extension@cocos2d@@QAE@ABV012@@Z
+    ??0CCTableViewCell@extension@cocos2d@@QAE@XZ
+    ??0CCTableViewDataSource@extension@cocos2d@@QAE@ABV012@@Z
+    ??0CCTableViewDataSource@extension@cocos2d@@QAE@XZ
+    ??0CCTableViewDelegate@extension@cocos2d@@QAE@ABV012@@Z
+    ??0CCTableViewDelegate@extension@cocos2d@@QAE@XZ
+    ??0CWin32InputBox@@QAE@PAUWIN32INPUTBOX_PARAM@@@Z
+    ??0ColorPickerDelegate@extension@cocos2d@@QAE@ABV012@@Z
+    ??0ColorPickerDelegate@extension@cocos2d@@QAE@XZ
+    ??0WebSocket@extension@cocos2d@@QAE@ABV012@@Z
+    ??0WebSocket@extension@cocos2d@@QAE@XZ
+    ??1AssetsManager@extension@cocos2d@@UAE@XZ
+    ??1CCArrayForObjectSorting@extension@cocos2d@@UAE@XZ
+    ??1CCColor3bObject@extension@cocos2d@@UAE@XZ
+    ??1CCControl@extension@cocos2d@@UAE@XZ
+    ??1CCControlButton@extension@cocos2d@@UAE@XZ
+    ??1CCControlColourPicker@extension@cocos2d@@UAE@XZ
+    ??1CCControlHuePicker@extension@cocos2d@@UAE@XZ
+    ??1CCControlPotentiometer@extension@cocos2d@@UAE@XZ
+    ??1CCControlSaturationBrightnessPicker@extension@cocos2d@@UAE@XZ
+    ??1CCControlSlider@extension@cocos2d@@UAE@XZ
+    ??1CCControlStepper@extension@cocos2d@@UAE@XZ
+    ??1CCControlSwitch@extension@cocos2d@@UAE@XZ
+    ??1CCEditBox@extension@cocos2d@@UAE@XZ
+    ??1CCEditBoxDelegate@extension@cocos2d@@UAE@XZ
+    ??1CCEditBoxImpl@extension@cocos2d@@UAE@XZ
+    ??1CCEditBoxImplWin@extension@cocos2d@@UAE@XZ
+    ??1CCHttpClient@extension@cocos2d@@EAE@XZ
+    ??1CCHttpRequest@extension@cocos2d@@UAE@XZ
+    ??1CCHttpResponse@extension@cocos2d@@UAE@XZ
+    ??1CCInvocation@extension@cocos2d@@UAE@XZ
+    ??1CCScale9Sprite@extension@cocos2d@@UAE@XZ
+    ??1CCScrollView@extension@cocos2d@@UAE@XZ
+    ??1CCScrollViewDelegate@extension@cocos2d@@UAE@XZ
+    ??1CCSortableObject@extension@cocos2d@@UAE@XZ
+    ??1CCTableView@extension@cocos2d@@UAE@XZ
+    ??1CCTableViewCell@extension@cocos2d@@UAE@XZ
+    ??1CCTableViewDataSource@extension@cocos2d@@UAE@XZ
+    ??1CCTableViewDelegate@extension@cocos2d@@UAE@XZ
+    ??1CWin32InputBox@@QAE@XZ
+    ??1WebSocket@extension@cocos2d@@UAE@XZ
+    ??4AssetsManager@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4AssetsManagerDelegateProtocol@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4CCArrayForObjectSorting@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4CCColor3bObject@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4CCControl@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4CCControlButton@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4CCControlColourPicker@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4CCControlHuePicker@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4CCControlPotentiometer@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4CCControlSaturationBrightnessPicker@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4CCControlSlider@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4CCControlStepper@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4CCControlSwitch@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4CCControlUtils@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4CCEditBox@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4CCEditBoxDelegate@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4CCEditBoxImpl@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4CCEditBoxImplWin@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4CCHttpClient@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4CCHttpRequest@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4CCHttpResponse@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4CCInvocation@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4CCScale9Sprite@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4CCScrollView@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4CCScrollViewDelegate@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4CCSortableObject@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4CCTableView@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4CCTableViewCell@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4CCTableViewDataSource@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4CCTableViewDelegate@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4CWin32InputBox@@QAEAAV0@ABV0@@Z
+    ??4ColorPickerDelegate@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??4WebSocket@extension@cocos2d@@QAEAAV012@ABV012@@Z
+    ??_7AssetsManager@extension@cocos2d@@6B@ DATA
+    ??_7AssetsManagerDelegateProtocol@extension@cocos2d@@6B@ DATA
+    ??_7CCArrayForObjectSorting@extension@cocos2d@@6B@ DATA
+    ??_7CCColor3bObject@extension@cocos2d@@6B@ DATA
+    ??_7CCControl@extension@cocos2d@@6B@ DATA
+    ??_7CCControl@extension@cocos2d@@6BCCAccelerometerDelegate@2@@ DATA
+    ??_7CCControl@extension@cocos2d@@6BCCKeyboardDelegate@2@@ DATA
+    ??_7CCControl@extension@cocos2d@@6BCCKeypadDelegate@2@@ DATA
+    ??_7CCControl@extension@cocos2d@@6BCCMouseDelegate@2@@ DATA
+    ??_7CCControl@extension@cocos2d@@6BCCNode@2@@ DATA
+    ??_7CCControl@extension@cocos2d@@6BCCTouchDelegate@2@@ DATA
+    ??_7CCControlButton@extension@cocos2d@@6B@ DATA
+    ??_7CCControlButton@extension@cocos2d@@6BCCAccelerometerDelegate@2@@ DATA
+    ??_7CCControlButton@extension@cocos2d@@6BCCKeyboardDelegate@2@@ DATA
+    ??_7CCControlButton@extension@cocos2d@@6BCCKeypadDelegate@2@@ DATA
+    ??_7CCControlButton@extension@cocos2d@@6BCCMouseDelegate@2@@ DATA
+    ??_7CCControlButton@extension@cocos2d@@6BCCNode@2@@ DATA
+    ??_7CCControlButton@extension@cocos2d@@6BCCTouchDelegate@2@@ DATA
+    ??_7CCControlColourPicker@extension@cocos2d@@6B@ DATA
+    ??_7CCControlColourPicker@extension@cocos2d@@6BCCAccelerometerDelegate@2@@ DATA
+    ??_7CCControlColourPicker@extension@cocos2d@@6BCCKeyboardDelegate@2@@ DATA
+    ??_7CCControlColourPicker@extension@cocos2d@@6BCCKeypadDelegate@2@@ DATA
+    ??_7CCControlColourPicker@extension@cocos2d@@6BCCMouseDelegate@2@@ DATA
+    ??_7CCControlColourPicker@extension@cocos2d@@6BCCNode@2@@ DATA
+    ??_7CCControlColourPicker@extension@cocos2d@@6BCCTouchDelegate@2@@ DATA
+    ??_7CCControlHuePicker@extension@cocos2d@@6B@ DATA
+    ??_7CCControlHuePicker@extension@cocos2d@@6BCCAccelerometerDelegate@2@@ DATA
+    ??_7CCControlHuePicker@extension@cocos2d@@6BCCKeyboardDelegate@2@@ DATA
+    ??_7CCControlHuePicker@extension@cocos2d@@6BCCKeypadDelegate@2@@ DATA
+    ??_7CCControlHuePicker@extension@cocos2d@@6BCCMouseDelegate@2@@ DATA
+    ??_7CCControlHuePicker@extension@cocos2d@@6BCCNode@2@@ DATA
+    ??_7CCControlHuePicker@extension@cocos2d@@6BCCTouchDelegate@2@@ DATA
+    ??_7CCControlPotentiometer@extension@cocos2d@@6B@ DATA
+    ??_7CCControlPotentiometer@extension@cocos2d@@6BCCAccelerometerDelegate@2@@ DATA
+    ??_7CCControlPotentiometer@extension@cocos2d@@6BCCKeyboardDelegate@2@@ DATA
+    ??_7CCControlPotentiometer@extension@cocos2d@@6BCCKeypadDelegate@2@@ DATA
+    ??_7CCControlPotentiometer@extension@cocos2d@@6BCCMouseDelegate@2@@ DATA
+    ??_7CCControlPotentiometer@extension@cocos2d@@6BCCNode@2@@ DATA
+    ??_7CCControlPotentiometer@extension@cocos2d@@6BCCTouchDelegate@2@@ DATA
+    ??_7CCControlSaturationBrightnessPicker@extension@cocos2d@@6B@ DATA
+    ??_7CCControlSaturationBrightnessPicker@extension@cocos2d@@6BCCAccelerometerDelegate@2@@ DATA
+    ??_7CCControlSaturationBrightnessPicker@extension@cocos2d@@6BCCKeyboardDelegate@2@@ DATA
+    ??_7CCControlSaturationBrightnessPicker@extension@cocos2d@@6BCCKeypadDelegate@2@@ DATA
+    ??_7CCControlSaturationBrightnessPicker@extension@cocos2d@@6BCCMouseDelegate@2@@ DATA
+    ??_7CCControlSaturationBrightnessPicker@extension@cocos2d@@6BCCNode@2@@ DATA
+    ??_7CCControlSaturationBrightnessPicker@extension@cocos2d@@6BCCTouchDelegate@2@@ DATA
+    ??_7CCControlSlider@extension@cocos2d@@6B@ DATA
+    ??_7CCControlSlider@extension@cocos2d@@6BCCAccelerometerDelegate@2@@ DATA
+    ??_7CCControlSlider@extension@cocos2d@@6BCCKeyboardDelegate@2@@ DATA
+    ??_7CCControlSlider@extension@cocos2d@@6BCCKeypadDelegate@2@@ DATA
+    ??_7CCControlSlider@extension@cocos2d@@6BCCMouseDelegate@2@@ DATA
+    ??_7CCControlSlider@extension@cocos2d@@6BCCNode@2@@ DATA
+    ??_7CCControlSlider@extension@cocos2d@@6BCCTouchDelegate@2@@ DATA
+    ??_7CCControlStepper@extension@cocos2d@@6B@ DATA
+    ??_7CCControlStepper@extension@cocos2d@@6BCCAccelerometerDelegate@2@@ DATA
+    ??_7CCControlStepper@extension@cocos2d@@6BCCKeyboardDelegate@2@@ DATA
+    ??_7CCControlStepper@extension@cocos2d@@6BCCKeypadDelegate@2@@ DATA
+    ??_7CCControlStepper@extension@cocos2d@@6BCCMouseDelegate@2@@ DATA
+    ??_7CCControlStepper@extension@cocos2d@@6BCCNode@2@@ DATA
+    ??_7CCControlStepper@extension@cocos2d@@6BCCTouchDelegate@2@@ DATA
+    ??_7CCControlSwitch@extension@cocos2d@@6B@ DATA
+    ??_7CCControlSwitch@extension@cocos2d@@6BCCAccelerometerDelegate@2@@ DATA
+    ??_7CCControlSwitch@extension@cocos2d@@6BCCKeyboardDelegate@2@@ DATA
+    ??_7CCControlSwitch@extension@cocos2d@@6BCCKeypadDelegate@2@@ DATA
+    ??_7CCControlSwitch@extension@cocos2d@@6BCCMouseDelegate@2@@ DATA
+    ??_7CCControlSwitch@extension@cocos2d@@6BCCNode@2@@ DATA
+    ??_7CCControlSwitch@extension@cocos2d@@6BCCTouchDelegate@2@@ DATA
+    ??_7CCEditBox@extension@cocos2d@@6BCCAccelerometerDelegate@2@@ DATA
+    ??_7CCEditBox@extension@cocos2d@@6BCCControlButton@12@@ DATA
+    ??_7CCEditBox@extension@cocos2d@@6BCCIMEDelegate@2@@ DATA
+    ??_7CCEditBox@extension@cocos2d@@6BCCKeyboardDelegate@2@@ DATA
+    ??_7CCEditBox@extension@cocos2d@@6BCCKeypadDelegate@2@@ DATA
+    ??_7CCEditBox@extension@cocos2d@@6BCCMouseDelegate@2@@ DATA
+    ??_7CCEditBox@extension@cocos2d@@6BCCNode@2@@ DATA
+    ??_7CCEditBox@extension@cocos2d@@6BCCTouchDelegate@2@@ DATA
+    ??_7CCEditBoxDelegate@extension@cocos2d@@6B@ DATA
+    ??_7CCEditBoxImpl@extension@cocos2d@@6B@ DATA
+    ??_7CCEditBoxImplWin@extension@cocos2d@@6B@ DATA
+    ??_7CCHttpClient@extension@cocos2d@@6B@ DATA
+    ??_7CCHttpRequest@extension@cocos2d@@6B@ DATA
+    ??_7CCHttpResponse@extension@cocos2d@@6B@ DATA
+    ??_7CCInvocation@extension@cocos2d@@6B@ DATA
+    ??_7CCScale9Sprite@extension@cocos2d@@6BCCNode@2@@ DATA
+    ??_7CCScale9Sprite@extension@cocos2d@@6BCCRGBAProtocol@2@@ DATA
+    ??_7CCScrollView@extension@cocos2d@@6BCCAccelerometerDelegate@2@@ DATA
+    ??_7CCScrollView@extension@cocos2d@@6BCCKeyboardDelegate@2@@ DATA
+    ??_7CCScrollView@extension@cocos2d@@6BCCKeypadDelegate@2@@ DATA
+    ??_7CCScrollView@extension@cocos2d@@6BCCMouseDelegate@2@@ DATA
+    ??_7CCScrollView@extension@cocos2d@@6BCCNode@2@@ DATA
+    ??_7CCScrollView@extension@cocos2d@@6BCCTouchDelegate@2@@ DATA
+    ??_7CCScrollViewDelegate@extension@cocos2d@@6B@ DATA
+    ??_7CCSortableObject@extension@cocos2d@@6B@ DATA
+    ??_7CCTableView@extension@cocos2d@@6B@ DATA
+    ??_7CCTableView@extension@cocos2d@@6BCCAccelerometerDelegate@2@@ DATA
+    ??_7CCTableView@extension@cocos2d@@6BCCKeyboardDelegate@2@@ DATA
+    ??_7CCTableView@extension@cocos2d@@6BCCKeypadDelegate@2@@ DATA
+    ??_7CCTableView@extension@cocos2d@@6BCCMouseDelegate@2@@ DATA
+    ??_7CCTableView@extension@cocos2d@@6BCCNode@2@@ DATA
+    ??_7CCTableView@extension@cocos2d@@6BCCTouchDelegate@2@@ DATA
+    ??_7CCTableViewCell@extension@cocos2d@@6BCCNode@2@@ DATA
+    ??_7CCTableViewCell@extension@cocos2d@@6BCCSortableObject@12@@ DATA
+    ??_7CCTableViewDataSource@extension@cocos2d@@6B@ DATA
+    ??_7CCTableViewDelegate@extension@cocos2d@@6B@ DATA
+    ??_7ColorPickerDelegate@extension@cocos2d@@6B@ DATA
+    ??_7WebSocket@extension@cocos2d@@6B@ DATA
+    ??_FAssetsManager@extension@cocos2d@@QAEXXZ
+    ?AnsiToUtf8@CWin32InputBox@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V23@@Z
+    ?CCRectUnion@CCControlUtils@extension@cocos2d@@SA?AVCCRect@3@ABV43@0@Z
+    ?DlgProc@CWin32InputBox@@CGJPAUHWND__@@IIJ@Z
+    ?GetParam@CWin32InputBox@@AAEPAUWIN32INPUTBOX_PARAM@@XZ
+    ?HSVfromRGB@CCControlUtils@extension@cocos2d@@SA?AUHSV@23@URGBA@23@@Z
+    ?InitDialog@CWin32InputBox@@AAEXXZ
+    ?InputBox@CWin32InputBox@@SAHPBD0PADK_NPAUHWND__@@@Z
+    ?InputBoxEx@CWin32InputBox@@SAHPAUWIN32INPUTBOX_PARAM@@@Z
+    ?RGBfromHSV@CCControlUtils@extension@cocos2d@@SA?AURGBA@23@UHSV@23@@Z
+    ?SetParam@CWin32InputBox@@AAEXPAUWIN32INPUTBOX_PARAM@@@Z
+    ?Utf8ToAnsi@CWin32InputBox@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V23@@Z
+    ?__indexFromOffset@CCTableView@extension@cocos2d@@IAEHVCCPoint@3@@Z
+    ?__offsetFromIndex@CCTableView@extension@cocos2d@@IAE?AVCCPoint@3@I@Z
+    ?_addCellIfNecessary@CCTableView@extension@cocos2d@@IAEXPAVCCTableViewCell@23@@Z
+    ?_indexFromOffset@CCTableView@extension@cocos2d@@IAEIVCCPoint@3@@Z
+    ?_moveCellOutOfSight@CCTableView@extension@cocos2d@@IAEXPAVCCTableViewCell@23@@Z
+    ?_offsetFromIndex@CCTableView@extension@cocos2d@@IAE?AVCCPoint@3@I@Z
+    ?_setIndexForCell@CCTableView@extension@cocos2d@@IAEXIPAVCCTableViewCell@23@@Z
+    ?_updateCellPositions@CCTableView@extension@cocos2d@@IAEXXZ
+    ?_updateContentSize@CCTableView@extension@cocos2d@@QAEXXZ
+    ?addChild@CCScrollView@extension@cocos2d@@UAEXPAVCCNode@3@@Z
+    ?addChild@CCScrollView@extension@cocos2d@@UAEXPAVCCNode@3@H@Z
+    ?addChild@CCScrollView@extension@cocos2d@@UAEXPAVCCNode@3@HH@Z
+    ?addHandleOfControlEvent@CCControl@extension@cocos2d@@QAEXHI@Z
+    ?addSpriteToTargetWithPosAndAnchor@CCControlUtils@extension@cocos2d@@SAPAVCCSprite@3@PBDPAVCCNode@3@VCCPoint@3@2@Z
+    ?addTargetWithActionForControlEvent@CCControl@extension@cocos2d@@IAEXPAVCCObject@3@P843@AEX0I@ZI@Z
+    ?addTargetWithActionForControlEvents@CCControl@extension@cocos2d@@UAEXPAVCCObject@3@P843@AEX0I@ZI@Z
+    ?afterDraw@CCScrollView@extension@cocos2d@@AAEXXZ
+    ?angleInDegreesBetweenLineFromPoint_toPoint_toLineFromPoint_toPoint@CCControlPotentiometer@extension@cocos2d@@QAEMVCCPoint@3@000@Z
+    ?autorelease@CCHttpRequest@extension@cocos2d@@QAEPAVCCObject@3@XZ
+    ?autorelease@CCHttpResponse@extension@cocos2d@@QAEPAVCCObject@3@XZ
+    ?beforeDraw@CCScrollView@extension@cocos2d@@AAEXXZ
+    ?ccTouchBegan@CCControlButton@extension@cocos2d@@UAE_NPAVCCTouch@3@PAVCCEvent@3@@Z
+    ?ccTouchBegan@CCControlColourPicker@extension@cocos2d@@MAE_NPAVCCTouch@3@PAVCCEvent@3@@Z
+    ?ccTouchBegan@CCControlHuePicker@extension@cocos2d@@MAE_NPAVCCTouch@3@PAVCCEvent@3@@Z
+    ?ccTouchBegan@CCControlPotentiometer@extension@cocos2d@@UAE_NPAVCCTouch@3@PAVCCEvent@3@@Z
+    ?ccTouchBegan@CCControlSaturationBrightnessPicker@extension@cocos2d@@MAE_NPAVCCTouch@3@PAVCCEvent@3@@Z
+    ?ccTouchBegan@CCControlSlider@extension@cocos2d@@MAE_NPAVCCTouch@3@PAVCCEvent@3@@Z
+    ?ccTouchBegan@CCControlStepper@extension@cocos2d@@UAE_NPAVCCTouch@3@PAVCCEvent@3@@Z
+    ?ccTouchBegan@CCControlSwitch@extension@cocos2d@@UAE_NPAVCCTouch@3@PAVCCEvent@3@@Z
+    ?ccTouchBegan@CCScrollView@extension@cocos2d@@UAE_NPAVCCTouch@3@PAVCCEvent@3@@Z
+    ?ccTouchBegan@CCTableView@extension@cocos2d@@UAE_NPAVCCTouch@3@PAVCCEvent@3@@Z
+    ?ccTouchCancelled@CCControlButton@extension@cocos2d@@UAEXPAVCCTouch@3@PAVCCEvent@3@@Z
+    ?ccTouchCancelled@CCControlSwitch@extension@cocos2d@@UAEXPAVCCTouch@3@PAVCCEvent@3@@Z
+    ?ccTouchCancelled@CCScrollView@extension@cocos2d@@UAEXPAVCCTouch@3@PAVCCEvent@3@@Z
+    ?ccTouchCancelled@CCTableView@extension@cocos2d@@UAEXPAVCCTouch@3@PAVCCEvent@3@@Z
+    ?ccTouchEnded@CCControlButton@extension@cocos2d@@UAEXPAVCCTouch@3@PAVCCEvent@3@@Z
+    ?ccTouchEnded@CCControlPotentiometer@extension@cocos2d@@UAEXPAVCCTouch@3@PAVCCEvent@3@@Z
+    ?ccTouchEnded@CCControlSlider@extension@cocos2d@@MAEXPAVCCTouch@3@PAVCCEvent@3@@Z
+    ?ccTouchEnded@CCControlStepper@extension@cocos2d@@UAEXPAVCCTouch@3@PAVCCEvent@3@@Z
+    ?ccTouchEnded@CCControlSwitch@extension@cocos2d@@UAEXPAVCCTouch@3@PAVCCEvent@3@@Z
+    ?ccTouchEnded@CCScrollView@extension@cocos2d@@UAEXPAVCCTouch@3@PAVCCEvent@3@@Z
+    ?ccTouchEnded@CCTableView@extension@cocos2d@@UAEXPAVCCTouch@3@PAVCCEvent@3@@Z
+    ?ccTouchMoved@CCControlButton@extension@cocos2d@@UAEXPAVCCTouch@3@PAVCCEvent@3@@Z
+    ?ccTouchMoved@CCControlHuePicker@extension@cocos2d@@MAEXPAVCCTouch@3@PAVCCEvent@3@@Z
+    ?ccTouchMoved@CCControlPotentiometer@extension@cocos2d@@UAEXPAVCCTouch@3@PAVCCEvent@3@@Z
+    ?ccTouchMoved@CCControlSaturationBrightnessPicker@extension@cocos2d@@MAEXPAVCCTouch@3@PAVCCEvent@3@@Z
+    ?ccTouchMoved@CCControlSlider@extension@cocos2d@@MAEXPAVCCTouch@3@PAVCCEvent@3@@Z
+    ?ccTouchMoved@CCControlStepper@extension@cocos2d@@UAEXPAVCCTouch@3@PAVCCEvent@3@@Z
+    ?ccTouchMoved@CCControlSwitch@extension@cocos2d@@UAEXPAVCCTouch@3@PAVCCEvent@3@@Z
+    ?ccTouchMoved@CCScrollView@extension@cocos2d@@UAEXPAVCCTouch@3@PAVCCEvent@3@@Z
+    ?ccTouchMoved@CCTableView@extension@cocos2d@@UAEXPAVCCTouch@3@PAVCCEvent@3@@Z
+    ?cellAtIndex@CCTableView@extension@cocos2d@@QAEPAVCCTableViewCell@23@I@Z
+    ?cellSizeForTable@CCTableViewDataSource@extension@cocos2d@@UAE?AVCCSize@3@PAVCCTableView@23@@Z
+    ?checkSliderPosition@CCControlHuePicker@extension@cocos2d@@IAE_NVCCPoint@3@_N@Z
+    ?checkSliderPosition@CCControlSaturationBrightnessPicker@extension@cocos2d@@IAE_NVCCPoint@3@_N@Z
+    ?checkStoragePath@AssetsManager@extension@cocos2d@@IAEXXZ
+    ?checkUpdate@AssetsManager@extension@cocos2d@@UAE_NXZ
+    ?close@WebSocket@extension@cocos2d@@QAEXXZ
+    ?closeKeyboard@CCEditBoxImplWin@extension@cocos2d@@UAEXXZ
+    ?colorValueChanged@ColorPickerDelegate@extension@cocos2d@@UAEXU_ccColor3B@3@@Z
+    ?colourPicker@CCControlColourPicker@extension@cocos2d@@SAPAV123@XZ
+    ?colourSliderValueChanged@CCControlColourPicker@extension@cocos2d@@QAEXPAVCCObject@3@I@Z
+    ?create@CCControl@extension@cocos2d@@KAPAV123@XZ
+    ?create@CCControlButton@extension@cocos2d@@SAPAV123@PAVCCNode@3@PAVCCScale9Sprite@23@@Z
+    ?create@CCControlButton@extension@cocos2d@@SAPAV123@PAVCCScale9Sprite@23@@Z
+    ?create@CCControlButton@extension@cocos2d@@SAPAV123@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PBDM@Z
+    ?create@CCControlButton@extension@cocos2d@@SAPAV123@XZ
+    ?create@CCControlColourPicker@extension@cocos2d@@SAPAV123@XZ
+    ?create@CCControlHuePicker@extension@cocos2d@@SAPAV123@PAVCCNode@3@VCCPoint@3@@Z
+    ?create@CCControlPotentiometer@extension@cocos2d@@SAPAV123@PBD00@Z
+    ?create@CCControlSaturationBrightnessPicker@extension@cocos2d@@SAPAV123@PAVCCNode@3@VCCPoint@3@@Z
+    ?create@CCControlSlider@extension@cocos2d@@SAPAV123@PAVCCSprite@3@00@Z
+    ?create@CCControlSlider@extension@cocos2d@@SAPAV123@PBD00@Z
+    ?create@CCControlStepper@extension@cocos2d@@SAPAV123@PAVCCSprite@3@0@Z
+    ?create@CCControlSwitch@extension@cocos2d@@SAPAV123@PAVCCSprite@3@000@Z
+    ?create@CCControlSwitch@extension@cocos2d@@SAPAV123@PAVCCSprite@3@000PAVCCLabelTTF@3@1@Z
+    ?create@CCEditBox@extension@cocos2d@@SAPAV123@ABVCCSize@3@PAVCCScale9Sprite@23@11@Z
+    ?create@CCInvocation@extension@cocos2d@@SAPAV123@PAVCCObject@3@P843@AEX0I@ZI@Z
+    ?create@CCScale9Sprite@extension@cocos2d@@SAPAV123@PBD@Z
+    ?create@CCScale9Sprite@extension@cocos2d@@SAPAV123@PBDVCCRect@3@1@Z
+    ?create@CCScale9Sprite@extension@cocos2d@@SAPAV123@PBDVCCRect@3@@Z
+    ?create@CCScale9Sprite@extension@cocos2d@@SAPAV123@VCCRect@3@PBD@Z
+    ?create@CCScale9Sprite@extension@cocos2d@@SAPAV123@XZ
+    ?create@CCScrollView@extension@cocos2d@@SAPAV123@VCCSize@3@PAVCCNode@3@@Z
+    ?create@CCScrollView@extension@cocos2d@@SAPAV123@XZ
+    ?create@CCTableView@extension@cocos2d@@SAPAV123@PAVCCTableViewDataSource@23@VCCSize@3@@Z
+    ?create@CCTableView@extension@cocos2d@@SAPAV123@PAVCCTableViewDataSource@23@VCCSize@3@PAVCCNode@3@@Z
+    ?createDirectory@AssetsManager@extension@cocos2d@@IAE_NPBD@Z
+    ?createWithSpriteFrame@CCScale9Sprite@extension@cocos2d@@SAPAV123@PAVCCSpriteFrame@3@@Z
+    ?createWithSpriteFrame@CCScale9Sprite@extension@cocos2d@@SAPAV123@PAVCCSpriteFrame@3@VCCRect@3@@Z
+    ?createWithSpriteFrameName@CCScale9Sprite@extension@cocos2d@@SAPAV123@PBD@Z
+    ?createWithSpriteFrameName@CCScale9Sprite@extension@cocos2d@@SAPAV123@PBDVCCRect@3@@Z
+    ?deaccelerateScrolling@CCScrollView@extension@cocos2d@@AAEXM@Z
+    ?deleteVersion@AssetsManager@extension@cocos2d@@QAEXXZ
+    ?dequeueCell@CCTableView@extension@cocos2d@@QAEPAVCCTableViewCell@23@XZ
+    ?destroyInstance@CCHttpClient@extension@cocos2d@@SAXXZ
+    ?dispatchListforControlEvent@CCControl@extension@cocos2d@@IAEPAVCCArray@3@I@Z
+    ?dispatchResponseCallbacks@CCHttpClient@extension@cocos2d@@AAEXM@Z
+    ?distanceBetweenPointAndPoint@CCControlPotentiometer@extension@cocos2d@@QAEMVCCPoint@3@0@Z
+    ?doAnimationWhenKeyboardMove@CCEditBoxImplWin@extension@cocos2d@@UAEXMM@Z
+    ?doesAdjustBackgroundImage@CCControlButton@extension@cocos2d@@QAE_NXZ
+    ?downLoad@AssetsManager@extension@cocos2d@@IAE_NXZ
+    ?editBoxEditingDidBegin@CCEditBoxDelegate@extension@cocos2d@@UAEXPAVCCEditBox@23@@Z
+    ?editBoxEditingDidEnd@CCEditBoxDelegate@extension@cocos2d@@UAEXPAVCCEditBox@23@@Z
+    ?editBoxTextChanged@CCEditBoxDelegate@extension@cocos2d@@UAEXPAVCCEditBox@23@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z
+    ?getAction@CCInvocation@extension@cocos2d@@UBEP8CCObject@3@AEXPAV43@I@ZXZ
+    ?getBackground@CCControlColourPicker@extension@cocos2d@@UBEPAVCCSprite@3@XZ
+    ?getBackground@CCControlHuePicker@extension@cocos2d@@UBEPAVCCSprite@3@XZ
+    ?getBackground@CCControlSaturationBrightnessPicker@extension@cocos2d@@UBEPAVCCSprite@3@XZ
+    ?getBackgroundSprite@CCControlButton@extension@cocos2d@@UBEPAVCCScale9Sprite@23@XZ
+    ?getBackgroundSprite@CCControlSlider@extension@cocos2d@@UBEPAVCCSprite@3@XZ
+    ?getBackgroundSpriteDispatchTable@CCControlButton@extension@cocos2d@@UBEPAVCCDictionary@3@XZ
+    ?getBackgroundSpriteForState@CCControlButton@extension@cocos2d@@UAEPAVCCScale9Sprite@23@I@Z
+    ?getBrightness@CCControlSaturationBrightnessPicker@extension@cocos2d@@UBEMXZ
+    ?getCCEditBox@CCEditBoxImpl@extension@cocos2d@@QAEPAVCCEditBox@23@XZ
+    ?getCapInsets@CCScale9Sprite@extension@cocos2d@@UAE?AVCCRect@3@XZ
+    ?getColor@CCControlButton@extension@cocos2d@@UAEABU_ccColor3B@3@XZ
+    ?getColor@CCScale9Sprite@extension@cocos2d@@UAEABU_ccColor3B@3@XZ
+    ?getColorTarget@CCControlColourPicker@extension@cocos2d@@UBEPAVCCSprite@3@XZ
+    ?getColorValue@CCControlColourPicker@extension@cocos2d@@UBEABU_ccColor3B@3@XZ
+    ?getConnectionTimeout@AssetsManager@extension@cocos2d@@QAEIXZ
+    ?getContainer@CCScrollView@extension@cocos2d@@QAEPAVCCNode@3@XZ
+    ?getContentOffset@CCScrollView@extension@cocos2d@@QAE?AVCCPoint@3@XZ
+    ?getContentSize@CCScrollView@extension@cocos2d@@UBEABVCCSize@3@XZ
+    ?getControlEvent@CCInvocation@extension@cocos2d@@UBEIXZ
+    ?getCurrentTitle@CCControlButton@extension@cocos2d@@UBEPAVCCString@3@XZ
+    ?getCurrentTitleColor@CCControlButton@extension@cocos2d@@UBEABU_ccColor3B@3@XZ
+    ?getDataSource@CCTableView@extension@cocos2d@@QAEPAVCCTableViewDataSource@23@XZ
+    ?getDelegate@CCControlColourPicker@extension@cocos2d@@UBEPAVColorPickerDelegate@23@XZ
+    ?getDelegate@CCEditBox@extension@cocos2d@@QAEPAVCCEditBoxDelegate@23@XZ
+    ?getDelegate@CCEditBoxImpl@extension@cocos2d@@QAEPAVCCEditBoxDelegate@23@XZ
+    ?getDelegate@CCScrollView@extension@cocos2d@@QAEPAVCCScrollViewDelegate@23@XZ
+    ?getDelegate@CCTableView@extension@cocos2d@@QAEPAVCCTableViewDelegate@23@XZ
+    ?getDirection@CCScrollView@extension@cocos2d@@QAE?AW4CCScrollViewDirection@23@XZ
+    ?getDisableAnimation@CCScrollView@extension@cocos2d@@UBE_NXZ
+    ?getDownloadProgress@CCHttpRequest@extension@cocos2d@@QAEHXZ
+    ?getErrorBuffer@CCHttpResponse@extension@cocos2d@@QAEPBDXZ
+    ?getHandleOfControlEvent@CCControl@extension@cocos2d@@AAEHI@Z
+    ?getHeaders@CCHttpRequest@extension@cocos2d@@QAE?AV?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@XZ
+    ?getHorizontalOrigin@CCControlButton@extension@cocos2d@@UBEHXZ
+    ?getHttpRequest@CCHttpResponse@extension@cocos2d@@QAEPAVCCHttpRequest@23@XZ
+    ?getHue@CCControlHuePicker@extension@cocos2d@@UBEMXZ
+    ?getHuePercentage@CCControlHuePicker@extension@cocos2d@@UBEMXZ
+    ?getIdx@CCTableViewCell@extension@cocos2d@@QAEIXZ
+    ?getInsetBottom@CCScale9Sprite@extension@cocos2d@@UAEMXZ
+    ?getInsetLeft@CCScale9Sprite@extension@cocos2d@@UAEMXZ
+    ?getInsetRight@CCScale9Sprite@extension@cocos2d@@UAEMXZ
+    ?getInsetTop@CCScale9Sprite@extension@cocos2d@@UAEMXZ
+    ?getInstance@CCHttpClient@extension@cocos2d@@SAPAV123@XZ
+    ?getLabelAnchorPoint@CCControlButton@extension@cocos2d@@UAE?AVCCPoint@3@XZ
+    ?getMaxLength@CCEditBox@extension@cocos2d@@QAEHXZ
+    ?getMaxLength@CCEditBoxImplWin@extension@cocos2d@@UAEHXZ
+    ?getMaximumAllowedValue@CCControlSlider@extension@cocos2d@@UBEMXZ
+    ?getMaximumValue@CCControlPotentiometer@extension@cocos2d@@QAEMXZ
+    ?getMaximumValue@CCControlSlider@extension@cocos2d@@UBEMXZ
+    ?getMinimumAllowedValue@CCControlSlider@extension@cocos2d@@UBEMXZ
+    ?getMinimumValue@CCControlPotentiometer@extension@cocos2d@@QAEMXZ
+    ?getMinimumValue@CCControlSlider@extension@cocos2d@@UBEMXZ
+    ?getMinusLabel@CCControlStepper@extension@cocos2d@@UBEPAVCCLabelTTF@3@XZ
+    ?getMinusSprite@CCControlStepper@extension@cocos2d@@UBEPAVCCSprite@3@XZ
+    ?getObjectID@CCTableViewCell@extension@cocos2d@@UAEIXZ
+    ?getOpacity@CCControlButton@extension@cocos2d@@UAEEXZ
+    ?getOpacity@CCScale9Sprite@extension@cocos2d@@UAEEXZ
+    ?getOriginalSize@CCScale9Sprite@extension@cocos2d@@UBE?AVCCSize@3@XZ
+    ?getOverlay@CCControlSaturationBrightnessPicker@extension@cocos2d@@UBEPAVCCSprite@3@XZ
+    ?getPackageUrl@AssetsManager@extension@cocos2d@@QBEPBDXZ
+    ?getPlaceHolder@CCEditBox@extension@cocos2d@@QAEPBDXZ
+    ?getPlusLabel@CCControlStepper@extension@cocos2d@@UBEPAVCCLabelTTF@3@XZ
+    ?getPlusSprite@CCControlStepper@extension@cocos2d@@UBEPAVCCSprite@3@XZ
+    ?getPreferredSize@CCControlButton@extension@cocos2d@@UAE?AVCCSize@3@XZ
+    ?getPreferredSize@CCScale9Sprite@extension@cocos2d@@UAE?AVCCSize@3@XZ
+    ?getPreviousLocation@CCControlPotentiometer@extension@cocos2d@@UBE?AVCCPoint@3@XZ
+    ?getProgressSprite@CCControlSlider@extension@cocos2d@@UBEPAVCCSprite@3@XZ
+    ?getProgressTimer@CCControlPotentiometer@extension@cocos2d@@UBEPAVCCProgressTimer@3@XZ
+    ?getReadTimeout@CCHttpRequest@extension@cocos2d@@QAEHXZ
+    ?getReadyState@WebSocket@extension@cocos2d@@QAE?AW4State@123@XZ
+    ?getRequestData@CCHttpRequest@extension@cocos2d@@QAEPADXZ
+    ?getRequestDataSize@CCHttpRequest@extension@cocos2d@@QAEHXZ
+    ?getRequestType@CCHttpRequest@extension@cocos2d@@QAE?AW4HttpRequestType@123@XZ
+    ?getResponseCode@CCHttpResponse@extension@cocos2d@@QAEJXZ
+    ?getResponseData@CCHttpResponse@extension@cocos2d@@QAEPAV?$vector@DV?$allocator@D@std@@@std@@XZ
+    ?getResponseHeader@CCHttpResponse@extension@cocos2d@@QAEPAV?$vector@DV?$allocator@D@std@@@std@@XZ
+    ?getSaturation@CCControlSaturationBrightnessPicker@extension@cocos2d@@UBEMXZ
+    ?getScriptEditBoxHandler@CCEditBox@extension@cocos2d@@QAEHXZ
+    ?getScriptHandler@CCScrollView@extension@cocos2d@@QAEHH@Z
+    ?getSelector@CCHttpRequest@extension@cocos2d@@QAE?AV_prxy@123@XZ
+    ?getShadow@CCControlSaturationBrightnessPicker@extension@cocos2d@@UBEPAVCCSprite@3@XZ
+    ?getShouldCancel@CCHttpRequest@extension@cocos2d@@QAE_NXZ
+    ?getSlider@CCControlHuePicker@extension@cocos2d@@UBEPAVCCSprite@3@XZ
+    ?getSlider@CCControlSaturationBrightnessPicker@extension@cocos2d@@UBEPAVCCSprite@3@XZ
+    ?getStartPos@CCControlHuePicker@extension@cocos2d@@UBE?AVCCPoint@3@XZ
+    ?getStartPos@CCControlSaturationBrightnessPicker@extension@cocos2d@@UBE?AVCCPoint@3@XZ
+    ?getState@CCControl@extension@cocos2d@@UBEIXZ
+    ?getStoragePath@AssetsManager@extension@cocos2d@@QBEPBDXZ
+    ?getTag@CCHttpRequest@extension@cocos2d@@QAEPBDXZ
+    ?getTarget@CCHttpRequest@extension@cocos2d@@QAEPAVCCObject@3@XZ
+    ?getTarget@CCInvocation@extension@cocos2d@@UBEPAVCCObject@3@XZ
+    ?getText@CCEditBox@extension@cocos2d@@QAEPBDXZ
+    ?getText@CCEditBoxImplWin@extension@cocos2d@@UAEPBDXZ
+    ?getThumbSprite@CCControlPotentiometer@extension@cocos2d@@UBEPAVCCSprite@3@XZ
+    ?getThumbSprite@CCControlSlider@extension@cocos2d@@UBEPAVCCSprite@3@XZ
+    ?getTimeoutForConnect@CCHttpClient@extension@cocos2d@@QAEHXZ
+    ?getTimeoutForRead@CCHttpClient@extension@cocos2d@@QAEHXZ
+    ?getTitleBMFontForState@CCControlButton@extension@cocos2d@@UAEPBDI@Z
+    ?getTitleColorDispatchTable@CCControlButton@extension@cocos2d@@UBEPAVCCDictionary@3@XZ
+    ?getTitleColorForState@CCControlButton@extension@cocos2d@@UAE?BU_ccColor3B@3@I@Z
+    ?getTitleDispatchTable@CCControlButton@extension@cocos2d@@UBEPAVCCDictionary@3@XZ
+    ?getTitleForState@CCControlButton@extension@cocos2d@@UAEPAVCCString@3@I@Z
+    ?getTitleLabel@CCControlButton@extension@cocos2d@@UBEPAVCCNode@3@XZ
+    ?getTitleLabelDispatchTable@CCControlButton@extension@cocos2d@@UBEPAVCCDictionary@3@XZ
+    ?getTitleLabelForState@CCControlButton@extension@cocos2d@@UAEPAVCCNode@3@I@Z
+    ?getTitleTTFForState@CCControlButton@extension@cocos2d@@UAEPBDI@Z
+    ?getTitleTTFSizeForState@CCControlButton@extension@cocos2d@@UAEMI@Z
+    ?getTouchLocation@CCControl@extension@cocos2d@@UAE?AVCCPoint@3@PAVCCTouch@3@@Z
+    ?getType@CCHttpRequest@extension@cocos2d@@QAEHXZ
+    ?getUrl@CCHttpRequest@extension@cocos2d@@QAEPBDXZ
+    ?getUserData@CCHttpRequest@extension@cocos2d@@QAEPAXXZ
+    ?getValue@CCControlPotentiometer@extension@cocos2d@@QAEMXZ
+    ?getValue@CCControlSlider@extension@cocos2d@@UBEMXZ
+    ?getValue@CCControlStepper@extension@cocos2d@@UAENXZ
+    ?getVersion@AssetsManager@extension@cocos2d@@QAE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ
+    ?getVersionFileUrl@AssetsManager@extension@cocos2d@@QBEPBDXZ
+    ?getVerticalFillOrder@CCTableView@extension@cocos2d@@QAE?AW4CCTableViewVerticalFillOrder@23@XZ
+    ?getVerticalMargin@CCControlButton@extension@cocos2d@@UBEHXZ
+    ?getViewRect@CCScrollView@extension@cocos2d@@IAE?AVCCRect@3@XZ
+    ?getViewSize@CCScrollView@extension@cocos2d@@QAE?AVCCSize@3@XZ
+    ?getZoomOnTouchDown@CCControlButton@extension@cocos2d@@UAE_NXZ
+    ?getZoomScale@CCScrollView@extension@cocos2d@@QAEMXZ
+    ?hasMoved@CCControlSwitch@extension@cocos2d@@QAE_NXZ
+    ?hasVisibleParents@CCControl@extension@cocos2d@@QAE_NXZ
+    ?hueSliderValueChanged@CCControlColourPicker@extension@cocos2d@@QAEXPAVCCObject@3@I@Z
+    ?indexOfSortedObject@CCArrayForObjectSorting@extension@cocos2d@@QAEIPAVCCSortableObject@23@@Z
+    ?init@CCControl@extension@cocos2d@@UAE_NXZ
+    ?init@CCControlButton@extension@cocos2d@@UAE_NXZ
+    ?init@CCControlColourPicker@extension@cocos2d@@UAE_NXZ
+    ?init@CCScale9Sprite@extension@cocos2d@@UAE_NXZ
+    ?init@CCScrollView@extension@cocos2d@@UAE_NXZ
+    ?init@WebSocket@extension@cocos2d@@QAE_NABVDelegate@123@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PBV?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@6@@Z
+    ?initWithBackgroundSprite@CCControlButton@extension@cocos2d@@UAE_NPAVCCScale9Sprite@23@@Z
+    ?initWithBatchNode@CCScale9Sprite@extension@cocos2d@@UAE_NPAVCCSpriteBatchNode@3@VCCRect@3@1@Z
+    ?initWithBatchNode@CCScale9Sprite@extension@cocos2d@@UAE_NPAVCCSpriteBatchNode@3@VCCRect@3@_N1@Z
+    ?initWithFile@CCScale9Sprite@extension@cocos2d@@UAE_NPBD@Z
+    ?initWithFile@CCScale9Sprite@extension@cocos2d@@UAE_NPBDVCCRect@3@1@Z
+    ?initWithFile@CCScale9Sprite@extension@cocos2d@@UAE_NPBDVCCRect@3@@Z
+    ?initWithFile@CCScale9Sprite@extension@cocos2d@@UAE_NVCCRect@3@PBD@Z
+    ?initWithLabelAndBackgroundSprite@CCControlButton@extension@cocos2d@@UAE_NPAVCCNode@3@PAVCCScale9Sprite@23@@Z
+    ?initWithMaskSprite@CCControlSwitch@extension@cocos2d@@QAE_NPAVCCSprite@3@000@Z
+    ?initWithMaskSprite@CCControlSwitch@extension@cocos2d@@QAE_NPAVCCSprite@3@000PAVCCLabelTTF@3@1@Z
+    ?initWithMinusSpriteAndPlusSprite@CCControlStepper@extension@cocos2d@@QAE_NPAVCCSprite@3@0@Z
+    ?initWithSize@CCEditBoxImplWin@extension@cocos2d@@UAE_NABVCCSize@3@@Z
+    ?initWithSizeAndBackgroundSprite@CCEditBox@extension@cocos2d@@QAE_NABVCCSize@3@PAVCCScale9Sprite@23@@Z
+    ?initWithSpriteFrame@CCScale9Sprite@extension@cocos2d@@UAE_NPAVCCSpriteFrame@3@@Z
+    ?initWithSpriteFrame@CCScale9Sprite@extension@cocos2d@@UAE_NPAVCCSpriteFrame@3@VCCRect@3@@Z
+    ?initWithSpriteFrameName@CCScale9Sprite@extension@cocos2d@@UAE_NPBD@Z
+    ?initWithSpriteFrameName@CCScale9Sprite@extension@cocos2d@@UAE_NPBDVCCRect@3@@Z
+    ?initWithSprites@CCControlSlider@extension@cocos2d@@UAE_NPAVCCSprite@3@00@Z
+    ?initWithTargetAndPos@CCControlHuePicker@extension@cocos2d@@UAE_NPAVCCNode@3@VCCPoint@3@@Z
+    ?initWithTargetAndPos@CCControlSaturationBrightnessPicker@extension@cocos2d@@UAE_NPAVCCNode@3@VCCPoint@3@@Z
+    ?initWithTitleAndFontNameAndFontSize@CCControlButton@extension@cocos2d@@UAE_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PBDM@Z
+    ?initWithTrackSprite_ProgressTimer_ThumbSprite@CCControlPotentiometer@extension@cocos2d@@QAE_NPAVCCSprite@3@PAVCCProgressTimer@3@0@Z
+    ?initWithViewSize@CCScrollView@extension@cocos2d@@QAE_NVCCSize@3@PAVCCNode@3@@Z
+    ?initWithViewSize@CCTableView@extension@cocos2d@@QAE_NVCCSize@3@PAVCCNode@3@@Z
+    ?insertCellAtIndex@CCTableView@extension@cocos2d@@QAEXI@Z
+    ?insertSortedObject@CCArrayForObjectSorting@extension@cocos2d@@QAEXPAVCCSortableObject@23@@Z
+    ?invoke@CCInvocation@extension@cocos2d@@QAEXPAVCCObject@3@@Z
+    ?isBounceable@CCScrollView@extension@cocos2d@@QAE_NXZ
+    ?isClippingToBounds@CCScrollView@extension@cocos2d@@QAE_NXZ
+    ?isContinuous@CCControlStepper@extension@cocos2d@@UAE_NXZ
+    ?isDragging@CCScrollView@extension@cocos2d@@QAE_NXZ
+    ?isEditing@CCEditBoxImplWin@extension@cocos2d@@UAE_NXZ
+    ?isEnabled@CCControl@extension@cocos2d@@UAE_NXZ
+    ?isHighlighted@CCControl@extension@cocos2d@@UAE_NXZ
+    ?isNodeVisible@CCScrollView@extension@cocos2d@@QAE_NPAVCCNode@3@@Z
+    ?isOn@CCControlSwitch@extension@cocos2d@@QAE_NXZ
+    ?isOpacityModifyRGB@CCControl@extension@cocos2d@@UAE_NXZ
+    ?isOpacityModifyRGB@CCScale9Sprite@extension@cocos2d@@UAE_NXZ
+    ?isPushed@CCControlButton@extension@cocos2d@@QAE_NXZ
+    ?isSelected@CCControl@extension@cocos2d@@UAE_NXZ
+    ?isSucceed@CCHttpResponse@extension@cocos2d@@QAE_NXZ
+    ?isTouchInside@CCControl@extension@cocos2d@@UAE_NPAVCCTouch@3@@Z
+    ?isTouchInside@CCControlPotentiometer@extension@cocos2d@@UAE_NPAVCCTouch@3@@Z
+    ?isTouchInside@CCControlSlider@extension@cocos2d@@UAE_NPAVCCTouch@3@@Z
+    ?isTouchMoved@CCScrollView@extension@cocos2d@@QAE_NXZ
+    ?keyboardDidHide@CCEditBox@extension@cocos2d@@UAEXAAUCCIMEKeyboardNotificationInfo@3@@Z
+    ?keyboardDidShow@CCEditBox@extension@cocos2d@@UAEXAAUCCIMEKeyboardNotificationInfo@3@@Z
+    ?keyboardWillHide@CCEditBox@extension@cocos2d@@UAEXAAUCCIMEKeyboardNotificationInfo@3@@Z
+    ?keyboardWillShow@CCEditBox@extension@cocos2d@@UAEXAAUCCIMEKeyboardNotificationInfo@3@@Z
+    ?lazyInitThreadSemphore@CCHttpClient@extension@cocos2d@@AAE_NXZ
+    ?localStorageFree@@YAXXZ
+    ?localStorageGetItem@@YAPBDPBD@Z
+    ?localStorageInit@@YAXPBD@Z
+    ?localStorageRemoveItem@@YAXPBD@Z
+    ?localStorageSetItem@@YAXPBD0@Z
+    ?locationFromTouch@CCControlSlider@extension@cocos2d@@QAE?AVCCPoint@3@PAVCCTouch@3@@Z
+    ?locationFromTouch@CCControlSwitch@extension@cocos2d@@QAE?AVCCPoint@3@PAVCCTouch@3@@Z
+    ?maxContainerOffset@CCScrollView@extension@cocos2d@@QAE?AVCCPoint@3@XZ
+    ?minContainerOffset@CCScrollView@extension@cocos2d@@QAE?AVCCPoint@3@XZ
+    ?needsLayout@CCControl@extension@cocos2d@@UAEXXZ
+    ?needsLayout@CCControlButton@extension@cocos2d@@UAEXXZ
+    ?needsLayout@CCControlSlider@extension@cocos2d@@UAEXXZ
+    ?objectWithObjectID@CCArrayForObjectSorting@extension@cocos2d@@QAEPAVCCSortableObject@23@I@Z
+    ?onEnter@CCControl@extension@cocos2d@@UAEXXZ
+    ?onEnter@CCEditBox@extension@cocos2d@@UAEXXZ
+    ?onEnter@CCEditBoxImplWin@extension@cocos2d@@UAEXXZ
+    ?onError@AssetsManagerDelegateProtocol@extension@cocos2d@@UAEXW4ErrorCode@AssetsManager@23@@Z
+    ?onExit@CCControl@extension@cocos2d@@UAEXXZ
+    ?onExit@CCEditBox@extension@cocos2d@@UAEXXZ
+    ?onProgress@AssetsManagerDelegateProtocol@extension@cocos2d@@UAEXH@Z
+    ?onSocketCallback@WebSocket@extension@cocos2d@@AAEHPAUlibwebsocket_context@@PAUlibwebsocket@@W4libwebsocket_callback_reasons@@PAX3I@Z
+    ?onSubThreadEnded@WebSocket@extension@cocos2d@@EAEXXZ
+    ?onSubThreadLoop@WebSocket@extension@cocos2d@@EAEHXZ
+    ?onSubThreadStarted@WebSocket@extension@cocos2d@@EAEXXZ
+    ?onSuccess@AssetsManagerDelegateProtocol@extension@cocos2d@@UAEXXZ
+    ?onUIThreadReceiveMessage@WebSocket@extension@cocos2d@@EAEXPAVWsMessage@23@@Z
+    ?openKeyboard@CCEditBoxImplWin@extension@cocos2d@@UAEXXZ
+    ?pause@CCScrollView@extension@cocos2d@@QAEXPAVCCObject@3@@Z
+    ?performedAnimatedScroll@CCScrollView@extension@cocos2d@@AAEXM@Z
+    ?potentiometerBegan@CCControlPotentiometer@extension@cocos2d@@QAEXVCCPoint@3@@Z
+    ?potentiometerEnded@CCControlPotentiometer@extension@cocos2d@@QAEXVCCPoint@3@@Z
+    ?potentiometerMoved@CCControlPotentiometer@extension@cocos2d@@QAEXVCCPoint@3@@Z
+    ?registerScriptEditBoxHandler@CCEditBox@extension@cocos2d@@QAEXH@Z
+    ?registerScriptHandler@CCScrollView@extension@cocos2d@@QAEXHH@Z
+    ?registerWithTouchDispatcher@CCControl@extension@cocos2d@@UAEXXZ
+    ?registerWithTouchDispatcher@CCControlHuePicker@extension@cocos2d@@UAEXXZ
+    ?registerWithTouchDispatcher@CCControlSaturationBrightnessPicker@extension@cocos2d@@UAEXXZ
+    ?registerWithTouchDispatcher@CCScrollView@extension@cocos2d@@UAEXXZ
+    ?reloadData@CCTableView@extension@cocos2d@@QAEXXZ
+    ?relocateContainer@CCScrollView@extension@cocos2d@@AAEX_N@Z
+    ?removeCellAtIndex@CCTableView@extension@cocos2d@@QAEXI@Z
+    ?removeHandleOfControlEvent@CCControl@extension@cocos2d@@QAEXI@Z
+    ?removeSortedObject@CCArrayForObjectSorting@extension@cocos2d@@QAEXPAVCCSortableObject@23@@Z
+    ?removeTargetWithActionForControlEvent@CCControl@extension@cocos2d@@IAEXPAVCCObject@3@P843@AEX0I@ZI@Z
+    ?removeTargetWithActionForControlEvents@CCControl@extension@cocos2d@@UAEXPAVCCObject@3@P843@AEX0I@ZI@Z
+    ?reset@CCTableViewCell@extension@cocos2d@@QAEXXZ
+    ?resizableSpriteWithCapInsets@CCScale9Sprite@extension@cocos2d@@QAEPAV123@VCCRect@3@@Z
+    ?resume@CCScrollView@extension@cocos2d@@QAEXPAVCCObject@3@@Z
+    ?scrollViewDidScroll@CCTableView@extension@cocos2d@@UAEXPAVCCScrollView@23@@Z
+    ?scrollViewDidZoom@CCTableView@extension@cocos2d@@UAEXPAVCCScrollView@23@@Z
+    ?send@CCHttpClient@extension@cocos2d@@QAEXPAVCCHttpRequest@23@@Z
+    ?send@WebSocket@extension@cocos2d@@QAEXABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z
+    ?send@WebSocket@extension@cocos2d@@QAEXPBEI@Z
+    ?sendActionsForControlEvents@CCControl@extension@cocos2d@@UAEXI@Z
+    ?sendErrorMessage@AssetsManager@extension@cocos2d@@IAEXW4ErrorCode@123@@Z
+    ?setAdjustBackgroundImage@CCControlButton@extension@cocos2d@@QAEX_N@Z
+    ?setAnchorPoint@CCEditBox@extension@cocos2d@@UAEXABVCCPoint@3@@Z
+    ?setAnchorPoint@CCEditBoxImplWin@extension@cocos2d@@UAEXABVCCPoint@3@@Z
+    ?setBackground@CCControlHuePicker@extension@cocos2d@@UAEXPAVCCSprite@3@@Z
+    ?setBackgroundSprite@CCControlButton@extension@cocos2d@@UAEXPAVCCScale9Sprite@23@@Z
+    ?setBackgroundSprite@CCControlSlider@extension@cocos2d@@UAEXPAVCCSprite@3@@Z
+    ?setBackgroundSpriteDispatchTable@CCControlButton@extension@cocos2d@@UAEXPAVCCDictionary@3@@Z
+    ?setBackgroundSpriteForState@CCControlButton@extension@cocos2d@@UAEXPAVCCScale9Sprite@23@I@Z
+    ?setBackgroundSpriteFrameForState@CCControlButton@extension@cocos2d@@UAEXPAVCCSpriteFrame@3@I@Z
+    ?setBounceable@CCScrollView@extension@cocos2d@@QAEX_N@Z
+    ?setCapInsets@CCScale9Sprite@extension@cocos2d@@UAEXVCCRect@3@@Z
+    ?setClippingToBounds@CCScrollView@extension@cocos2d@@QAEX_N@Z
+    ?setColor@CCControlButton@extension@cocos2d@@UAEXABU_ccColor3B@3@@Z
+    ?setColor@CCScale9Sprite@extension@cocos2d@@UAEXABU_ccColor3B@3@@Z
+    ?setColorTarget@CCControlColourPicker@extension@cocos2d@@UAEXPAVCCSprite@3@@Z
+    ?setColorValue@CCControlColourPicker@extension@cocos2d@@UAEXABU_ccColor3B@3@@Z
+    ?setConnectionTimeout@AssetsManager@extension@cocos2d@@QAEXI@Z
+    ?setContainer@CCScrollView@extension@cocos2d@@QAEXPAVCCNode@3@@Z
+    ?setContentOffset@CCScrollView@extension@cocos2d@@QAEXVCCPoint@3@_N@Z
+    ?setContentOffsetInDuration@CCScrollView@extension@cocos2d@@QAEXVCCPoint@3@M@Z
+    ?setContentSize@CCEditBox@extension@cocos2d@@UAEXABVCCSize@3@@Z
+    ?setContentSize@CCEditBoxImplWin@extension@cocos2d@@UAEXABVCCSize@3@@Z
+    ?setContentSize@CCScale9Sprite@extension@cocos2d@@UAEXABVCCSize@3@@Z
+    ?setContentSize@CCScrollView@extension@cocos2d@@UAEXABVCCSize@3@@Z
+    ?setDataSource@CCTableView@extension@cocos2d@@QAEXPAVCCTableViewDataSource@23@@Z
+    ?setDelegate@AssetsManager@extension@cocos2d@@QAEXPAVAssetsManagerDelegateProtocol@23@@Z
+    ?setDelegate@CCControlColourPicker@extension@cocos2d@@UAEXPAVColorPickerDelegate@23@@Z
+    ?setDelegate@CCEditBox@extension@cocos2d@@QAEXPAVCCEditBoxDelegate@23@@Z
+    ?setDelegate@CCEditBoxImpl@extension@cocos2d@@QAEXPAVCCEditBoxDelegate@23@@Z
+    ?setDelegate@CCScrollView@extension@cocos2d@@QAEXPAVCCScrollViewDelegate@23@@Z
+    ?setDelegate@CCTableView@extension@cocos2d@@QAEXPAVCCTableViewDelegate@23@@Z
+    ?setDirection@CCScrollView@extension@cocos2d@@UAEXW4CCScrollViewDirection@23@@Z
+    ?setDisableAnimation@CCScrollView@extension@cocos2d@@UAEX_N@Z
+    ?setDownloadProgress@CCHttpRequest@extension@cocos2d@@QAEXH@Z
+    ?setEnabled@CCControl@extension@cocos2d@@UAEX_N@Z
+    ?setEnabled@CCControlButton@extension@cocos2d@@UAEX_N@Z
+    ?setEnabled@CCControlHuePicker@extension@cocos2d@@UAEX_N@Z
+    ?setEnabled@CCControlPotentiometer@extension@cocos2d@@UAEX_N@Z
+    ?setEnabled@CCControlSaturationBrightnessPicker@extension@cocos2d@@UAEX_N@Z
+    ?setEnabled@CCControlSlider@extension@cocos2d@@UAEX_N@Z
+    ?setEnabled@CCControlSwitch@extension@cocos2d@@UAEX_N@Z
+    ?setErrorBuffer@CCHttpResponse@extension@cocos2d@@QAEXPBD@Z
+    ?setFont@CCEditBox@extension@cocos2d@@QAEXPBDH@Z
+    ?setFont@CCEditBoxImplWin@extension@cocos2d@@UAEXPBDH@Z
+    ?setFontColor@CCEditBox@extension@cocos2d@@QAEXABU_ccColor3B@3@@Z
+    ?setFontColor@CCEditBoxImplWin@extension@cocos2d@@UAEXABU_ccColor3B@3@@Z
+    ?setFontName@CCEditBox@extension@cocos2d@@QAEXPBD@Z
+    ?setFontSize@CCEditBox@extension@cocos2d@@QAEXH@Z
+    ?setHeaders@CCHttpRequest@extension@cocos2d@@QAEXV?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@@Z
+    ?setHighlighted@CCControl@extension@cocos2d@@UAEX_N@Z
+    ?setHighlighted@CCControlButton@extension@cocos2d@@UAEX_N@Z
+    ?setHue@CCControlHuePicker@extension@cocos2d@@UAEXM@Z
+    ?setHuePercentage@CCControlHuePicker@extension@cocos2d@@UAEXM@Z
+    ?setIdx@CCTableViewCell@extension@cocos2d@@QAEXI@Z
+    ?setInputFlag@CCEditBox@extension@cocos2d@@QAEXW4EditBoxInputFlag@23@@Z
+    ?setInputFlag@CCEditBoxImplWin@extension@cocos2d@@UAEXW4EditBoxInputFlag@23@@Z
+    ?setInputMode@CCEditBox@extension@cocos2d@@QAEXW4EditBoxInputMode@23@@Z
+    ?setInputMode@CCEditBoxImplWin@extension@cocos2d@@UAEXW4EditBoxInputMode@23@@Z
+    ?setInsetBottom@CCScale9Sprite@extension@cocos2d@@UAEXM@Z
+    ?setInsetLeft@CCScale9Sprite@extension@cocos2d@@UAEXM@Z
+    ?setInsetRight@CCScale9Sprite@extension@cocos2d@@UAEXM@Z
+    ?setInsetTop@CCScale9Sprite@extension@cocos2d@@UAEXM@Z
+    ?setLabelAnchorPoint@CCControlButton@extension@cocos2d@@UAEXVCCPoint@3@@Z
+    ?setMargins@CCControlButton@extension@cocos2d@@UAEXHH@Z
+    ?setMaxLength@CCEditBox@extension@cocos2d@@QAEXH@Z
+    ?setMaxLength@CCEditBoxImplWin@extension@cocos2d@@UAEXH@Z
+    ?setMaximumAllowedValue@CCControlSlider@extension@cocos2d@@UAEXM@Z
+    ?setMaximumValue@CCControlPotentiometer@extension@cocos2d@@QAEXM@Z
+    ?setMaximumValue@CCControlSlider@extension@cocos2d@@UAEXM@Z
+    ?setMaximumValue@CCControlStepper@extension@cocos2d@@UAEXN@Z
+    ?setMinimumAllowedValue@CCControlSlider@extension@cocos2d@@UAEXM@Z
+    ?setMinimumValue@CCControlPotentiometer@extension@cocos2d@@QAEXM@Z
+    ?setMinimumValue@CCControlSlider@extension@cocos2d@@UAEXM@Z
+    ?setMinimumValue@CCControlStepper@extension@cocos2d@@UAEXN@Z
+    ?setMinusLabel@CCControlStepper@extension@cocos2d@@UAEXPAVCCLabelTTF@3@@Z
+    ?setMinusSprite@CCControlStepper@extension@cocos2d@@UAEXPAVCCSprite@3@@Z
+    ?setObjectID@CCTableViewCell@extension@cocos2d@@UAEXI@Z
+    ?setObjectID_ofSortedObject@CCArrayForObjectSorting@extension@cocos2d@@QAEXIPAVCCSortableObject@23@@Z
+    ?setOn@CCControlSwitch@extension@cocos2d@@QAEX_N0@Z
+    ?setOn@CCControlSwitch@extension@cocos2d@@QAEX_N@Z
+    ?setOpacity@CCControlButton@extension@cocos2d@@UAEXE@Z
+    ?setOpacity@CCScale9Sprite@extension@cocos2d@@UAEXE@Z
+    ?setOpacityModifyRGB@CCControl@extension@cocos2d@@UAEX_N@Z
+    ?setOpacityModifyRGB@CCScale9Sprite@extension@cocos2d@@UAEX_N@Z
+    ?setPackageUrl@AssetsManager@extension@cocos2d@@QAEXPBD@Z
+    ?setPlaceHolder@CCEditBox@extension@cocos2d@@QAEXPBD@Z
+    ?setPlaceHolder@CCEditBoxImplWin@extension@cocos2d@@UAEXPBD@Z
+    ?setPlaceholderFont@CCEditBox@extension@cocos2d@@QAEXPBDH@Z
+    ?setPlaceholderFont@CCEditBoxImplWin@extension@cocos2d@@UAEXPBDH@Z
+    ?setPlaceholderFontColor@CCEditBox@extension@cocos2d@@QAEXABU_ccColor3B@3@@Z
+    ?setPlaceholderFontColor@CCEditBoxImplWin@extension@cocos2d@@UAEXABU_ccColor3B@3@@Z
+    ?setPlaceholderFontName@CCEditBox@extension@cocos2d@@QAEXPBD@Z
+    ?setPlaceholderFontSize@CCEditBox@extension@cocos2d@@QAEXH@Z
+    ?setPlusLabel@CCControlStepper@extension@cocos2d@@UAEXPAVCCLabelTTF@3@@Z
+    ?setPlusSprite@CCControlStepper@extension@cocos2d@@UAEXPAVCCSprite@3@@Z
+    ?setPosition@CCEditBox@extension@cocos2d@@UAEXABVCCPoint@3@@Z
+    ?setPosition@CCEditBoxImplWin@extension@cocos2d@@UAEXABVCCPoint@3@@Z
+    ?setPreferredSize@CCControlButton@extension@cocos2d@@UAEXVCCSize@3@@Z
+    ?setPreferredSize@CCScale9Sprite@extension@cocos2d@@UAEXVCCSize@3@@Z
+    ?setPreviousLocation@CCControlPotentiometer@extension@cocos2d@@UAEXVCCPoint@3@@Z
+    ?setProgressSprite@CCControlSlider@extension@cocos2d@@UAEXPAVCCSprite@3@@Z
+    ?setProgressTimer@CCControlPotentiometer@extension@cocos2d@@UAEXPAVCCProgressTimer@3@@Z
+    ?setReadTimeout@CCHttpRequest@extension@cocos2d@@QAEXH@Z
+    ?setRequestData@CCHttpRequest@extension@cocos2d@@QAEXPBDI@Z
+    ?setRequestType@CCHttpRequest@extension@cocos2d@@QAEXW4HttpRequestType@123@@Z
+    ?setResponseCallback@CCHttpRequest@extension@cocos2d@@QAEXPAVCCObject@3@P843@AEXPAVCCHttpClient@23@PAVCCHttpResponse@23@@Z@Z
+    ?setResponseCallback@CCHttpRequest@extension@cocos2d@@QAEXPAVCCObject@3@P843@AEXPAVCCNode@3@PAX@Z@Z
+    ?setResponseCode@CCHttpResponse@extension@cocos2d@@QAEXJ@Z
+    ?setResponseData@CCHttpResponse@extension@cocos2d@@QAEXPAV?$vector@DV?$allocator@D@std@@@std@@@Z
+    ?setResponseHeader@CCHttpResponse@extension@cocos2d@@QAEXPAV?$vector@DV?$allocator@D@std@@@std@@@Z
+    ?setReturnType@CCEditBox@extension@cocos2d@@QAEXW4KeyboardReturnType@23@@Z
+    ?setReturnType@CCEditBoxImplWin@extension@cocos2d@@UAEXW4KeyboardReturnType@23@@Z
+    ?setSearchPath@AssetsManager@extension@cocos2d@@IAEXXZ
+    ?setSelected@CCControl@extension@cocos2d@@UAEX_N@Z
+    ?setSelected@CCControlButton@extension@cocos2d@@UAEX_N@Z
+    ?setShouldCancel@CCHttpRequest@extension@cocos2d@@QAEX_N@Z
+    ?setSlider@CCControlHuePicker@extension@cocos2d@@UAEXPAVCCSprite@3@@Z
+    ?setSpriteFrame@CCScale9Sprite@extension@cocos2d@@UAEXPAVCCSpriteFrame@3@@Z
+    ?setStepValue@CCControlStepper@extension@cocos2d@@UAEXN@Z
+    ?setStoragePath@AssetsManager@extension@cocos2d@@QAEXPBD@Z
+    ?setSucceed@CCHttpResponse@extension@cocos2d@@QAEX_N@Z
+    ?setTag@CCHttpRequest@extension@cocos2d@@QAEXPBD@Z
+    ?setText@CCEditBox@extension@cocos2d@@QAEXPBD@Z
+    ?setText@CCEditBoxImplWin@extension@cocos2d@@UAEXPBD@Z
+    ?setThumbSprite@CCControlPotentiometer@extension@cocos2d@@UAEXPAVCCSprite@3@@Z
+    ?setThumbSprite@CCControlSlider@extension@cocos2d@@UAEXPAVCCSprite@3@@Z
+    ?setTimeoutForConnect@CCHttpClient@extension@cocos2d@@QAEXH@Z
+    ?setTimeoutForRead@CCHttpClient@extension@cocos2d@@QAEXH@Z
+    ?setTitleBMFontForState@CCControlButton@extension@cocos2d@@UAEXPBDI@Z
+    ?setTitleColorDispatchTable@CCControlButton@extension@cocos2d@@UAEXPAVCCDictionary@3@@Z
+    ?setTitleColorForState@CCControlButton@extension@cocos2d@@UAEXU_ccColor3B@3@I@Z
+    ?setTitleDispatchTable@CCControlButton@extension@cocos2d@@UAEXPAVCCDictionary@3@@Z
+    ?setTitleForState@CCControlButton@extension@cocos2d@@UAEXPAVCCString@3@I@Z
+    ?setTitleLabel@CCControlButton@extension@cocos2d@@UAEXPAVCCNode@3@@Z
+    ?setTitleLabelDispatchTable@CCControlButton@extension@cocos2d@@UAEXPAVCCDictionary@3@@Z
+    ?setTitleLabelForState@CCControlButton@extension@cocos2d@@UAEXPAVCCNode@3@I@Z
+    ?setTitleTTFForState@CCControlButton@extension@cocos2d@@UAEXPBDI@Z
+    ?setTitleTTFSizeForState@CCControlButton@extension@cocos2d@@UAEXMI@Z
+    ?setTouchEnabled@CCScrollView@extension@cocos2d@@UAEX_N@Z
+    ?setType@CCHttpRequest@extension@cocos2d@@QAEXH@Z
+    ?setUrl@CCHttpRequest@extension@cocos2d@@QAEXPBD@Z
+    ?setUserData@CCHttpRequest@extension@cocos2d@@QAEXPAX@Z
+    ?setValue@CCControlPotentiometer@extension@cocos2d@@QAEXM@Z
+    ?setValue@CCControlSlider@extension@cocos2d@@UAEXM@Z
+    ?setValue@CCControlStepper@extension@cocos2d@@UAEXN@Z
+    ?setValueWithSendingEvent@CCControlStepper@extension@cocos2d@@UAEXN_N@Z
+    ?setVersionFileUrl@AssetsManager@extension@cocos2d@@QAEXPBD@Z
+    ?setVerticalFillOrder@CCTableView@extension@cocos2d@@QAEXW4CCTableViewVerticalFillOrder@23@@Z
+    ?setViewSize@CCScrollView@extension@cocos2d@@QAEXVCCSize@3@@Z
+    ?setVisible@CCEditBox@extension@cocos2d@@UAEX_N@Z
+    ?setVisible@CCEditBoxImplWin@extension@cocos2d@@UAEX_N@Z
+    ?setWraps@CCControlStepper@extension@cocos2d@@UAEX_N@Z
+    ?setZoomOnTouchDown@CCControlButton@extension@cocos2d@@UAEX_N@Z
+    ?setZoomScale@CCScrollView@extension@cocos2d@@QAEXM@Z
+    ?setZoomScale@CCScrollView@extension@cocos2d@@QAEXM_N@Z
+    ?setZoomScaleInDuration@CCScrollView@extension@cocos2d@@QAEXMM@Z
+    ?sliderBegan@CCControlSlider@extension@cocos2d@@IAEXVCCPoint@3@@Z
+    ?sliderEnded@CCControlSlider@extension@cocos2d@@IAEXVCCPoint@3@@Z
+    ?sliderMoved@CCControlSlider@extension@cocos2d@@IAEXVCCPoint@3@@Z
+    ?startAutorepeat@CCControlStepper@extension@cocos2d@@QAEXXZ
+    ?stopAutorepeat@CCControlStepper@extension@cocos2d@@QAEXXZ
+    ?stoppedAnimatedScroll@CCScrollView@extension@cocos2d@@AAEXPAVCCNode@3@@Z
+    ?tableCellHighlight@CCTableViewDelegate@extension@cocos2d@@UAEXPAVCCTableView@23@PAVCCTableViewCell@23@@Z
+    ?tableCellSizeForIndex@CCTableViewDataSource@extension@cocos2d@@UAE?AVCCSize@3@PAVCCTableView@23@I@Z
+    ?tableCellUnhighlight@CCTableViewDelegate@extension@cocos2d@@UAEXPAVCCTableView@23@PAVCCTableViewCell@23@@Z
+    ?tableCellWillRecycle@CCTableViewDelegate@extension@cocos2d@@UAEXPAVCCTableView@23@PAVCCTableViewCell@23@@Z
+    ?touchDownAction@CCEditBox@extension@cocos2d@@QAEXPAVCCObject@3@I@Z
+    ?uncompress@AssetsManager@extension@cocos2d@@IAE_NXZ
+    ?unregisterAllScriptHandler@CCTableView@extension@cocos2d@@QAEXXZ
+    ?unregisterScriptEditBoxHandler@CCEditBox@extension@cocos2d@@QAEXXZ
+    ?unregisterScriptHandler@CCScrollView@extension@cocos2d@@QAEXH@Z
+    ?update@AssetsManager@extension@cocos2d@@UAEXXZ
+    ?update@CCControlStepper@extension@cocos2d@@UAEXM@Z
+    ?updateCapInset@CCScale9Sprite@extension@cocos2d@@IAEXXZ
+    ?updateCellAtIndex@CCTableView@extension@cocos2d@@QAEXI@Z
+    ?updateControlPicker@CCControlColourPicker@extension@cocos2d@@IAEXXZ
+    ?updateDisplayedColor@CCScale9Sprite@extension@cocos2d@@UAEXABU_ccColor3B@3@@Z
+    ?updateDisplayedOpacity@CCScale9Sprite@extension@cocos2d@@UAEXE@Z
+    ?updateDraggerWithHSV@CCControlSaturationBrightnessPicker@extension@cocos2d@@UAEXUHSV@23@@Z
+    ?updateHueAndControlPicker@CCControlColourPicker@extension@cocos2d@@IAEXXZ
+    ?updateInset@CCScrollView@extension@cocos2d@@QAEXXZ
+    ?updateLayoutUsingTouchLocation@CCControlStepper@extension@cocos2d@@QAEXVCCPoint@3@@Z
+    ?updatePositions@CCScale9Sprite@extension@cocos2d@@IAEXXZ
+    ?updateSliderPosition@CCControlHuePicker@extension@cocos2d@@IAEXVCCPoint@3@@Z
+    ?updateSliderPosition@CCControlSaturationBrightnessPicker@extension@cocos2d@@IAEXVCCPoint@3@@Z
+    ?updateWithBatchNode@CCScale9Sprite@extension@cocos2d@@UAE_NPAVCCSpriteBatchNode@3@VCCRect@3@_N1@Z
+    ?updateWithHSV@CCControlSaturationBrightnessPicker@extension@cocos2d@@UAEXUHSV@23@@Z
+    ?valueForLocation@CCControlSlider@extension@cocos2d@@IAEMVCCPoint@3@@Z
+    ?visit@CCEditBox@extension@cocos2d@@UAEXXZ
+    ?visit@CCEditBoxImplWin@extension@cocos2d@@UAEXXZ
+    ?visit@CCScale9Sprite@extension@cocos2d@@UAEXXZ
+    ?visit@CCScrollView@extension@cocos2d@@UAEXXZ

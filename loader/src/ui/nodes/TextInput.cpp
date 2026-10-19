@@ -182,20 +182,20 @@ void TextInput::setCallbackEnabled(bool enabled) {
 }
 void TextInput::setEnabled(bool enabled) {
     m_impl->input->setTouchEnabled(enabled);
-    m_impl->input->m_textLabel->setOpacity(enabled ? 255 : 150);
+    m_impl->input->m_placeholderLabel->setOpacity(enabled ? 255 : 150);
 }
 void TextInput::setTextAlign(TextInputAlign align) {
     switch (align) {
         default:
         case TextInputAlign::Center: {
             m_impl->input->m_textField->setAnchorPoint({ .5f, .5f });
-            m_impl->input->m_textLabel->setAnchorPoint({ .5f, .5f });
+            m_impl->input->m_placeholderLabel->setAnchorPoint({ .5f, .5f });
             m_impl->input->updateAnchoredPosition(Anchor::Center);
         } break;
 
         case TextInputAlign::Left: {
             m_impl->input->m_textField->setAnchorPoint({ .0f, .5f });
-            m_impl->input->m_textLabel->setAnchorPoint({ .0f, .5f });
+            m_impl->input->m_placeholderLabel->setAnchorPoint({ .0f, .5f });
             m_impl->input->updateAnchoredPosition(Anchor::Left, ccp(5, 0));
         } break;
     }

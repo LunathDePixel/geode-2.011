@@ -105,6 +105,14 @@ private:
 
     class Impl;
     Impl * m_pImpl;
+
+public:
+    // GD 2.011 port: 2.2's hasDelegate (is a text field attached to the IME) for 2.0. Impl is
+    // { std::list<CCIMEDelegate*> m_DelegateList; CCIMEDelegate* m_DelegateWithIme; } (0xC bytes,
+    // VS2013 list = head + size); detachDelegateWithIME reads m_DelegateWithIme at Impl+8
+    GD20_ADD(bool hasDelegate() const {
+        return m_pImpl && reinterpret_cast<CCIMEDelegate* const*>(m_pImpl)[2] != nullptr;
+    })
 };
 
 // end of input group

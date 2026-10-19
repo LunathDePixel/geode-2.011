@@ -33,7 +33,7 @@ namespace geode {
         }
         BasicZStringView(std::basic_string<C> const& str) : m_str(str.c_str()), m_length(str.size()) {}
 
-#ifdef GEODE_IS_ANDROID
+#if defined(GEODE_IS_ANDROID) || defined(GEODE_IS_WINDOWS32)  // GD 2.011 port: gd::string is not std::string there either
         BasicZStringView(gd::string const& str) requires std::same_as<C, char> : m_str(str.c_str()), m_length(str.size()) {}
 #endif
 
@@ -52,7 +52,7 @@ namespace geode {
             return std::basic_string<C>(m_str, _size());
         }
 
-#ifdef GEODE_IS_ANDROID
+#if defined(GEODE_IS_ANDROID) || defined(GEODE_IS_WINDOWS32)
         operator gd::string() const requires std::same_as<C, char> {
             return gd::string(m_str, _size());
         }

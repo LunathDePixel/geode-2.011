@@ -466,7 +466,7 @@ protected:
 
     /** calculates delta time since last time it was called */
     void calculateDeltaTime();
-protected:
+public:  // GD 2.011 port: public as in v5
     /* The CCEGLView, where everything is rendered */
     CCEGLView    *m_pobOpenGLView;
 

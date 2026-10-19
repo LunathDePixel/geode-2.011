@@ -67,7 +67,6 @@ EXPORTS
     ??0CCAccelerometerDelegate@cocos2d@@QAE@ABV01@@Z
     ??0CCAccelerometerDelegate@cocos2d@@QAE@XZ
     ??0CCAction@cocos2d@@QAE@ABV01@@Z
-    ??0CCAction@cocos2d@@QAE@XZ
     ??0CCActionCamera@cocos2d@@QAE@ABV01@@Z
     ??0CCActionCamera@cocos2d@@QAE@XZ
     ??0CCActionEase@cocos2d@@QAE@ABV01@@Z
@@ -77,7 +76,6 @@ EXPORTS
     ??0CCActionInterval@cocos2d@@QAE@ABV01@@Z
     ??0CCActionInterval@cocos2d@@QAE@XZ
     ??0CCActionManager@cocos2d@@QAE@ABV01@@Z
-    ??0CCActionManager@cocos2d@@QAE@XZ
     ??0CCActionTween@cocos2d@@QAE@ABV01@@Z
     ??0CCActionTween@cocos2d@@QAE@XZ
     ??0CCActionTweenDelegate@cocos2d@@QAE@ABV01@@Z
@@ -91,7 +89,6 @@ EXPORTS
     ??0CCAnimationFrame@cocos2d@@QAE@ABV01@@Z
     ??0CCAnimationFrame@cocos2d@@QAE@XZ
     ??0CCApplication@cocos2d@@QAE@ABV01@@Z
-    ??0CCApplication@cocos2d@@QAE@XZ
     ??0CCApplicationProtocol@cocos2d@@QAE@ABV01@@Z
     ??0CCApplicationProtocol@cocos2d@@QAE@XZ
     ??0CCArray@cocos2d@@QAE@ABV01@@Z
@@ -130,7 +127,6 @@ EXPORTS
     ??0CCCatmullRomBy@cocos2d@@QAE@XZ
     ??0CCCatmullRomTo@cocos2d@@QAE@ABV01@@Z
     ??0CCCatmullRomTo@cocos2d@@QAE@XZ
-    ??0CCClippingNode@cocos2d@@IAE@XZ
     ??0CCClippingNode@cocos2d@@QAE@ABV01@@Z
     ??0CCComponent@cocos2d@@IAE@XZ
     ??0CCComponent@cocos2d@@QAE@ABV01@@Z
@@ -153,17 +149,14 @@ EXPORTS
     ??0CCDictionary@cocos2d@@QAE@ABV01@@Z
     ??0CCDictionary@cocos2d@@QAE@XZ
     ??0CCDirector@cocos2d@@QAE@ABV01@@Z
-    ??0CCDirector@cocos2d@@QAE@XZ
     ??0CCDirectorDelegate@cocos2d@@QAE@ABV01@@Z
     ??0CCDirectorDelegate@cocos2d@@QAE@XZ
     ??0CCDouble@cocos2d@@QAE@ABV01@@Z
     ??0CCDouble@cocos2d@@QAE@N@Z
     ??0CCDrawNode@cocos2d@@QAE@ABV01@@Z
-    ??0CCDrawNode@cocos2d@@QAE@XZ
     ??0CCEGLView@cocos2d@@IAE@XZ
     ??0CCEGLView@cocos2d@@QAE@ABV01@@Z
     ??0CCEGLViewProtocol@cocos2d@@QAE@ABV01@@Z
-    ??0CCEGLViewProtocol@cocos2d@@QAE@XZ
     ??0CCEaseBackIn@cocos2d@@QAE@ABV01@@Z
     ??0CCEaseBackIn@cocos2d@@QAE@XZ
     ??0CCEaseBackInOut@cocos2d@@QAE@ABV01@@Z
@@ -252,10 +245,8 @@ EXPORTS
     ??0CCGridBase@cocos2d@@QAE@XZ
     ??0CCHide@cocos2d@@QAE@ABV01@@Z
     ??0CCHide@cocos2d@@QAE@XZ
-    ??0CCIMEDelegate@cocos2d@@IAE@XZ
     ??0CCIMEDelegate@cocos2d@@QAE@ABV01@@Z
     ??0CCIMEDispatcher@cocos2d@@AAE@XZ
-    ??0CCImage@cocos2d@@QAE@XZ
     ??0CCInteger@cocos2d@@QAE@ABV01@@Z
     ??0CCInteger@cocos2d@@QAE@H@Z
     ??0CCJumpBy@cocos2d@@QAE@ABV01@@Z
@@ -279,21 +270,17 @@ EXPORTS
     ??0CCLabelAtlas@cocos2d@@QAE@ABV01@@Z
     ??0CCLabelAtlas@cocos2d@@QAE@XZ
     ??0CCLabelBMFont@cocos2d@@QAE@ABV01@@Z
-    ??0CCLabelBMFont@cocos2d@@QAE@XZ
     ??0CCLabelProtocol@cocos2d@@QAE@ABV01@@Z
     ??0CCLabelProtocol@cocos2d@@QAE@XZ
     ??0CCLabelTTF@cocos2d@@QAE@ABV01@@Z
     ??0CCLabelTTF@cocos2d@@QAE@XZ
     ??0CCLayer@cocos2d@@QAE@ABV01@@Z
-    ??0CCLayer@cocos2d@@QAE@XZ
     ??0CCLayerColor@cocos2d@@QAE@ABV01@@Z
-    ??0CCLayerColor@cocos2d@@QAE@XZ
     ??0CCLayerGradient@cocos2d@@QAE@ABV01@@Z
     ??0CCLayerGradient@cocos2d@@QAE@XZ
     ??0CCLayerMultiplex@cocos2d@@QAE@ABV01@@Z
     ??0CCLayerMultiplex@cocos2d@@QAE@XZ
     ??0CCLayerRGBA@cocos2d@@QAE@ABV01@@Z
-    ??0CCLayerRGBA@cocos2d@@QAE@XZ
     ??0CCLens3D@cocos2d@@QAE@ABV01@@Z
     ??0CCLens3D@cocos2d@@QAE@XZ
     ??0CCLiquid@cocos2d@@QAE@ABV01@@Z
@@ -315,7 +302,6 @@ EXPORTS
     ??0CCMenuItemToggle@cocos2d@@QAE@ABV01@@Z
     ??0CCMenuItemToggle@cocos2d@@QAE@XZ
     ??0CCMotionStreak@cocos2d@@QAE@ABV01@@Z
-    ??0CCMotionStreak@cocos2d@@QAE@XZ
     ??0CCMouseDelegate@cocos2d@@QAE@ABV01@@Z
     ??0CCMouseDelegate@cocos2d@@QAE@XZ
     ??0CCMouseDispatcher@cocos2d@@QAE@ABV01@@Z
@@ -327,15 +313,12 @@ EXPORTS
     ??0CCMoveTo@cocos2d@@QAE@ABV01@@Z
     ??0CCMoveTo@cocos2d@@QAE@XZ
     ??0CCNode@cocos2d@@QAE@ABV01@@Z
-    ??0CCNode@cocos2d@@QAE@XZ
     ??0CCNodeRGBA@cocos2d@@QAE@ABV01@@Z
-    ??0CCNodeRGBA@cocos2d@@QAE@XZ
     ??0CCNotificationCenter@cocos2d@@QAE@ABV01@@Z
     ??0CCNotificationCenter@cocos2d@@QAE@XZ
     ??0CCNotificationObserver@cocos2d@@QAE@ABV01@@Z
     ??0CCNotificationObserver@cocos2d@@QAE@PAVCCObject@1@P821@AEX0@ZPBD0@Z
     ??0CCObject@cocos2d@@QAE@ABV01@@Z
-    ??0CCObject@cocos2d@@QAE@XZ
     ??0CCOrbitCamera@cocos2d@@QAE@ABV01@@Z
     ??0CCOrbitCamera@cocos2d@@QAE@XZ
     ??0CCPageTurn3D@cocos2d@@QAE@ABV01@@Z
@@ -367,9 +350,7 @@ EXPORTS
     ??0CCParticleSun@cocos2d@@QAE@ABV01@@Z
     ??0CCParticleSun@cocos2d@@QAE@XZ
     ??0CCParticleSystem@cocos2d@@QAE@ABV01@@Z
-    ??0CCParticleSystem@cocos2d@@QAE@XZ
     ??0CCParticleSystemQuad@cocos2d@@QAE@ABV01@@Z
-    ??0CCParticleSystemQuad@cocos2d@@QAE@XZ
     ??0CCPlace@cocos2d@@QAE@ABV01@@Z
     ??0CCPlace@cocos2d@@QAE@XZ
     ??0CCPoint@cocos2d@@QAE@ABV01@@Z
@@ -429,7 +410,6 @@ EXPORTS
     ??0CCSequence@cocos2d@@QAE@ABV01@@Z
     ??0CCSequence@cocos2d@@QAE@XZ
     ??0CCSet@cocos2d@@QAE@ABV01@@Z
-    ??0CCSet@cocos2d@@QAE@XZ
     ??0CCShaderCache@cocos2d@@QAE@ABV01@@Z
     ??0CCShaderCache@cocos2d@@QAE@XZ
     ??0CCShaky3D@cocos2d@@QAE@ABV01@@Z
@@ -459,7 +439,6 @@ EXPORTS
     ??0CCSplitRows@cocos2d@@QAE@ABV01@@Z
     ??0CCSplitRows@cocos2d@@QAE@XZ
     ??0CCSprite@cocos2d@@QAE@ABV01@@Z
-    ??0CCSprite@cocos2d@@QAE@XZ
     ??0CCSpriteBatchNode@cocos2d@@QAE@ABV01@@Z
     ??0CCSpriteBatchNode@cocos2d@@QAE@XZ
     ??0CCSpriteExtra@cocos2d@@QAE@ABV01@@Z
@@ -501,9 +480,7 @@ EXPORTS
     ??0CCTextFieldTTF@cocos2d@@QAE@ABV01@@Z
     ??0CCTextFieldTTF@cocos2d@@QAE@XZ
     ??0CCTexture2D@cocos2d@@QAE@ABV01@@Z
-    ??0CCTexture2D@cocos2d@@QAE@XZ
     ??0CCTextureAtlas@cocos2d@@QAE@ABV01@@Z
-    ??0CCTextureAtlas@cocos2d@@QAE@XZ
     ??0CCTextureCache@cocos2d@@QAE@ABV01@@Z
     ??0CCTextureCache@cocos2d@@QAE@XZ
     ??0CCTextureETC@cocos2d@@QAE@ABV01@@Z
@@ -619,7 +596,6 @@ EXPORTS
     ??0CCWavesTiles3D@cocos2d@@QAE@ABV01@@Z
     ??0CCWavesTiles3D@cocos2d@@QAE@XZ
     ??0CCZone@cocos2d@@QAE@PAVCCObject@1@@Z
-    ??0DS_Dictionary@@QAE@XZ
     ??0EGLTouchDelegate@cocos2d@@QAE@ABV01@@Z
     ??0EGLTouchDelegate@cocos2d@@QAE@XZ
     ??0FormatError@fmt@@QAE@ABV01@@Z
@@ -679,19 +655,16 @@ EXPORTS
     ??1CCAccelAmplitude@cocos2d@@UAE@XZ
     ??1CCAccelDeccelAmplitude@cocos2d@@UAE@XZ
     ??1CCAccelerometer@cocos2d@@QAE@XZ
-    ??1CCAction@cocos2d@@UAE@XZ
     ??1CCActionCamera@cocos2d@@UAE@XZ
     ??1CCActionEase@cocos2d@@UAE@XZ
     ??1CCActionInstant@cocos2d@@UAE@XZ
     ??1CCActionInterval@cocos2d@@UAE@XZ
-    ??1CCActionManager@cocos2d@@UAE@XZ
     ??1CCActionTween@cocos2d@@UAE@XZ
     ??1CCActionTweenDelegate@cocos2d@@UAE@XZ
     ??1CCAnimate@cocos2d@@UAE@XZ
     ??1CCAnimation@cocos2d@@UAE@XZ
     ??1CCAnimationCache@cocos2d@@UAE@XZ
     ??1CCAnimationFrame@cocos2d@@UAE@XZ
-    ??1CCApplication@cocos2d@@UAE@XZ
     ??1CCApplicationProtocol@cocos2d@@UAE@XZ
     ??1CCArray@cocos2d@@UAE@XZ
     ??1CCAtlasNode@cocos2d@@UAE@XZ
@@ -710,7 +683,6 @@ EXPORTS
     ??1CCCardinalSplineTo@cocos2d@@UAE@XZ
     ??1CCCatmullRomBy@cocos2d@@UAE@XZ
     ??1CCCatmullRomTo@cocos2d@@UAE@XZ
-    ??1CCClippingNode@cocos2d@@UAE@XZ
     ??1CCComponent@cocos2d@@UAE@XZ
     ??1CCComponentContainer@cocos2d@@UAE@XZ
     ??1CCConfiguration@cocos2d@@UAE@XZ
@@ -720,11 +692,8 @@ EXPORTS
     ??1CCDelayTime@cocos2d@@UAE@XZ
     ??1CCDictElement@cocos2d@@QAE@XZ
     ??1CCDictionary@cocos2d@@UAE@XZ
-    ??1CCDirector@cocos2d@@UAE@XZ
     ??1CCDouble@cocos2d@@UAE@XZ
-    ??1CCDrawNode@cocos2d@@UAE@XZ
     ??1CCEGLView@cocos2d@@MAE@XZ
-    ??1CCEGLViewProtocol@cocos2d@@UAE@XZ
     ??1CCEaseBackIn@cocos2d@@UAE@XZ
     ??1CCEaseBackInOut@cocos2d@@UAE@XZ
     ??1CCEaseBackOut@cocos2d@@UAE@XZ
@@ -769,45 +738,30 @@ EXPORTS
     ??1CCGridAction@cocos2d@@UAE@XZ
     ??1CCGridBase@cocos2d@@UAE@XZ
     ??1CCHide@cocos2d@@UAE@XZ
-    ??1CCIMEDelegate@cocos2d@@UAE@XZ
     ??1CCIMEDispatcher@cocos2d@@QAE@XZ
-    ??1CCImage@cocos2d@@UAE@XZ
     ??1CCInteger@cocos2d@@UAE@XZ
     ??1CCJumpBy@cocos2d@@UAE@XZ
     ??1CCJumpTiles3D@cocos2d@@UAE@XZ
     ??1CCJumpTo@cocos2d@@UAE@XZ
     ??1CCKeyboardDispatcher@cocos2d@@UAE@XZ
-    ??1CCKeyboardHandler@cocos2d@@UAE@XZ
     ??1CCKeypadDispatcher@cocos2d@@UAE@XZ
-    ??1CCKeypadHandler@cocos2d@@UAE@XZ
     ??1CCLabelAtlas@cocos2d@@UAE@XZ
-    ??1CCLabelBMFont@cocos2d@@UAE@XZ
     ??1CCLabelTTF@cocos2d@@UAE@XZ
-    ??1CCLayer@cocos2d@@UAE@XZ
-    ??1CCLayerColor@cocos2d@@UAE@XZ
     ??1CCLayerGradient@cocos2d@@UAE@XZ
     ??1CCLayerMultiplex@cocos2d@@UAE@XZ
-    ??1CCLayerRGBA@cocos2d@@UAE@XZ
     ??1CCLens3D@cocos2d@@UAE@XZ
     ??1CCLiquid@cocos2d@@UAE@XZ
     ??1CCMenu@cocos2d@@UAE@XZ
-    ??1CCMenuItem@cocos2d@@UAE@XZ
     ??1CCMenuItemAtlasFont@cocos2d@@UAE@XZ
     ??1CCMenuItemFont@cocos2d@@UAE@XZ
     ??1CCMenuItemImage@cocos2d@@UAE@XZ
-    ??1CCMenuItemLabel@cocos2d@@UAE@XZ
     ??1CCMenuItemSprite@cocos2d@@UAE@XZ
     ??1CCMenuItemToggle@cocos2d@@UAE@XZ
-    ??1CCMotionStreak@cocos2d@@UAE@XZ
     ??1CCMouseDispatcher@cocos2d@@UAE@XZ
-    ??1CCMouseHandler@cocos2d@@UAE@XZ
     ??1CCMoveBy@cocos2d@@UAE@XZ
     ??1CCMoveTo@cocos2d@@UAE@XZ
-    ??1CCNode@cocos2d@@UAE@XZ
-    ??1CCNodeRGBA@cocos2d@@UAE@XZ
     ??1CCNotificationCenter@cocos2d@@UAE@XZ
     ??1CCNotificationObserver@cocos2d@@UAE@XZ
-    ??1CCObject@cocos2d@@UAE@XZ
     ??1CCOrbitCamera@cocos2d@@UAE@XZ
     ??1CCPageTurn3D@cocos2d@@UAE@XZ
     ??1CCParallaxNode@cocos2d@@UAE@XZ
@@ -823,8 +777,6 @@ EXPORTS
     ??1CCParticleSnow@cocos2d@@UAE@XZ
     ??1CCParticleSpiral@cocos2d@@UAE@XZ
     ??1CCParticleSun@cocos2d@@UAE@XZ
-    ??1CCParticleSystem@cocos2d@@UAE@XZ
-    ??1CCParticleSystemQuad@cocos2d@@UAE@XZ
     ??1CCPlace@cocos2d@@UAE@XZ
     ??1CCPointArray@cocos2d@@UAE@XZ
     ??1CCPoolManager@cocos2d@@QAE@XZ
@@ -850,7 +802,6 @@ EXPORTS
     ??1CCScriptEngineManager@cocos2d@@QAE@XZ
     ??1CCScriptEngineProtocol@cocos2d@@UAE@XZ
     ??1CCSequence@cocos2d@@UAE@XZ
-    ??1CCSet@cocos2d@@UAE@XZ
     ??1CCShaderCache@cocos2d@@UAE@XZ
     ??1CCShaky3D@cocos2d@@UAE@XZ
     ??1CCShakyTiles3D@cocos2d@@UAE@XZ
@@ -863,13 +814,10 @@ EXPORTS
     ??1CCSpeed@cocos2d@@UAE@XZ
     ??1CCSplitCols@cocos2d@@UAE@XZ
     ??1CCSplitRows@cocos2d@@UAE@XZ
-    ??1CCSprite@cocos2d@@UAE@XZ
-    ??1CCSpriteBatchNode@cocos2d@@UAE@XZ
     ??1CCSpriteExtra@cocos2d@@UAE@XZ
     ??1CCSpriteFrame@cocos2d@@UAE@XZ
     ??1CCSpriteFrameCache@cocos2d@@UAE@XZ
     ??1CCStandardTouchDelegate@cocos2d@@UAE@XZ
-    ??1CCStandardTouchHandler@cocos2d@@UAE@XZ
     ??1CCStopGrid@cocos2d@@UAE@XZ
     ??1CCString@cocos2d@@UAE@XZ
     ??1CCTMXLayer@cocos2d@@UAE@XZ
@@ -880,10 +828,7 @@ EXPORTS
     ??1CCTMXTilesetInfo@cocos2d@@UAE@XZ
     ??1CCTargetedAction@cocos2d@@UAE@XZ
     ??1CCTargetedTouchDelegate@cocos2d@@UAE@XZ
-    ??1CCTargetedTouchHandler@cocos2d@@UAE@XZ
     ??1CCTextFieldTTF@cocos2d@@UAE@XZ
-    ??1CCTexture2D@cocos2d@@UAE@XZ
-    ??1CCTextureAtlas@cocos2d@@UAE@XZ
     ??1CCTextureCache@cocos2d@@UAE@XZ
     ??1CCTextureETC@cocos2d@@UAE@XZ
     ??1CCThread@cocos2d@@QAE@XZ
@@ -897,7 +842,6 @@ EXPORTS
     ??1CCTouch@cocos2d@@UAE@XZ
     ??1CCTouchDelegate@cocos2d@@UAE@XZ
     ??1CCTouchDispatcher@cocos2d@@UAE@XZ
-    ??1CCTouchHandler@cocos2d@@UAE@XZ
     ??1CCTransitionCrossFade@cocos2d@@UAE@XZ
     ??1CCTransitionFade@cocos2d@@UAE@XZ
     ??1CCTransitionFadeBL@cocos2d@@UAE@XZ
@@ -940,7 +884,6 @@ EXPORTS
     ??1CCWaves3D@cocos2d@@UAE@XZ
     ??1CCWaves@cocos2d@@UAE@XZ
     ??1CCWavesTiles3D@cocos2d@@UAE@XZ
-    ??1DS_Dictionary@@QAE@XZ
     ??1EGLTouchDelegate@cocos2d@@UAE@XZ
     ??1FormatError@fmt@@UAE@XZ
     ??1MemPool@tinyxml2@@UAE@XZ
@@ -1344,21 +1287,16 @@ EXPORTS
     ??_7?$MemPoolT@$0DE@@tinyxml2@@6B@ DATA
     ??_7CCAccelAmplitude@cocos2d@@6B@ DATA
     ??_7CCAccelDeccelAmplitude@cocos2d@@6B@ DATA
-    ??_7CCAccelerometerDelegate@cocos2d@@6B@ DATA
-    ??_7CCAction@cocos2d@@6B@ DATA
     ??_7CCActionCamera@cocos2d@@6B@ DATA
     ??_7CCActionEase@cocos2d@@6B@ DATA
     ??_7CCActionInstant@cocos2d@@6B@ DATA
     ??_7CCActionInterval@cocos2d@@6B@ DATA
-    ??_7CCActionManager@cocos2d@@6B@ DATA
     ??_7CCActionTween@cocos2d@@6B@ DATA
     ??_7CCActionTweenDelegate@cocos2d@@6B@ DATA
     ??_7CCAnimate@cocos2d@@6B@ DATA
     ??_7CCAnimation@cocos2d@@6B@ DATA
     ??_7CCAnimationCache@cocos2d@@6B@ DATA
     ??_7CCAnimationFrame@cocos2d@@6B@ DATA
-    ??_7CCApplication@cocos2d@@6B@ DATA
-    ??_7CCApplicationProtocol@cocos2d@@6B@ DATA
     ??_7CCArray@cocos2d@@6B@ DATA
     ??_7CCAtlasNode@cocos2d@@6B@ DATA
     ??_7CCAtlasNode@cocos2d@@6BCCNode@1@@ DATA
@@ -1367,7 +1305,6 @@ EXPORTS
     ??_7CCBMFontConfiguration@cocos2d@@6B@ DATA
     ??_7CCBezierBy@cocos2d@@6B@ DATA
     ??_7CCBezierTo@cocos2d@@6B@ DATA
-    ??_7CCBlendProtocol@cocos2d@@6B@ DATA
     ??_7CCBlink@cocos2d@@6B@ DATA
     ??_7CCBool@cocos2d@@6B@ DATA
     ??_7CCCallFunc@cocos2d@@6B@ DATA
@@ -1382,25 +1319,16 @@ EXPORTS
     ??_7CCCardinalSplineTo@cocos2d@@6B@ DATA
     ??_7CCCatmullRomBy@cocos2d@@6B@ DATA
     ??_7CCCatmullRomTo@cocos2d@@6B@ DATA
-    ??_7CCClippingNode@cocos2d@@6B@ DATA
     ??_7CCComponent@cocos2d@@6B@ DATA
     ??_7CCComponentContainer@cocos2d@@6B@ DATA
     ??_7CCConfiguration@cocos2d@@6B@ DATA
     ??_7CCContentManager@@6B@ DATA
-    ??_7CCCopying@cocos2d@@6B@ DATA
     ??_7CCDataVisitor@cocos2d@@6B@ DATA
     ??_7CCDeccelAmplitude@cocos2d@@6B@ DATA
     ??_7CCDelayTime@cocos2d@@6B@ DATA
     ??_7CCDictionary@cocos2d@@6B@ DATA
-    ??_7CCDirector@cocos2d@@6BCCObject@1@@ DATA
-    ??_7CCDirector@cocos2d@@6BTypeInfo@1@@ DATA
     ??_7CCDirectorDelegate@cocos2d@@6B@ DATA
     ??_7CCDouble@cocos2d@@6B@ DATA
-    ??_7CCDrawNode@cocos2d@@6BCCNode@1@@ DATA
-    ??_7CCDrawNode@cocos2d@@6BCCRGBAProtocol@1@@ DATA
-    ??_7CCEGLView@cocos2d@@6BCCEGLViewProtocol@1@@ DATA
-    ??_7CCEGLView@cocos2d@@6BCCObject@1@@ DATA
-    ??_7CCEGLViewProtocol@cocos2d@@6B@ DATA
     ??_7CCEaseBackIn@cocos2d@@6B@ DATA
     ??_7CCEaseBackInOut@cocos2d@@6B@ DATA
     ??_7CCEaseBackOut@cocos2d@@6B@ DATA
@@ -1445,45 +1373,20 @@ EXPORTS
     ??_7CCGridAction@cocos2d@@6B@ DATA
     ??_7CCGridBase@cocos2d@@6B@ DATA
     ??_7CCHide@cocos2d@@6B@ DATA
-    ??_7CCIMEDelegate@cocos2d@@6B@ DATA
-    ??_7CCImage@cocos2d@@6B@ DATA
     ??_7CCInteger@cocos2d@@6B@ DATA
     ??_7CCJumpBy@cocos2d@@6B@ DATA
     ??_7CCJumpTiles3D@cocos2d@@6B@ DATA
     ??_7CCJumpTo@cocos2d@@6B@ DATA
-    ??_7CCKeyboardDelegate@cocos2d@@6B@ DATA
     ??_7CCKeyboardDispatcher@cocos2d@@6B@ DATA
-    ??_7CCKeyboardHandler@cocos2d@@6B@ DATA
-    ??_7CCKeypadDelegate@cocos2d@@6B@ DATA
     ??_7CCKeypadDispatcher@cocos2d@@6B@ DATA
-    ??_7CCKeypadHandler@cocos2d@@6B@ DATA
     ??_7CCLabelAtlas@cocos2d@@6BCCAtlasNode@1@@ DATA
     ??_7CCLabelAtlas@cocos2d@@6BCCLabelProtocol@1@@ DATA
     ??_7CCLabelAtlas@cocos2d@@6BCCNode@1@@ DATA
     ??_7CCLabelAtlas@cocos2d@@6BCCRGBAProtocol@1@@ DATA
-    ??_7CCLabelBMFont@cocos2d@@6BCCLabelProtocol@1@@ DATA
-    ??_7CCLabelBMFont@cocos2d@@6BCCNode@1@@ DATA
-    ??_7CCLabelBMFont@cocos2d@@6BCCRGBAProtocol@1@@ DATA
-    ??_7CCLabelBMFont@cocos2d@@6BCCTextureProtocol@1@@ DATA
-    ??_7CCLabelProtocol@cocos2d@@6B@ DATA
     ??_7CCLabelTTF@cocos2d@@6BCCLabelProtocol@1@@ DATA
     ??_7CCLabelTTF@cocos2d@@6BCCNode@1@@ DATA
     ??_7CCLabelTTF@cocos2d@@6BCCRGBAProtocol@1@@ DATA
     ??_7CCLabelTTF@cocos2d@@6BCCSprite@1@@ DATA
-    ??_7CCLayer@cocos2d@@6BCCAccelerometerDelegate@1@@ DATA
-    ??_7CCLayer@cocos2d@@6BCCKeyboardDelegate@1@@ DATA
-    ??_7CCLayer@cocos2d@@6BCCKeypadDelegate@1@@ DATA
-    ??_7CCLayer@cocos2d@@6BCCMouseDelegate@1@@ DATA
-    ??_7CCLayer@cocos2d@@6BCCNode@1@@ DATA
-    ??_7CCLayer@cocos2d@@6BCCTouchDelegate@1@@ DATA
-    ??_7CCLayerColor@cocos2d@@6BCCAccelerometerDelegate@1@@ DATA
-    ??_7CCLayerColor@cocos2d@@6BCCBlendProtocol@1@@ DATA
-    ??_7CCLayerColor@cocos2d@@6BCCKeyboardDelegate@1@@ DATA
-    ??_7CCLayerColor@cocos2d@@6BCCKeypadDelegate@1@@ DATA
-    ??_7CCLayerColor@cocos2d@@6BCCLayerRGBA@1@@ DATA
-    ??_7CCLayerColor@cocos2d@@6BCCMouseDelegate@1@@ DATA
-    ??_7CCLayerColor@cocos2d@@6BCCNode@1@@ DATA
-    ??_7CCLayerColor@cocos2d@@6BCCTouchDelegate@1@@ DATA
     ??_7CCLayerGradient@cocos2d@@6BCCAccelerometerDelegate@1@@ DATA
     ??_7CCLayerGradient@cocos2d@@6BCCBlendProtocol@1@@ DATA
     ??_7CCLayerGradient@cocos2d@@6BCCKeyboardDelegate@1@@ DATA
@@ -1498,13 +1401,6 @@ EXPORTS
     ??_7CCLayerMultiplex@cocos2d@@6BCCMouseDelegate@1@@ DATA
     ??_7CCLayerMultiplex@cocos2d@@6BCCNode@1@@ DATA
     ??_7CCLayerMultiplex@cocos2d@@6BCCTouchDelegate@1@@ DATA
-    ??_7CCLayerRGBA@cocos2d@@6B@ DATA
-    ??_7CCLayerRGBA@cocos2d@@6BCCAccelerometerDelegate@1@@ DATA
-    ??_7CCLayerRGBA@cocos2d@@6BCCKeyboardDelegate@1@@ DATA
-    ??_7CCLayerRGBA@cocos2d@@6BCCKeypadDelegate@1@@ DATA
-    ??_7CCLayerRGBA@cocos2d@@6BCCMouseDelegate@1@@ DATA
-    ??_7CCLayerRGBA@cocos2d@@6BCCNode@1@@ DATA
-    ??_7CCLayerRGBA@cocos2d@@6BCCTouchDelegate@1@@ DATA
     ??_7CCLens3D@cocos2d@@6B@ DATA
     ??_7CCLiquid@cocos2d@@6B@ DATA
     ??_7CCMenu@cocos2d@@6B@ DATA
@@ -1514,34 +1410,19 @@ EXPORTS
     ??_7CCMenu@cocos2d@@6BCCMouseDelegate@1@@ DATA
     ??_7CCMenu@cocos2d@@6BCCNode@1@@ DATA
     ??_7CCMenu@cocos2d@@6BCCTouchDelegate@1@@ DATA
-    ??_7CCMenuItem@cocos2d@@6BCCNode@1@@ DATA
-    ??_7CCMenuItem@cocos2d@@6BCCRGBAProtocol@1@@ DATA
     ??_7CCMenuItemAtlasFont@cocos2d@@6BCCNode@1@@ DATA
     ??_7CCMenuItemAtlasFont@cocos2d@@6BCCRGBAProtocol@1@@ DATA
     ??_7CCMenuItemFont@cocos2d@@6BCCNode@1@@ DATA
     ??_7CCMenuItemFont@cocos2d@@6BCCRGBAProtocol@1@@ DATA
     ??_7CCMenuItemImage@cocos2d@@6BCCNode@1@@ DATA
     ??_7CCMenuItemImage@cocos2d@@6BCCRGBAProtocol@1@@ DATA
-    ??_7CCMenuItemLabel@cocos2d@@6BCCNode@1@@ DATA
-    ??_7CCMenuItemLabel@cocos2d@@6BCCRGBAProtocol@1@@ DATA
-    ??_7CCMenuItemSprite@cocos2d@@6BCCNode@1@@ DATA
-    ??_7CCMenuItemSprite@cocos2d@@6BCCRGBAProtocol@1@@ DATA
     ??_7CCMenuItemToggle@cocos2d@@6BCCNode@1@@ DATA
     ??_7CCMenuItemToggle@cocos2d@@6BCCRGBAProtocol@1@@ DATA
-    ??_7CCMotionStreak@cocos2d@@6B@ DATA
-    ??_7CCMotionStreak@cocos2d@@6BCCNode@1@@ DATA
-    ??_7CCMotionStreak@cocos2d@@6BCCRGBAProtocol@1@@ DATA
-    ??_7CCMouseDelegate@cocos2d@@6B@ DATA
     ??_7CCMouseDispatcher@cocos2d@@6B@ DATA
-    ??_7CCMouseHandler@cocos2d@@6B@ DATA
     ??_7CCMoveBy@cocos2d@@6B@ DATA
     ??_7CCMoveTo@cocos2d@@6B@ DATA
-    ??_7CCNode@cocos2d@@6B@ DATA
-    ??_7CCNodeRGBA@cocos2d@@6BCCNode@1@@ DATA
-    ??_7CCNodeRGBA@cocos2d@@6BCCRGBAProtocol@1@@ DATA
     ??_7CCNotificationCenter@cocos2d@@6B@ DATA
     ??_7CCNotificationObserver@cocos2d@@6B@ DATA
-    ??_7CCObject@cocos2d@@6B@ DATA
     ??_7CCOrbitCamera@cocos2d@@6B@ DATA
     ??_7CCPageTurn3D@cocos2d@@6B@ DATA
     ??_7CCParallaxNode@cocos2d@@6B@ DATA
@@ -1569,10 +1450,6 @@ EXPORTS
     ??_7CCParticleSpiral@cocos2d@@6BCCTextureProtocol@1@@ DATA
     ??_7CCParticleSun@cocos2d@@6BCCNode@1@@ DATA
     ??_7CCParticleSun@cocos2d@@6BCCTextureProtocol@1@@ DATA
-    ??_7CCParticleSystem@cocos2d@@6BCCNode@1@@ DATA
-    ??_7CCParticleSystem@cocos2d@@6BCCTextureProtocol@1@@ DATA
-    ??_7CCParticleSystemQuad@cocos2d@@6BCCNode@1@@ DATA
-    ??_7CCParticleSystemQuad@cocos2d@@6BCCTextureProtocol@1@@ DATA
     ??_7CCPlace@cocos2d@@6B@ DATA
     ??_7CCPointArray@cocos2d@@6B@ DATA
     ??_7CCPrettyPrinter@cocos2d@@6B@ DATA
@@ -1581,7 +1458,6 @@ EXPORTS
     ??_7CCProgressTimer@cocos2d@@6BCCNode@1@@ DATA
     ??_7CCProgressTimer@cocos2d@@6BCCRGBAProtocol@1@@ DATA
     ??_7CCProgressTo@cocos2d@@6B@ DATA
-    ??_7CCRGBAProtocol@cocos2d@@6B@ DATA
     ??_7CCRemoveSelf@cocos2d@@6B@ DATA
     ??_7CCRenderTexture@cocos2d@@6B@ DATA
     ??_7CCRepeat@cocos2d@@6B@ DATA
@@ -1598,7 +1474,6 @@ EXPORTS
     ??_7CCScheduler@cocos2d@@6B@ DATA
     ??_7CCScriptEngineProtocol@cocos2d@@6B@ DATA
     ??_7CCSequence@cocos2d@@6B@ DATA
-    ??_7CCSet@cocos2d@@6B@ DATA
     ??_7CCShaderCache@cocos2d@@6B@ DATA
     ??_7CCShaky3D@cocos2d@@6B@ DATA
     ??_7CCShakyTiles3D@cocos2d@@6B@ DATA
@@ -1611,18 +1486,12 @@ EXPORTS
     ??_7CCSpeed@cocos2d@@6B@ DATA
     ??_7CCSplitCols@cocos2d@@6B@ DATA
     ??_7CCSplitRows@cocos2d@@6B@ DATA
-    ??_7CCSprite@cocos2d@@6B@ DATA
-    ??_7CCSprite@cocos2d@@6BCCNode@1@@ DATA
-    ??_7CCSprite@cocos2d@@6BCCRGBAProtocol@1@@ DATA
-    ??_7CCSpriteBatchNode@cocos2d@@6BCCNode@1@@ DATA
-    ??_7CCSpriteBatchNode@cocos2d@@6BCCTextureProtocol@1@@ DATA
     ??_7CCSpriteExtra@cocos2d@@6B@ DATA
     ??_7CCSpriteExtra@cocos2d@@6BCCNode@1@@ DATA
     ??_7CCSpriteExtra@cocos2d@@6BCCRGBAProtocol@1@@ DATA
     ??_7CCSpriteFrame@cocos2d@@6B@ DATA
     ??_7CCSpriteFrameCache@cocos2d@@6B@ DATA
     ??_7CCStandardTouchDelegate@cocos2d@@6B@ DATA
-    ??_7CCStandardTouchHandler@cocos2d@@6B@ DATA
     ??_7CCStopGrid@cocos2d@@6B@ DATA
     ??_7CCString@cocos2d@@6B@ DATA
     ??_7CCTMXLayer@cocos2d@@6BCCNode@1@@ DATA
@@ -1635,18 +1504,14 @@ EXPORTS
     ??_7CCTMXTilesetInfo@cocos2d@@6B@ DATA
     ??_7CCTargetedAction@cocos2d@@6B@ DATA
     ??_7CCTargetedTouchDelegate@cocos2d@@6B@ DATA
-    ??_7CCTargetedTouchHandler@cocos2d@@6B@ DATA
     ??_7CCTextFieldDelegate@cocos2d@@6B@ DATA
     ??_7CCTextFieldTTF@cocos2d@@6B@ DATA
     ??_7CCTextFieldTTF@cocos2d@@6BCCLabelProtocol@1@@ DATA
     ??_7CCTextFieldTTF@cocos2d@@6BCCNode@1@@ DATA
     ??_7CCTextFieldTTF@cocos2d@@6BCCRGBAProtocol@1@@ DATA
     ??_7CCTextFieldTTF@cocos2d@@6BCCSprite@1@@ DATA
-    ??_7CCTexture2D@cocos2d@@6B@ DATA
-    ??_7CCTextureAtlas@cocos2d@@6B@ DATA
     ??_7CCTextureCache@cocos2d@@6B@ DATA
     ??_7CCTextureETC@cocos2d@@6B@ DATA
-    ??_7CCTextureProtocol@cocos2d@@6B@ DATA
     ??_7CCTileMapAtlas@cocos2d@@6B@ DATA
     ??_7CCTileMapAtlas@cocos2d@@6BCCNode@1@@ DATA
     ??_7CCTileMapAtlas@cocos2d@@6BCCRGBAProtocol@1@@ DATA
@@ -1657,10 +1522,8 @@ EXPORTS
     ??_7CCTintTo@cocos2d@@6B@ DATA
     ??_7CCToggleVisibility@cocos2d@@6B@ DATA
     ??_7CCTouch@cocos2d@@6B@ DATA
-    ??_7CCTouchDelegate@cocos2d@@6B@ DATA
     ??_7CCTouchDispatcher@cocos2d@@6BCCObject@1@@ DATA
     ??_7CCTouchDispatcher@cocos2d@@6BEGLTouchDelegate@1@@ DATA
-    ??_7CCTouchHandler@cocos2d@@6B@ DATA
     ??_7CCTransitionCrossFade@cocos2d@@6B@ DATA
     ??_7CCTransitionEaseScene@cocos2d@@6B@ DATA
     ??_7CCTransitionFade@cocos2d@@6B@ DATA
@@ -2207,8 +2070,6 @@ EXPORTS
     ?appendChild@CCSpriteBatchNode@cocos2d@@QAEXPAVCCSprite@2@@Z
     ?appendIn@CCScheduler@cocos2d@@AAEXPAPAU_listEntry@2@PAVCCObject@2@_N@Z
     ?appendTileForGID@CCTMXLayer@cocos2d@@AAEPAVCCSprite@2@IABVCCPoint@2@@Z
-    ?applicationWillBecomeActive@CCApplicationProtocol@cocos2d@@UAEXXZ
-    ?applicationWillResignActive@CCApplicationProtocol@cocos2d@@UAEXXZ
     ?atlasIndexForChild@CCSpriteBatchNode@cocos2d@@QAEIPAVCCSprite@2@H@Z
     ?atlasIndexForExistantZ@CCTMXLayer@cocos2d@@AAEII@Z
     ?atlasIndexForNewZ@CCTMXLayer@cocos2d@@AAEIH@Z
@@ -2251,9 +2112,7 @@ EXPORTS
     ?calculateVertexPoints@CCGrid3D@cocos2d@@UAEXXZ
     ?calculateVertexPoints@CCGridBase@cocos2d@@UAEXXZ
     ?calculateVertexPoints@CCTiledGrid3D@cocos2d@@UAEXXZ
-    ?canAttachWithIME@CCIMEDelegate@cocos2d@@MAE_NXZ
     ?canAttachWithIME@CCTextFieldTTF@cocos2d@@MAE_NXZ
-    ?canDetachWithIME@CCIMEDelegate@cocos2d@@MAE_NXZ
     ?canDetachWithIME@CCTextFieldTTF@cocos2d@@MAE_NXZ
     ?canEncode@CCObject@cocos2d@@UAE_NXZ
     ?capacity@CCArray@cocos2d@@QBEIXZ
@@ -2321,31 +2180,23 @@ EXPORTS
     ?ccTouchBegan@CCLayer@cocos2d@@UAE_NPAVCCTouch@2@PAVCCEvent@2@@Z
     ?ccTouchBegan@CCMenu@cocos2d@@UAE_NPAVCCTouch@2@PAVCCEvent@2@@Z
     ?ccTouchBegan@CCTargetedTouchDelegate@cocos2d@@UAE_NPAVCCTouch@2@PAVCCEvent@2@@Z
-    ?ccTouchBegan@CCTouchDelegate@cocos2d@@UAE_NPAVCCTouch@2@PAVCCEvent@2@@Z
     ?ccTouchCancelled@CCLayer@cocos2d@@UAEXPAVCCTouch@2@PAVCCEvent@2@@Z
     ?ccTouchCancelled@CCMenu@cocos2d@@UAEXPAVCCTouch@2@PAVCCEvent@2@@Z
     ?ccTouchCancelled@CCTargetedTouchDelegate@cocos2d@@UAEXPAVCCTouch@2@PAVCCEvent@2@@Z
-    ?ccTouchCancelled@CCTouchDelegate@cocos2d@@UAEXPAVCCTouch@2@PAVCCEvent@2@@Z
     ?ccTouchEnded@CCLayer@cocos2d@@UAEXPAVCCTouch@2@PAVCCEvent@2@@Z
     ?ccTouchEnded@CCMenu@cocos2d@@UAEXPAVCCTouch@2@PAVCCEvent@2@@Z
     ?ccTouchEnded@CCTargetedTouchDelegate@cocos2d@@UAEXPAVCCTouch@2@PAVCCEvent@2@@Z
-    ?ccTouchEnded@CCTouchDelegate@cocos2d@@UAEXPAVCCTouch@2@PAVCCEvent@2@@Z
     ?ccTouchMoved@CCLayer@cocos2d@@UAEXPAVCCTouch@2@PAVCCEvent@2@@Z
     ?ccTouchMoved@CCMenu@cocos2d@@UAEXPAVCCTouch@2@PAVCCEvent@2@@Z
     ?ccTouchMoved@CCTargetedTouchDelegate@cocos2d@@UAEXPAVCCTouch@2@PAVCCEvent@2@@Z
-    ?ccTouchMoved@CCTouchDelegate@cocos2d@@UAEXPAVCCTouch@2@PAVCCEvent@2@@Z
     ?ccTouchesBegan@CCLayer@cocos2d@@UAEXPAVCCSet@2@PAVCCEvent@2@@Z
     ?ccTouchesBegan@CCStandardTouchDelegate@cocos2d@@UAEXPAVCCSet@2@PAVCCEvent@2@@Z
-    ?ccTouchesBegan@CCTouchDelegate@cocos2d@@UAEXPAVCCSet@2@PAVCCEvent@2@@Z
     ?ccTouchesCancelled@CCLayer@cocos2d@@UAEXPAVCCSet@2@PAVCCEvent@2@@Z
     ?ccTouchesCancelled@CCStandardTouchDelegate@cocos2d@@UAEXPAVCCSet@2@PAVCCEvent@2@@Z
-    ?ccTouchesCancelled@CCTouchDelegate@cocos2d@@UAEXPAVCCSet@2@PAVCCEvent@2@@Z
     ?ccTouchesEnded@CCLayer@cocos2d@@UAEXPAVCCSet@2@PAVCCEvent@2@@Z
     ?ccTouchesEnded@CCStandardTouchDelegate@cocos2d@@UAEXPAVCCSet@2@PAVCCEvent@2@@Z
-    ?ccTouchesEnded@CCTouchDelegate@cocos2d@@UAEXPAVCCSet@2@PAVCCEvent@2@@Z
     ?ccTouchesMoved@CCLayer@cocos2d@@UAEXPAVCCSet@2@PAVCCEvent@2@@Z
     ?ccTouchesMoved@CCStandardTouchDelegate@cocos2d@@UAEXPAVCCSet@2@PAVCCEvent@2@@Z
-    ?ccTouchesMoved@CCTouchDelegate@cocos2d@@UAEXPAVCCSet@2@PAVCCEvent@2@@Z
     ?ccVertexLineIntersect@cocos2d@@YA_NMMMMMMMMPAM@Z
     ?ccVertexLineToPolygon@cocos2d@@YAXPAVCCPoint@1@MPAU_ccVertex2F@1@II@Z
     ?cc_assert_script_compatible@@YA_NPBD@Z
@@ -2410,11 +2261,9 @@ EXPORTS
     ?convertKeyCode@CCKeyboardDispatcher@cocos2d@@QAE?AW4enumKeyCodes@2@W432@@Z
     ?convertToGL@CCDirector@cocos2d@@QAE?AVCCPoint@2@ABV32@@Z
     ?convertToNodeSpace@CCNode@cocos2d@@QAE?AVCCPoint@2@ABV32@@Z
-    ?convertToNodeSpaceAR@CCNode@cocos2d@@QAE?AVCCPoint@2@ABV32@@Z
     ?convertToUI@CCDirector@cocos2d@@QAE?AVCCPoint@2@ABV32@@Z
     ?convertToWindowSpace@CCNode@cocos2d@@AAE?AVCCPoint@2@ABV32@@Z
     ?convertToWorldSpace@CCNode@cocos2d@@QAE?AVCCPoint@2@ABV32@@Z
-    ?convertToWorldSpaceAR@CCNode@cocos2d@@QAE?AVCCPoint@2@ABV32@@Z
     ?convertTouchToNodeSpace@CCNode@cocos2d@@QAE?AVCCPoint@2@PAVCCTouch@2@@Z
     ?convertTouchToNodeSpaceAR@CCNode@cocos2d@@QAE?AVCCPoint@2@PAVCCTouch@2@@Z
     ?copy@CCObject@cocos2d@@QAEPAV12@XZ
@@ -2436,7 +2285,6 @@ EXPORTS
     ?copyWithZone@CCCallFuncND@cocos2d@@UAEPAVCCObject@2@PAVCCZone@2@@Z
     ?copyWithZone@CCCallFuncO@cocos2d@@UAEPAVCCObject@2@PAVCCZone@2@@Z
     ?copyWithZone@CCCardinalSplineTo@cocos2d@@UAEPAV12@PAVCCZone@2@@Z
-    ?copyWithZone@CCCopying@cocos2d@@UAEPAVCCObject@2@PAVCCZone@2@@Z
     ?copyWithZone@CCDelayTime@cocos2d@@UAEPAVCCObject@2@PAVCCZone@2@@Z
     ?copyWithZone@CCDictionary@cocos2d@@UAEPAVCCObject@2@PAVCCZone@2@@Z
     ?copyWithZone@CCEaseBackIn@cocos2d@@UAEPAVCCObject@2@PAVCCZone@2@@Z
@@ -2797,7 +2645,6 @@ EXPORTS
     ?createWithData@CCString@cocos2d@@SAPAV12@PBEK@Z
     ?createWithDictionary@CCDictionary@cocos2d@@SAPAV12@PAV12@@Z
     ?createWithFontDefinition@CCLabelTTF@cocos2d@@SAPAV12@PBDAAU_ccFontDefinition@2@@Z
-    ?createWithFormat@CCString@cocos2d@@SAPAV12@PBDZZ
     ?createWithFullScreen@CCEGLView@cocos2d@@SAPAV12@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z
     ?createWithFullScreen@CCEGLView@cocos2d@@SAPAV12@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABUGLFWvidmode@@PAUGLFWmonitor@@@Z
     ?createWithItem@CCMenu@cocos2d@@SAPAV12@PAVCCMenuItem@2@@Z
@@ -2845,7 +2692,6 @@ EXPORTS
     ?decompressString@ZipUtils@cocos2d@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V34@_NH@Z
     ?decrementForcePrio@CCTouchDispatcher@cocos2d@@QAEXH@Z
     ?defaultAlphaPixelFormat@CCTexture2D@cocos2d@@SA?AW4CCTexture2DPixelFormat@2@XZ
-    ?deleteBackward@CCIMEDelegate@cocos2d@@MAEXXZ
     ?deleteBackward@CCTextFieldTTF@cocos2d@@MAEXXZ
     ?deleteHashElement@CCActionManager@cocos2d@@IAEXPAU_hashElement@2@@Z
     ?description@CCAction@cocos2d@@QAEPBDXZ
@@ -2862,10 +2708,7 @@ EXPORTS
     ?detachDelegateWithIME@CCIMEDispatcher@cocos2d@@IAE_NPAVCCIMEDelegate@2@@Z
     ?detachWithIME@CCIMEDelegate@cocos2d@@UAE_NXZ
     ?detachWithIME@CCTextFieldTTF@cocos2d@@UAE_NXZ
-    ?didAccelerate@CCAccelerometerDelegate@cocos2d@@UAEXPAVCCAcceleration@2@@Z
     ?didAccelerate@CCLayer@cocos2d@@UAEXPAVCCAcceleration@2@@Z
-    ?didAttachWithIME@CCIMEDelegate@cocos2d@@MAEXXZ
-    ?didDetachWithIME@CCIMEDelegate@cocos2d@@MAEXXZ
     ?disableParticle@CCParticleBatchNode@cocos2d@@QAEXI@Z
     ?disableShadow@CCLabelTTF@cocos2d@@QAEX_N@Z
     ?disableStroke@CCLabelTTF@cocos2d@@QAEX_N@Z
@@ -2981,7 +2824,6 @@ EXPORTS
     ?fuzzyEquals@CCPoint@cocos2d@@QBE_NABV12@M@Z
     ?g_uNumberOfDraws@@3IA DATA
     ?gameDidSave@CCApplication@cocos2d@@UAEXXZ
-    ?gameDidSave@CCApplicationProtocol@cocos2d@@UAEXXZ
     ?gatherGPUInfo@CCConfiguration@cocos2d@@QAEXXZ
     ?generateMipmap@CCTexture2D@cocos2d@@QAEXXZ
     ?get@CCComponentContainer@cocos2d@@UBEPAVCCComponent@2@PBD@Z
@@ -2990,7 +2832,6 @@ EXPORTS
     ?getActionByTag@CCNode@cocos2d@@QAEPAVCCAction@2@H@Z
     ?getActionManager@CCDirector@cocos2d@@UAEPAVCCActionManager@2@XZ
     ?getActionManager@CCNode@cocos2d@@UAEPAVCCActionManager@2@XZ
-    ?getActualDeltaTime@CCDirector@cocos2d@@UBEMXZ
     ?getAllKeys@DS_Dictionary@@QAE?AV?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@XZ
     ?getAlphaThreshold@CCClippingNode@cocos2d@@QBEMXZ
     ?getAltKeyPressed@CCKeyboardDispatcher@cocos2d@@UBE_NXZ
@@ -3020,20 +2861,17 @@ EXPORTS
     ?getAnimationInterval@CCDirector@cocos2d@@QAENXZ
     ?getArrayForKey@DS_Dictionary@@QAEPAVCCArray@cocos2d@@PBD_N@Z
     ?getAtlasCapacity@CCSpriteBatchNode@cocos2d@@QAEHXZ
-    ?getAtlasIndex@CCParticleSystem@cocos2d@@UBEIXZ
     ?getAtlasIndex@CCSprite@cocos2d@@QAEIXZ
     ?getAtlasName@CCBMFontConfiguration@cocos2d@@QAEPBDXZ
     ?getBarChangeRate@CCProgressTimer@cocos2d@@UBE?AVCCPoint@2@XZ
     ?getBatchNode@CCParticleSystem@cocos2d@@UAEPAVCCParticleBatchNode@2@XZ
     ?getBatchNode@CCSprite@cocos2d@@UAEPAVCCSpriteBatchNode@2@XZ
-    ?getBitsPerComponent@CCImage@cocos2d@@UBEHXZ
     ?getBlendFunc@CCAtlasNode@cocos2d@@UAE?AU_ccBlendFunc@2@XZ
     ?getBlendFunc@CCDrawNode@cocos2d@@QBE?AU_ccBlendFunc@2@XZ
     ?getBlendFunc@CCLayerColor@cocos2d@@UAE?AU_ccBlendFunc@2@XZ
     ?getBlendFunc@CCMotionStreak@cocos2d@@UAE?AU_ccBlendFunc@2@XZ
     ?getBlendFunc@CCParticleBatchNode@cocos2d@@UAE?AU_ccBlendFunc@2@XZ
     ?getBlendFunc@CCParticleSystem@cocos2d@@UAE?AU_ccBlendFunc@2@XZ
-    ?getBlendFunc@CCSprite@cocos2d@@UAE?AU_ccBlendFunc@2@XZ
     ?getBlendFunc@CCSpriteBatchNode@cocos2d@@UAE?AU_ccBlendFunc@2@XZ
     ?getBool@CCConfiguration@cocos2d@@QBE_NPBD_N@Z
     ?getBoolForKey@CCUserDefault@cocos2d@@QAE_NPBD@Z
@@ -3053,7 +2891,6 @@ EXPORTS
     ?getClassTypeInfo@CCCallFuncN@cocos2d@@UAEJXZ
     ?getClassTypeInfo@CCCallFuncND@cocos2d@@UAEJXZ
     ?getClassTypeInfo@CCCallFuncO@cocos2d@@UAEJXZ
-    ?getClassTypeInfo@CCDirector@cocos2d@@UAEJXZ
     ?getClassTypeInfo@CCFileUtils@cocos2d@@UAEJXZ
     ?getClearColor@CCRenderTexture@cocos2d@@QBEABU_ccColor4F@2@XZ
     ?getClearDepth@CCRenderTexture@cocos2d@@QBEMXZ
@@ -3072,13 +2909,11 @@ EXPORTS
     ?getContentSize@CCNode@cocos2d@@UBEABVCCSize@2@XZ
     ?getContentSize@CCTexture2D@cocos2d@@UAE?AVCCSize@2@XZ
     ?getContentSizeInPixels@CCTexture2D@cocos2d@@QAEABVCCSize@2@XZ
-    ?getContentText@CCIMEDelegate@cocos2d@@MAEPBDXZ
     ?getContentText@CCIMEDispatcher@cocos2d@@QAEPBDXZ
     ?getContentText@CCTextFieldTTF@cocos2d@@MAEPBDXZ
     ?getControlKeyPressed@CCKeyboardDispatcher@cocos2d@@UBE_NXZ
     ?getControlPointAtIndex@CCPointArray@cocos2d@@QAE?AVCCPoint@2@I@Z
     ?getControlPoints@CCPointArray@cocos2d@@QAEPBV?$vector@PAVCCPoint@cocos2d@@V?$allocator@PAVCCPoint@cocos2d@@@std@@@std@@XZ
-    ?getControllerConnected@CCApplication@cocos2d@@UBE_NXZ
     ?getCurReleasePool@CCPoolManager@cocos2d@@AAEPAVCCAutoreleasePool@2@XZ
     ?getCurrentIndex@CCParticleBatchNode@cocos2d@@AAEXPAI0PAVCCNode@2@H@Z
     ?getCurrentLanguage@CCApplication@cocos2d@@UAE?AW4LanguageType@2@XZ
@@ -3094,7 +2929,6 @@ EXPORTS
     ?getDelegate@CCKeypadHandler@cocos2d@@QAEPAVCCKeypadDelegate@2@XZ
     ?getDelegate@CCMouseHandler@cocos2d@@QAEPAVCCMouseDelegate@2@XZ
     ?getDelegate@CCTextFieldTTF@cocos2d@@UBEPAVCCTextFieldDelegate@2@XZ
-    ?getDelegate@CCTouchHandler@cocos2d@@QAEPAVCCTouchDelegate@2@XZ
     ?getDelegate@ObjectDecoder@@UBEPAVObjectDecoderDelegate@@XZ
     ?getDelta@CCShuffleTiles@cocos2d@@QAE?AVCCSize@2@ABV32@@Z
     ?getDelta@CCTouch@cocos2d@@QBE?AVCCPoint@2@XZ
@@ -3114,8 +2948,6 @@ EXPORTS
     ?getDisplayedOpacity@CCNodeRGBA@cocos2d@@UAEEXZ
     ?getDistance@CCPoint@cocos2d@@QBEMABV12@@Z
     ?getDistanceSq@CCPoint@cocos2d@@QBEMABV12@@Z
-    ?getDontDraw@CCSprite@cocos2d@@UBE_NXZ
-    ?getDontOpacityFade@CCMotionStreak@cocos2d@@UBE_NXZ
     ?getDoubleForKey@CCUserDefault@cocos2d@@QAENPBD@Z
     ?getDoubleForKey@CCUserDefault@cocos2d@@QAENPBDN@Z
     ?getDuration@CCAnimation@cocos2d@@UAEMXZ
@@ -3146,13 +2978,11 @@ EXPORTS
     ?getFontName@CCLabelTTF@cocos2d@@QAEPBDXZ
     ?getFontSize@CCLabelTTF@cocos2d@@QAEMXZ
     ?getForcePrio@CCTouchDispatcher@cocos2d@@UBE_NXZ
-    ?getForceTimer@CCApplication@cocos2d@@UBE_NXZ
     ?getForcedTarget@CCTargetedAction@cocos2d@@UBEPAVCCNode@2@XZ
     ?getFrameSize@CCEGLViewProtocol@cocos2d@@UBEABVCCSize@2@XZ
     ?getFrameZoomFactor@CCEGLView@cocos2d@@QAEMXZ
     ?getFrames@CCAnimation@cocos2d@@UBEPAVCCArray@2@XZ
     ?getFullPathForDirectoryAndFilename@CCFileUtils@cocos2d@@MAE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABV34@0@Z
-    ?getFullscreen@CCApplication@cocos2d@@UBE_NXZ
     ?getGLServerState@CCNode@cocos2d@@UAE?AW4ccGLServerState@2@XZ
     ?getGravity@CCParticleSystem@cocos2d@@UAEABVCCPoint@2@XZ
     ?getGrid@CCGrid3DAction@cocos2d@@UAEPAVCCGridBase@2@XZ
@@ -3162,7 +2992,6 @@ EXPORTS
     ?getGridSize@CCGridBase@cocos2d@@QAEABVCCSize@2@XZ
     ?getGroupName@CCTMXObjectGroup@cocos2d@@QAEPBDXZ
     ?getHandler@CCNotificationObserver@cocos2d@@UAEHXZ
-    ?getHeight@CCImage@cocos2d@@UBEGXZ
     ?getHeight@CCTextureETC@cocos2d@@QBEIXZ
     ?getHighestChildZ@CCScene@cocos2d@@QAEHXZ
     ?getHorizontalAlignment@CCLabelTTF@cocos2d@@QAE?AW4CCTextAlignment@2@XZ
@@ -3178,9 +3007,6 @@ EXPORTS
     ?getIntegerForKey@CCUserDefault@cocos2d@@QAEHPBDH@Z
     ?getIntegerForKey@DS_Dictionary@@QAEHPBD@Z
     ?getInterval@CCTimer@cocos2d@@QBEMXZ
-    ?getIsBatched@CCLabelBMFont@cocos2d@@UBE_NXZ
-    ?getIsFullscreen@CCEGLView@cocos2d@@UBE_NXZ
-    ?getIsTransitioning@CCDirector@cocos2d@@UBE_NXZ
     ?getKey@DS_Dictionary@@QAE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@I@Z
     ?getKeyboardDispatcher@CCDirector@cocos2d@@UAEPAVCCKeyboardDispatcher@2@XZ
     ?getKeypadDispatcher@CCDirector@cocos2d@@UAEPAVCCKeypadDispatcher@2@XZ
@@ -3197,12 +3023,10 @@ EXPORTS
     ?getLetterPosXRight@CCLabelBMFont@cocos2d@@AAEMPAVCCSprite@2@@Z
     ?getLife@CCParticleSystem@cocos2d@@UAEMXZ
     ?getLifeVar@CCParticleSystem@cocos2d@@UAEMXZ
-    ?getLoadedTextureQuality@CCDirector@cocos2d@@UBE?AW4TextureQuality@2@XZ
     ?getLocation@CCTouch@cocos2d@@QBE?AVCCPoint@2@XZ
     ?getLocationInView@CCTouch@cocos2d@@QBE?AVCCPoint@2@XZ
     ?getLoops@CCAnimation@cocos2d@@UBEIXZ
     ?getM_bFirstTick@CCActionInterval@cocos2d@@UBE_NXZ
-    ?getM_fMaxSeg@CCMotionStreak@cocos2d@@UBEMXZ
     ?getManualSortChildren@CCSpriteBatchNode@cocos2d@@UBE_NXZ
     ?getMapOrientation@CCTMXTiledMap@cocos2d@@UBEHXZ
     ?getMapSize@CCTMXMapInfo@cocos2d@@UBEABVCCSize@2@XZ
@@ -3322,8 +3146,6 @@ EXPORTS
     ?getScaleX@CCNode@cocos2d@@UAEMXZ
     ?getScaleY@CCEGLViewProtocol@cocos2d@@QBEMXZ
     ?getScaleY@CCNode@cocos2d@@UAEMXZ
-    ?getSceneDelegate@CCDirector@cocos2d@@UBEPAVCCSceneDelegate@2@XZ
-    ?getSceneReference@CCDirector@cocos2d@@UBEPAVCCScene@2@XZ
     ?getScheduler@CCDirector@cocos2d@@UAEPAVCCScheduler@2@XZ
     ?getScheduler@CCNode@cocos2d@@UAEPAVCCScheduler@2@XZ
     ?getScissorRect@CCEGLViewProtocol@cocos2d@@UAE?AVCCRect@2@XZ
@@ -3356,16 +3178,8 @@ EXPORTS
     ?getShaderProgram@CCNode@cocos2d@@UAEPAVCCGLProgram@2@XZ
     ?getShaderProgram@CCTexture2D@cocos2d@@UAEPAVCCGLProgram@2@XZ
     ?getShiftKeyPressed@CCKeyboardDispatcher@cocos2d@@UBE_NXZ
-    ?getShouldCallGLFinish@CCEGLView@cocos2d@@UBE_NXZ
-    ?getShouldHideCursor@CCEGLView@cocos2d@@UBE_NXZ
-    ?getShutdownCalled@CCApplication@cocos2d@@UBE_NXZ
     ?getSkewX@CCNode@cocos2d@@UAEMXZ
     ?getSkewY@CCNode@cocos2d@@UAEMXZ
-    ?getSleepMode@CCApplication@cocos2d@@UBE_NXZ
-    ?getSmoothFix@CCApplication@cocos2d@@UBE_NXZ
-    ?getSmoothFix@CCDirector@cocos2d@@UBE_NXZ
-    ?getSmoothFixCheck@CCDirector@cocos2d@@UBE_NXZ
-    ?getSmoothFixCounter@CCDirector@cocos2d@@UBEHXZ
     ?getSourcePosition@CCParticleSystem@cocos2d@@UAEABVCCPoint@2@XZ
     ?getSpeed@CCParticleSystem@cocos2d@@UAEMXZ
     ?getSpeed@CCSpeed@cocos2d@@QAEMXZ
@@ -3408,7 +3222,6 @@ EXPORTS
     ?getTangentialAccelVar@CCParticleSystem@cocos2d@@UAEMXZ
     ?getTarget@CCAction@cocos2d@@QAEPAVCCNode@2@XZ
     ?getTarget@CCNotificationObserver@cocos2d@@UAEPAVCCObject@2@XZ
-    ?getTargetArray@CCLabelBMFont@cocos2d@@UBEPAVCCArray@2@XZ
     ?getTargetCallback@CCCallFunc@cocos2d@@QAEPAVCCObject@2@XZ
     ?getTargetPlatform@CCApplication@cocos2d@@UAE?AW4TargetPlatform@2@XZ
     ?getTargetPrio@CCTouchDispatcher@cocos2d@@UBEHXZ
@@ -3456,19 +3269,16 @@ EXPORTS
     ?getVector@CCLayerGradient@cocos2d@@UAEABVCCPoint@2@XZ
     ?getVertexZ@CCNode@cocos2d@@UAEMXZ
     ?getVerticalAlignment@CCLabelTTF@cocos2d@@QAE?AW4CCVerticalTextAlignment@2@XZ
-    ?getVerticalSyncEnabled@CCApplication@cocos2d@@UBE_NXZ
     ?getViewName@CCEGLViewProtocol@cocos2d@@QAEPBDXZ
     ?getViewPortRect@CCEGLViewProtocol@cocos2d@@QBEABVCCRect@2@XZ
     ?getVisibleOrigin@CCDirector@cocos2d@@QAE?AVCCPoint@2@XZ
     ?getVisibleOrigin@CCEGLViewProtocol@cocos2d@@UBE?AVCCPoint@2@XZ
     ?getVisibleSize@CCDirector@cocos2d@@QAE?AVCCSize@2@XZ
     ?getVisibleSize@CCEGLViewProtocol@cocos2d@@UBE?AVCCSize@2@XZ
-    ?getWidth@CCImage@cocos2d@@UBEGXZ
     ?getWidth@CCTextureETC@cocos2d@@QBEIXZ
     ?getWinSize@CCDirector@cocos2d@@QAE?AVCCSize@2@XZ
     ?getWinSizeInPixels@CCDirector@cocos2d@@QAE?AVCCSize@2@XZ
     ?getWindow@CCEGLView@cocos2d@@QBEPAUGLFWwindow@@XZ
-    ?getWindowedSize@CCEGLView@cocos2d@@UBE?AVCCSize@2@XZ
     ?getWritablePath2@CCFileUtils@cocos2d@@UAE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ
     ?getWritablePath2@CCFileUtilsWin32@cocos2d@@UAE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ
     ?getWritablePath@CCFileUtilsWin32@cocos2d@@UAE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ
@@ -3506,7 +3316,6 @@ EXPORTS
     ?id@?1??getClassTypeInfo@CCCallFuncN@cocos2d@@UAEJXZ@4JB DATA
     ?id@?1??getClassTypeInfo@CCCallFuncND@cocos2d@@UAEJXZ@4JB DATA
     ?id@?1??getClassTypeInfo@CCCallFuncO@cocos2d@@UAEJXZ@4JB DATA
-    ?id@?1??getClassTypeInfo@CCDirector@cocos2d@@UAEJXZ@4JB DATA
     ?id@?1??getClassTypeInfo@CCFileUtils@cocos2d@@UAEJXZ@4JB DATA
     ?ignoreAnchorPointForPosition@CCNode@cocos2d@@UAEX_N@Z
     ?ignoreAnchorPointForPosition@CCSprite@cocos2d@@UAEX_N@Z
@@ -3767,7 +3576,6 @@ EXPORTS
     ?insertQuadFromIndex@CCTextureAtlas@cocos2d@@QAEXII@Z
     ?insertQuadFromSprite@CCSpriteBatchNode@cocos2d@@IAEXPAVCCSprite@2@I@Z
     ?insertQuads@CCTextureAtlas@cocos2d@@QAEXPAU_ccV3F_C4B_T2F_Quad@2@II@Z
-    ?insertText@CCIMEDelegate@cocos2d@@MAEXPBDH@Z
     ?insertText@CCTextFieldTTF@cocos2d@@MAEXPBDH@Z
     ?insertTileForGID@CCTMXLayer@cocos2d@@AAEPAVCCSprite@2@IABVCCPoint@2@@Z
     ?intValue@CCString@cocos2d@@QBEHXZ
@@ -3790,7 +3598,6 @@ EXPORTS
     ?isCascadeOpacityEnabled@CCNodeRGBA@cocos2d@@UAE_NXZ
     ?isCompressedInterpolation@CCLayerGradient@cocos2d@@UAE_NXZ
     ?isDirty@CCCamera@cocos2d@@QAE_NXZ
-    ?isDirty@CCSprite@cocos2d@@UAE_NXZ
     ?isDirty@CCTextureAtlas@cocos2d@@QAE_NXZ
     ?isDispatchEvents@CCTouchDispatcher@cocos2d@@QAE_NXZ
     ?isDisplayStats@CCDirector@cocos2d@@QAE_NXZ
@@ -3822,10 +3629,8 @@ EXPORTS
     ?isNextDeltaTimeZero@CCDirector@cocos2d@@QAE_NXZ
     ?isOpacityModifyRGB@CCAtlasNode@cocos2d@@UAE_NXZ
     ?isOpacityModifyRGB@CCLabelBMFont@cocos2d@@UAE_NXZ
-    ?isOpacityModifyRGB@CCLayerRGBA@cocos2d@@UAE_NXZ
     ?isOpacityModifyRGB@CCMenu@cocos2d@@UAE_NXZ
     ?isOpacityModifyRGB@CCMotionStreak@cocos2d@@UAE_NXZ
-    ?isOpacityModifyRGB@CCNodeRGBA@cocos2d@@UAE_NXZ
     ?isOpacityModifyRGB@CCSprite@cocos2d@@UAE_NXZ
     ?isOpenGLReady@CCEGLView@cocos2d@@UAE_NXZ
     ?isPaused@CCDirector@cocos2d@@QAE_NXZ
@@ -3853,18 +3658,10 @@ EXPORTS
     ?itemForTouch@CCMenu@cocos2d@@IAEPAVCCMenuItem@2@PAVCCTouch@2@@Z
     ?keepData@CCTexture2D@cocos2d@@QAEPAXPAXI@Z
     ?kerningAmountForFirst@CCLabelBMFont@cocos2d@@AAEHGG@Z
-    ?keyBackClicked@CCKeypadDelegate@cocos2d@@UAEXXZ
     ?keyBackClicked@CCLayer@cocos2d@@UAEXXZ
-    ?keyDown@CCKeyboardDelegate@cocos2d@@UAEXW4enumKeyCodes@2@@Z
     ?keyDown@CCLayer@cocos2d@@UAEXW4enumKeyCodes@2@@Z
-    ?keyMenuClicked@CCKeypadDelegate@cocos2d@@UAEXXZ
     ?keyMenuClicked@CCLayer@cocos2d@@UAEXXZ
     ?keyToString@CCKeyboardDispatcher@cocos2d@@QAEPBDW4enumKeyCodes@2@@Z
-    ?keyUp@CCKeyboardDelegate@cocos2d@@UAEXW4enumKeyCodes@2@@Z
-    ?keyboardDidHide@CCIMEDelegate@cocos2d@@MAEXAAUCCIMEKeyboardNotificationInfo@2@@Z
-    ?keyboardDidShow@CCIMEDelegate@cocos2d@@MAEXAAUCCIMEKeyboardNotificationInfo@2@@Z
-    ?keyboardWillHide@CCIMEDelegate@cocos2d@@MAEXAAUCCIMEKeyboardNotificationInfo@2@@Z
-    ?keyboardWillShow@CCIMEDelegate@cocos2d@@MAEXAAUCCIMEKeyboardNotificationInfo@2@@Z
     ?lastObject@CCArray@cocos2d@@QAEPAVCCObject@2@XZ
     ?layerNamed@CCTMXTiledMap@cocos2d@@QAEPAVCCTMXLayer@2@PBD@Z
     ?leftMouseDown@CCApplication@cocos2d@@QAEXXZ
@@ -3976,7 +3773,6 @@ EXPORTS
     ?onTextFieldDetachWithIME@CCTextFieldDelegate@cocos2d@@UAE_NPAVCCTextFieldTTF@2@@Z
     ?onTextFieldInsertText@CCTextFieldDelegate@cocos2d@@UAE_NPAVCCTextFieldTTF@2@PBDH@Z
     ?openURL@CCApplication@cocos2d@@UAEXPBD@Z
-    ?openURL@CCApplicationProtocol@cocos2d@@UAEXPBD@Z
     ?originalTile@CCTiledGrid3D@cocos2d@@QAE?AU_ccQuad3@2@ABVCCPoint@2@@Z
     ?originalTile@CCTiledGrid3DAction@cocos2d@@QAE?AU_ccQuad3@2@ABVCCPoint@2@@Z
     ?originalVertex@CCGrid3D@cocos2d@@QAE?AU_ccVertex3F@2@ABVCCPoint@2@@Z
@@ -4151,7 +3947,6 @@ EXPORTS
     ?removeObject@CCArray@cocos2d@@QAEXPAVCCObject@2@_N@Z
     ?removeObject@CCAutoreleasePool@cocos2d@@QAEXPAVCCObject@2@@Z
     ?removeObject@CCPoolManager@cocos2d@@QAEXPAVCCObject@2@@Z
-    ?removeObject@CCSet@cocos2d@@QAEXPAVCCObject@2@@Z
     ?removeObjectAtIndex@CCArray@cocos2d@@QAEXI_N@Z
     ?removeObjectForElememt@CCDictionary@cocos2d@@QAEXPAVCCDictElement@2@@Z
     ?removeObjectForKey@CCDictionary@cocos2d@@QAEXABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z
@@ -4270,8 +4065,6 @@ EXPORTS
     ?reverse@CCTintBy@cocos2d@@UAEPAVCCActionInterval@2@XZ
     ?reverseInline@CCPointArray@cocos2d@@QAEXXZ
     ?reverseObjects@CCArray@cocos2d@@QAEXXZ
-    ?rightKeyDown@CCMouseDelegate@cocos2d@@UAEXXZ
-    ?rightKeyUp@CCMouseDelegate@cocos2d@@UAEXXZ
     ?rotate@CCPoint@cocos2d@@QBE?AV12@ABV12@@Z
     ?rotateByAngle@CCPoint@cocos2d@@QBE?AV12@ABV12@M@Z
     ?run@CCApplication@cocos2d@@UAEHXZ
@@ -4312,12 +4105,10 @@ EXPORTS
     ?scheduleOnce@CCNode@cocos2d@@QAEXP8CCObject@2@AEXM@ZM@Z
     ?scheduleScriptFunc@CCScheduler@cocos2d@@QAEIIM_N@Z
     ?scheduleSelector@CCScheduler@cocos2d@@QAEXP8CCObject@2@AEXM@ZPAV32@MIM_N@Z
-    ?scheduleSelector@CCScheduler@cocos2d@@QAEXP8CCObject@2@AEXM@ZPAV32@M_N@Z
     ?scheduleUpdate@CCNode@cocos2d@@QAEXXZ
     ?scheduleUpdateForTarget@CCScheduler@cocos2d@@QAEXPAVCCObject@2@H_N@Z
     ?scheduleUpdateWithPriority@CCNode@cocos2d@@QAEXH@Z
     ?scheduleUpdateWithPriorityLua@CCNode@cocos2d@@QAEXHH@Z
-    ?scrollWheel@CCMouseDelegate@cocos2d@@UAEXMM@Z
     ?searchNewPositionInChildrenForZ@CCParticleBatchNode@cocos2d@@AAEIH@Z
     ?selected@CCMenuItem@cocos2d@@UAEXXZ
     ?selected@CCMenuItemLabel@cocos2d@@UAEXXZ
@@ -4333,7 +4124,6 @@ EXPORTS
     ?setActionManager@CCDirector@cocos2d@@UAEXPAVCCActionManager@2@@Z
     ?setActionManager@CCNode@cocos2d@@UAEXPAVCCActionManager@2@@Z
     ?setActive@CCGridBase@cocos2d@@QAEX_N@Z
-    ?setActualDeltaTime@CCDirector@cocos2d@@UAEXM@Z
     ?setAdditionalTransform@CCNode@cocos2d@@QAEXABUCCAffineTransform@2@@Z
     ?setAliasTexParameters@CCTexture2D@cocos2d@@QAEXXZ
     ?setAlignment@CCLabelBMFont@cocos2d@@UAEXW4CCTextAlignment@2@@Z
@@ -4365,7 +4155,6 @@ EXPORTS
     ?setAnimationInterval@CCApplication@cocos2d@@UAEXN@Z
     ?setAntiAliasTexParameters@CCTexture2D@cocos2d@@QAEXXZ
     ?setArrayForKey@DS_Dictionary@@QAEXPBDPAVCCArray@cocos2d@@@Z
-    ?setAtlasIndex@CCParticleSystem@cocos2d@@UAEXI@Z
     ?setAtlasIndex@CCSprite@cocos2d@@QAEXI@Z
     ?setAtlasName@CCBMFontConfiguration@cocos2d@@QAEXPBD@Z
     ?setAutoDraw@CCRenderTexture@cocos2d@@QAEX_N@Z
@@ -4381,7 +4170,6 @@ EXPORTS
     ?setBlendFunc@CCMotionStreak@cocos2d@@UAEXU_ccBlendFunc@2@@Z
     ?setBlendFunc@CCParticleBatchNode@cocos2d@@UAEXU_ccBlendFunc@2@@Z
     ?setBlendFunc@CCParticleSystem@cocos2d@@UAEXU_ccBlendFunc@2@@Z
-    ?setBlendFunc@CCSprite@cocos2d@@UAEXU_ccBlendFunc@2@@Z
     ?setBlendFunc@CCSpriteBatchNode@cocos2d@@UAEXU_ccBlendFunc@2@@Z
     ?setBoolForKey@CCUserDefault@cocos2d@@QAEXPBD_N@Z
     ?setBoolForKey@DS_Dictionary@@QAEXPBD_N1@Z
@@ -4435,7 +4223,6 @@ EXPORTS
     ?setDictForKey@DS_Dictionary@@QAEXPBDPAVCCDictionary@cocos2d@@@Z
     ?setDimensions@CCLabelTTF@cocos2d@@QAEXABVCCSize@2@@Z
     ?setDirty@CCCamera@cocos2d@@QAEX_N@Z
-    ?setDirty@CCSprite@cocos2d@@UAEX_N@Z
     ?setDirty@CCTextureAtlas@cocos2d@@QAEX_N@Z
     ?setDirtyRecursively@CCSprite@cocos2d@@MAEX_N@Z
     ?setDisabledColor@CCMenuItemLabel@cocos2d@@UAEXABU_ccColor3B@2@@Z
@@ -4446,8 +4233,6 @@ EXPORTS
     ?setDisplayFrame@CCSprite@cocos2d@@UAEXPAVCCSpriteFrame@2@@Z
     ?setDisplayFrameWithAnimationName@CCSprite@cocos2d@@UAEXPBDH@Z
     ?setDisplayStats@CCDirector@cocos2d@@QAEX_N@Z
-    ?setDontDraw@CCSprite@cocos2d@@UAEX_N@Z
-    ?setDontOpacityFade@CCMotionStreak@cocos2d@@UAEX_N@Z
     ?setDoubleForKey@CCUserDefault@cocos2d@@QAEXPBDN@Z
     ?setDuration@CCFiniteTimeAction@cocos2d@@QAEXM@Z
     ?setDuration@CCParticleSystem@cocos2d@@UAEXM@Z
@@ -4487,13 +4272,11 @@ EXPORTS
     ?setFontSize@CCMenuItemFont@cocos2d@@SAXI@Z
     ?setFontSizeObj@CCMenuItemFont@cocos2d@@QAEXI@Z
     ?setForcePrio@CCTouchDispatcher@cocos2d@@UAEX_N@Z
-    ?setForceTimer@CCApplication@cocos2d@@UAEX_N@Z
     ?setForcedTarget@CCTargetedAction@cocos2d@@UAEXPAVCCNode@2@@Z
     ?setFrameSize@CCEGLView@cocos2d@@UAEXMM@Z
     ?setFrameSize@CCEGLViewProtocol@cocos2d@@UAEXMM@Z
     ?setFrameZoomFactor@CCEGLView@cocos2d@@QAEXM@Z
     ?setFrames@CCAnimation@cocos2d@@UAEXPAVCCArray@2@@Z
-    ?setFullscreen@CCApplication@cocos2d@@UAEX_N@Z
     ?setGLDefaultValues@CCDirector@cocos2d@@QAEXXZ
     ?setGLServerState@CCNode@cocos2d@@UAEXW4ccGLServerState@2@@Z
     ?setGravity@CCParticleSystem@cocos2d@@UAEXABVCCPoint@2@@Z
@@ -4514,7 +4297,6 @@ EXPORTS
     ?setIntegerForKey@DS_Dictionary@@QAEXPBDH_N@Z
     ?setInterval@CCTimer@cocos2d@@QAEXM@Z
     ?setInverted@CCClippingNode@cocos2d@@QAEX_N@Z
-    ?setIsBatched@CCLabelBMFont@cocos2d@@UAEX_N@Z
     ?setKeyboardDispatcher@CCDirector@cocos2d@@UAEXPAVCCKeyboardDispatcher@2@@Z
     ?setKeyboardEnabled@CCLayer@cocos2d@@UAEX_N@Z
     ?setKeypadDispatcher@CCDirector@cocos2d@@UAEXPAVCCKeypadDispatcher@2@@Z
@@ -4530,7 +4312,6 @@ EXPORTS
     ?setLifeVar@CCParticleSystem@cocos2d@@UAEXM@Z
     ?setLineBreakWithoutSpace@CCLabelBMFont@cocos2d@@UAEX_N@Z
     ?setLoops@CCAnimation@cocos2d@@UAEXI@Z
-    ?setM_fMaxSeg@CCMotionStreak@cocos2d@@UAEXM@Z
     ?setManualSortChildren@CCSpriteBatchNode@cocos2d@@UAEX_N@Z
     ?setMapOrientation@CCTMXTiledMap@cocos2d@@UAEXH@Z
     ?setMapSize@CCTMXMapInfo@cocos2d@@UAEXABVCCSize@2@@Z
@@ -4571,10 +4352,8 @@ EXPORTS
     ?setOpacity@CCSprite@cocos2d@@UAEXE@Z
     ?setOpacityModifyRGB@CCAtlasNode@cocos2d@@UAEX_N@Z
     ?setOpacityModifyRGB@CCLabelBMFont@cocos2d@@UAEX_N@Z
-    ?setOpacityModifyRGB@CCLayerRGBA@cocos2d@@UAEX_N@Z
     ?setOpacityModifyRGB@CCMenu@cocos2d@@UAEX_N@Z
     ?setOpacityModifyRGB@CCMotionStreak@cocos2d@@UAEX_N@Z
-    ?setOpacityModifyRGB@CCNodeRGBA@cocos2d@@UAEX_N@Z
     ?setOpacityModifyRGB@CCParticleSystem@cocos2d@@UAEX_N@Z
     ?setOpacityModifyRGB@CCSprite@cocos2d@@UAEX_N@Z
     ?setOpenGLView@CCDirector@cocos2d@@QAEXPAVCCEGLView@2@@Z
@@ -4659,8 +4438,6 @@ EXPORTS
     ?setScaleY@CCNode@cocos2d@@UAEXM@Z
     ?setScaleY@CCParticleSystem@cocos2d@@UAEXM@Z
     ?setScaleY@CCSprite@cocos2d@@UAEXM@Z
-    ?setSceneDelegate@CCDirector@cocos2d@@UAEXPAVCCSceneDelegate@2@@Z
-    ?setSceneReference@CCDirector@cocos2d@@UAEXPAVCCScene@2@@Z
     ?setScheduler@CCDirector@cocos2d@@UAEXPAVCCScheduler@2@@Z
     ?setScheduler@CCNode@cocos2d@@UAEXPAVCCScheduler@2@@Z
     ?setScissorInPoints@CCEGLView@cocos2d@@UAEXMMMM@Z
@@ -4674,17 +4451,11 @@ EXPORTS
     ?setSelectedSpriteFrame@CCMenuItemImage@cocos2d@@QAEXPAVCCSpriteFrame@2@@Z
     ?setShaderProgram@CCNode@cocos2d@@UAEXPAVCCGLProgram@2@@Z
     ?setShaderProgram@CCTexture2D@cocos2d@@UAEXPAVCCGLProgram@2@@Z
-    ?setShouldCallGLFinish@CCEGLView@cocos2d@@UAEX_N@Z
-    ?setShutdownCalled@CCApplication@cocos2d@@UAEX_N@Z
     ?setSize@CCSize@cocos2d@@QAEXMM@Z
     ?setSkewX@CCNode@cocos2d@@UAEXM@Z
     ?setSkewX@CCSprite@cocos2d@@UAEXM@Z
     ?setSkewY@CCNode@cocos2d@@UAEXM@Z
     ?setSkewY@CCSprite@cocos2d@@UAEXM@Z
-    ?setSleepMode@CCApplication@cocos2d@@UAEX_N@Z
-    ?setSmoothFix@CCApplication@cocos2d@@UAEX_N@Z
-    ?setSmoothFix@CCDirector@cocos2d@@UAEX_N@Z
-    ?setSmoothFixCheck@CCDirector@cocos2d@@UAEX_N@Z
     ?setSourcePosition@CCParticleSystem@cocos2d@@UAEXABVCCPoint@2@@Z
     ?setSpeed@CCParticleSystem@cocos2d@@UAEXM@Z
     ?setSpeed@CCSpeed@cocos2d@@QAEXM@Z
@@ -4733,7 +4504,6 @@ EXPORTS
     ?setTangentialAccelVar@CCParticleSystem@cocos2d@@UAEXM@Z
     ?setTarget@CCAction@cocos2d@@QAEXPAVCCNode@2@@Z
     ?setTarget@CCMenuItem@cocos2d@@QAEXPAVCCObject@2@P832@AEX0@Z@Z
-    ?setTargetArray@CCLabelBMFont@cocos2d@@UAEXPAVCCArray@2@@Z
     ?setTargetCallback@CCCallFunc@cocos2d@@QAEXPAVCCObject@2@@Z
     ?setTargetPrio@CCTouchDispatcher@cocos2d@@UAEXH@Z
     ?setTexParameters@CCTexture2D@cocos2d@@QAEXPAU_ccTexParams@2@@Z
@@ -4815,7 +4585,6 @@ EXPORTS
     ?setVisible@CCNode@cocos2d@@UAEX_N@Z
     ?setVisible@CCSprite@cocos2d@@UAEX_N@Z
     ?setWidth@CCLabelBMFont@cocos2d@@UAEXM@Z
-    ?setWindowedSize@CCEGLView@cocos2d@@UAEXVCCSize@2@@Z
     ?setXOffset@CCSpriteExtra@cocos2d@@UAEXM@Z
     ?setYOffset@CCSpriteExtra@cocos2d@@UAEXM@Z
     ?setZOrder@CCNode@cocos2d@@UAEXH@Z
@@ -4997,7 +4766,6 @@ EXPORTS
     ?transformAncestors@CCNode@cocos2d@@QAEXXZ
     ?transformTile@CCFadeOutTRTiles@cocos2d@@UAEXABVCCPoint@2@M@Z
     ?transformTile@CCFadeOutUpTiles@cocos2d@@UAEXABVCCPoint@2@M@Z
-    ?trySaveGame@CCApplicationProtocol@cocos2d@@UAEXXZ
     ?turnOffTile@CCFadeOutTRTiles@cocos2d@@QAEXABVCCPoint@2@@Z
     ?turnOffTile@CCTurnOffTiles@cocos2d@@QAEXABVCCPoint@2@@Z
     ?turnOnTile@CCFadeOutTRTiles@cocos2d@@QAEXABVCCPoint@2@@Z
@@ -5114,7 +4882,6 @@ EXPORTS
     ?update@CCMotionStreak@cocos2d@@UAEXM@Z
     ?update@CCMoveBy@cocos2d@@UAEXM@Z
     ?update@CCNode@cocos2d@@UAEXM@Z
-    ?update@CCObject@cocos2d@@UAEXM@Z
     ?update@CCOrbitCamera@cocos2d@@UAEXM@Z
     ?update@CCPageTurn3D@cocos2d@@UAEXM@Z
     ?update@CCParticleSystem@cocos2d@@UAEXM@Z

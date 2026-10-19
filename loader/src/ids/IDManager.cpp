@@ -172,7 +172,7 @@ namespace {
         std::vector<cocos2d::CCNode*> containers;
         collectLayouts2011(snap.layer, containers);
         for (auto c : containers) {
-            auto layout = geode::cast::typeinfo_cast<cocos2d::AxisLayout*>(c->getLayout());
+            auto layout = geode::cast::typeinfo_cast<geode::AxisLayout*>(c->getLayout());
             if (!layout) continue;
             std::vector<Calib2011> nodes;
             for (auto& p : snap.nodes) {
@@ -185,14 +185,15 @@ namespace {
             // auto-scale would grow a vanilla node to its max scale (1, or a label's 0.5);
             // cap each one at its 2.0 scale
             for (auto& n : nodes) {
-                auto opts = geode::cast::typeinfo_cast<cocos2d::AxisLayoutOptions*>(n.node->getLayoutOptions());
+                auto opts = geode::cast::typeinfo_cast<geode::AxisLayoutOptions*>(n.node->getLayoutOptions());
                 if (!opts) {
-                    opts = cocos2d::AxisLayoutOptions::create();
+                    opts = geode::AxisLayoutOptions::create();
                     n.node->setLayoutOptions(opts, false);
                 }
                 auto scale = n.node->getScale();
-                if (opts->getMaxScale() > scale) opts->setMaxScale(scale);
-                if (opts->getMinScale() > scale) opts->setMinScale(scale);
+                opts->setScaleLimits(
+                    std::min(opts->getMinScale(), scale), std::min(opts->getMaxScale(), scale)
+                );
             }
 
             if (nodes.size() >= 2) {

@@ -79,7 +79,7 @@ bool BitmapFont::initWithFile(ZStringView fntFile) {
     auto contents = std::string_view(reinterpret_cast<char*>(data), size);
 #else
     auto fullPath = CCFileUtils::get()->fullPathForFilename(fntFile.c_str(), false);
-    auto res = file::readString(fullPath);
+    auto res = file::readString(std::filesystem::path(std::string_view(fullPath)));  // GD 2.011 port: gd::string is not std::string
     if (res.isErr()) {
         return false;
     }

@@ -1,3 +1,4 @@
+#include <Geode/binding/PauseLayer.hpp>
 #include <Geode/ui/PopupManager.hpp>
 #include <Geode/Geode.hpp>
 
@@ -207,7 +208,12 @@ void PopupManager::update(float dt) {
     // if we are playing and are unpaused, only show priority popups
     bool playing = false;
     auto gjbgl = PlayLayer::get();
+#ifdef GEODE_IS_WINDOWS32
+    // GD 2.011 port: no PlayLayer::m_isPaused in 2.0; paused means a PauseLayer is up
+    if (gjbgl && !scene->getChildByType<PauseLayer>(0)) {
+#else
     if (gjbgl && !gjbgl->m_isPaused) {
+#endif
         playing = true;
     }
 

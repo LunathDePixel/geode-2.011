@@ -9,11 +9,9 @@ EXPORTS
     ??0CCColor3bObject@extension@cocos2d@@QAE@ABV012@@Z
     ??0CCColor3bObject@extension@cocos2d@@QAE@U_ccColor3B@2@@Z
     ??0CCControl@extension@cocos2d@@QAE@ABV012@@Z
-    ??0CCControl@extension@cocos2d@@QAE@XZ
     ??0CCControlButton@extension@cocos2d@@QAE@ABV012@@Z
     ??0CCControlButton@extension@cocos2d@@QAE@XZ
     ??0CCControlColourPicker@extension@cocos2d@@QAE@ABV012@@Z
-    ??0CCControlColourPicker@extension@cocos2d@@QAE@XZ
     ??0CCControlHuePicker@extension@cocos2d@@QAE@ABV012@@Z
     ??0CCControlHuePicker@extension@cocos2d@@QAE@XZ
     ??0CCControlPotentiometer@extension@cocos2d@@QAE@ABV012@@Z
@@ -43,9 +41,7 @@ EXPORTS
     ??0CCInvocation@extension@cocos2d@@QAE@ABV012@@Z
     ??0CCInvocation@extension@cocos2d@@QAE@PAVCCObject@2@P832@AEX0I@ZI@Z
     ??0CCScale9Sprite@extension@cocos2d@@QAE@ABV012@@Z
-    ??0CCScale9Sprite@extension@cocos2d@@QAE@XZ
     ??0CCScrollView@extension@cocos2d@@QAE@ABV012@@Z
-    ??0CCScrollView@extension@cocos2d@@QAE@XZ
     ??0CCScrollViewDelegate@extension@cocos2d@@QAE@ABV012@@Z
     ??0CCScrollViewDelegate@extension@cocos2d@@QAE@XZ
     ??0CCSortableObject@extension@cocos2d@@QAE@ABV012@@Z
@@ -66,9 +62,7 @@ EXPORTS
     ??1AssetsManager@extension@cocos2d@@UAE@XZ
     ??1CCArrayForObjectSorting@extension@cocos2d@@UAE@XZ
     ??1CCColor3bObject@extension@cocos2d@@UAE@XZ
-    ??1CCControl@extension@cocos2d@@UAE@XZ
     ??1CCControlButton@extension@cocos2d@@UAE@XZ
-    ??1CCControlColourPicker@extension@cocos2d@@UAE@XZ
     ??1CCControlHuePicker@extension@cocos2d@@UAE@XZ
     ??1CCControlPotentiometer@extension@cocos2d@@UAE@XZ
     ??1CCControlSaturationBrightnessPicker@extension@cocos2d@@UAE@XZ
@@ -83,8 +77,6 @@ EXPORTS
     ??1CCHttpRequest@extension@cocos2d@@UAE@XZ
     ??1CCHttpResponse@extension@cocos2d@@UAE@XZ
     ??1CCInvocation@extension@cocos2d@@UAE@XZ
-    ??1CCScale9Sprite@extension@cocos2d@@UAE@XZ
-    ??1CCScrollView@extension@cocos2d@@UAE@XZ
     ??1CCScrollViewDelegate@extension@cocos2d@@UAE@XZ
     ??1CCSortableObject@extension@cocos2d@@UAE@XZ
     ??1CCTableView@extension@cocos2d@@UAE@XZ
@@ -130,13 +122,6 @@ EXPORTS
     ??_7AssetsManagerDelegateProtocol@extension@cocos2d@@6B@ DATA
     ??_7CCArrayForObjectSorting@extension@cocos2d@@6B@ DATA
     ??_7CCColor3bObject@extension@cocos2d@@6B@ DATA
-    ??_7CCControl@extension@cocos2d@@6B@ DATA
-    ??_7CCControl@extension@cocos2d@@6BCCAccelerometerDelegate@2@@ DATA
-    ??_7CCControl@extension@cocos2d@@6BCCKeyboardDelegate@2@@ DATA
-    ??_7CCControl@extension@cocos2d@@6BCCKeypadDelegate@2@@ DATA
-    ??_7CCControl@extension@cocos2d@@6BCCMouseDelegate@2@@ DATA
-    ??_7CCControl@extension@cocos2d@@6BCCNode@2@@ DATA
-    ??_7CCControl@extension@cocos2d@@6BCCTouchDelegate@2@@ DATA
     ??_7CCControlButton@extension@cocos2d@@6B@ DATA
     ??_7CCControlButton@extension@cocos2d@@6BCCAccelerometerDelegate@2@@ DATA
     ??_7CCControlButton@extension@cocos2d@@6BCCKeyboardDelegate@2@@ DATA
@@ -144,13 +129,6 @@ EXPORTS
     ??_7CCControlButton@extension@cocos2d@@6BCCMouseDelegate@2@@ DATA
     ??_7CCControlButton@extension@cocos2d@@6BCCNode@2@@ DATA
     ??_7CCControlButton@extension@cocos2d@@6BCCTouchDelegate@2@@ DATA
-    ??_7CCControlColourPicker@extension@cocos2d@@6B@ DATA
-    ??_7CCControlColourPicker@extension@cocos2d@@6BCCAccelerometerDelegate@2@@ DATA
-    ??_7CCControlColourPicker@extension@cocos2d@@6BCCKeyboardDelegate@2@@ DATA
-    ??_7CCControlColourPicker@extension@cocos2d@@6BCCKeypadDelegate@2@@ DATA
-    ??_7CCControlColourPicker@extension@cocos2d@@6BCCMouseDelegate@2@@ DATA
-    ??_7CCControlColourPicker@extension@cocos2d@@6BCCNode@2@@ DATA
-    ??_7CCControlColourPicker@extension@cocos2d@@6BCCTouchDelegate@2@@ DATA
     ??_7CCControlHuePicker@extension@cocos2d@@6B@ DATA
     ??_7CCControlHuePicker@extension@cocos2d@@6BCCAccelerometerDelegate@2@@ DATA
     ??_7CCControlHuePicker@extension@cocos2d@@6BCCKeyboardDelegate@2@@ DATA
@@ -208,14 +186,6 @@ EXPORTS
     ??_7CCHttpRequest@extension@cocos2d@@6B@ DATA
     ??_7CCHttpResponse@extension@cocos2d@@6B@ DATA
     ??_7CCInvocation@extension@cocos2d@@6B@ DATA
-    ??_7CCScale9Sprite@extension@cocos2d@@6BCCNode@2@@ DATA
-    ??_7CCScale9Sprite@extension@cocos2d@@6BCCRGBAProtocol@2@@ DATA
-    ??_7CCScrollView@extension@cocos2d@@6BCCAccelerometerDelegate@2@@ DATA
-    ??_7CCScrollView@extension@cocos2d@@6BCCKeyboardDelegate@2@@ DATA
-    ??_7CCScrollView@extension@cocos2d@@6BCCKeypadDelegate@2@@ DATA
-    ??_7CCScrollView@extension@cocos2d@@6BCCMouseDelegate@2@@ DATA
-    ??_7CCScrollView@extension@cocos2d@@6BCCNode@2@@ DATA
-    ??_7CCScrollView@extension@cocos2d@@6BCCTouchDelegate@2@@ DATA
     ??_7CCScrollViewDelegate@extension@cocos2d@@6B@ DATA
     ??_7CCSortableObject@extension@cocos2d@@6B@ DATA
     ??_7CCTableView@extension@cocos2d@@6B@ DATA
@@ -229,7 +199,6 @@ EXPORTS
     ??_7CCTableViewCell@extension@cocos2d@@6BCCSortableObject@12@@ DATA
     ??_7CCTableViewDataSource@extension@cocos2d@@6B@ DATA
     ??_7CCTableViewDelegate@extension@cocos2d@@6B@ DATA
-    ??_7ColorPickerDelegate@extension@cocos2d@@6B@ DATA
     ??_7WebSocket@extension@cocos2d@@6B@ DATA
     ??_FAssetsManager@extension@cocos2d@@QAEXXZ
     ?AnsiToUtf8@CWin32InputBox@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V23@@Z
@@ -302,7 +271,6 @@ EXPORTS
     ?checkUpdate@AssetsManager@extension@cocos2d@@UAE_NXZ
     ?close@WebSocket@extension@cocos2d@@QAEXXZ
     ?closeKeyboard@CCEditBoxImplWin@extension@cocos2d@@UAEXXZ
-    ?colorValueChanged@ColorPickerDelegate@extension@cocos2d@@UAEXU_ccColor3B@3@@Z
     ?colourPicker@CCControlColourPicker@extension@cocos2d@@SAPAV123@XZ
     ?colourSliderValueChanged@CCControlColourPicker@extension@cocos2d@@QAEXPAVCCObject@3@I@Z
     ?create@CCControl@extension@cocos2d@@KAPAV123@XZ
@@ -349,7 +317,6 @@ EXPORTS
     ?editBoxEditingDidEnd@CCEditBoxDelegate@extension@cocos2d@@UAEXPAVCCEditBox@23@@Z
     ?editBoxTextChanged@CCEditBoxDelegate@extension@cocos2d@@UAEXPAVCCEditBox@23@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z
     ?getAction@CCInvocation@extension@cocos2d@@UBEP8CCObject@3@AEXPAV43@I@ZXZ
-    ?getBackground@CCControlColourPicker@extension@cocos2d@@UBEPAVCCSprite@3@XZ
     ?getBackground@CCControlHuePicker@extension@cocos2d@@UBEPAVCCSprite@3@XZ
     ?getBackground@CCControlSaturationBrightnessPicker@extension@cocos2d@@UBEPAVCCSprite@3@XZ
     ?getBackgroundSprite@CCControlButton@extension@cocos2d@@UBEPAVCCScale9Sprite@23@XZ
@@ -361,8 +328,6 @@ EXPORTS
     ?getCapInsets@CCScale9Sprite@extension@cocos2d@@UAE?AVCCRect@3@XZ
     ?getColor@CCControlButton@extension@cocos2d@@UAEABU_ccColor3B@3@XZ
     ?getColor@CCScale9Sprite@extension@cocos2d@@UAEABU_ccColor3B@3@XZ
-    ?getColorTarget@CCControlColourPicker@extension@cocos2d@@UBEPAVCCSprite@3@XZ
-    ?getColorValue@CCControlColourPicker@extension@cocos2d@@UBEABU_ccColor3B@3@XZ
     ?getConnectionTimeout@AssetsManager@extension@cocos2d@@QAEIXZ
     ?getContainer@CCScrollView@extension@cocos2d@@QAEPAVCCNode@3@XZ
     ?getContentOffset@CCScrollView@extension@cocos2d@@QAE?AVCCPoint@3@XZ
@@ -371,13 +336,11 @@ EXPORTS
     ?getCurrentTitle@CCControlButton@extension@cocos2d@@UBEPAVCCString@3@XZ
     ?getCurrentTitleColor@CCControlButton@extension@cocos2d@@UBEABU_ccColor3B@3@XZ
     ?getDataSource@CCTableView@extension@cocos2d@@QAEPAVCCTableViewDataSource@23@XZ
-    ?getDelegate@CCControlColourPicker@extension@cocos2d@@UBEPAVColorPickerDelegate@23@XZ
     ?getDelegate@CCEditBox@extension@cocos2d@@QAEPAVCCEditBoxDelegate@23@XZ
     ?getDelegate@CCEditBoxImpl@extension@cocos2d@@QAEPAVCCEditBoxDelegate@23@XZ
     ?getDelegate@CCScrollView@extension@cocos2d@@QAEPAVCCScrollViewDelegate@23@XZ
     ?getDelegate@CCTableView@extension@cocos2d@@QAEPAVCCTableViewDelegate@23@XZ
     ?getDirection@CCScrollView@extension@cocos2d@@QAE?AW4CCScrollViewDirection@23@XZ
-    ?getDisableAnimation@CCScrollView@extension@cocos2d@@UBE_NXZ
     ?getDownloadProgress@CCHttpRequest@extension@cocos2d@@QAEHXZ
     ?getErrorBuffer@CCHttpResponse@extension@cocos2d@@QAEPBDXZ
     ?getHandleOfControlEvent@CCControl@extension@cocos2d@@AAEHI@Z
@@ -406,7 +369,6 @@ EXPORTS
     ?getObjectID@CCTableViewCell@extension@cocos2d@@UAEIXZ
     ?getOpacity@CCControlButton@extension@cocos2d@@UAEEXZ
     ?getOpacity@CCScale9Sprite@extension@cocos2d@@UAEEXZ
-    ?getOriginalSize@CCScale9Sprite@extension@cocos2d@@UBE?AVCCSize@3@XZ
     ?getOverlay@CCControlSaturationBrightnessPicker@extension@cocos2d@@UBEPAVCCSprite@3@XZ
     ?getPackageUrl@AssetsManager@extension@cocos2d@@QBEPBDXZ
     ?getPlaceHolder@CCEditBox@extension@cocos2d@@QAEPBDXZ
@@ -435,7 +397,6 @@ EXPORTS
     ?getSlider@CCControlSaturationBrightnessPicker@extension@cocos2d@@UBEPAVCCSprite@3@XZ
     ?getStartPos@CCControlHuePicker@extension@cocos2d@@UBE?AVCCPoint@3@XZ
     ?getStartPos@CCControlSaturationBrightnessPicker@extension@cocos2d@@UBE?AVCCPoint@3@XZ
-    ?getState@CCControl@extension@cocos2d@@UBEIXZ
     ?getStoragePath@AssetsManager@extension@cocos2d@@QBEPBDXZ
     ?getTag@CCHttpRequest@extension@cocos2d@@QAEPBDXZ
     ?getTarget@CCHttpRequest@extension@cocos2d@@QAEPAVCCObject@3@XZ
@@ -600,7 +561,6 @@ EXPORTS
     ?setClippingToBounds@CCScrollView@extension@cocos2d@@QAEX_N@Z
     ?setColor@CCControlButton@extension@cocos2d@@UAEXABU_ccColor3B@3@@Z
     ?setColor@CCScale9Sprite@extension@cocos2d@@UAEXABU_ccColor3B@3@@Z
-    ?setColorTarget@CCControlColourPicker@extension@cocos2d@@UAEXPAVCCSprite@3@@Z
     ?setColorValue@CCControlColourPicker@extension@cocos2d@@UAEXABU_ccColor3B@3@@Z
     ?setConnectionTimeout@AssetsManager@extension@cocos2d@@QAEXI@Z
     ?setContainer@CCScrollView@extension@cocos2d@@QAEXPAVCCNode@3@@Z
@@ -612,13 +572,10 @@ EXPORTS
     ?setContentSize@CCScrollView@extension@cocos2d@@UAEXABVCCSize@3@@Z
     ?setDataSource@CCTableView@extension@cocos2d@@QAEXPAVCCTableViewDataSource@23@@Z
     ?setDelegate@AssetsManager@extension@cocos2d@@QAEXPAVAssetsManagerDelegateProtocol@23@@Z
-    ?setDelegate@CCControlColourPicker@extension@cocos2d@@UAEXPAVColorPickerDelegate@23@@Z
     ?setDelegate@CCEditBox@extension@cocos2d@@QAEXPAVCCEditBoxDelegate@23@@Z
     ?setDelegate@CCEditBoxImpl@extension@cocos2d@@QAEXPAVCCEditBoxDelegate@23@@Z
     ?setDelegate@CCScrollView@extension@cocos2d@@QAEXPAVCCScrollViewDelegate@23@@Z
     ?setDelegate@CCTableView@extension@cocos2d@@QAEXPAVCCTableViewDelegate@23@@Z
-    ?setDirection@CCScrollView@extension@cocos2d@@UAEXW4CCScrollViewDirection@23@@Z
-    ?setDisableAnimation@CCScrollView@extension@cocos2d@@UAEX_N@Z
     ?setDownloadProgress@CCHttpRequest@extension@cocos2d@@QAEXH@Z
     ?setEnabled@CCControl@extension@cocos2d@@UAEX_N@Z
     ?setEnabled@CCControlButton@extension@cocos2d@@UAEX_N@Z

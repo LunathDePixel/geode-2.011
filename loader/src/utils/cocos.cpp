@@ -589,12 +589,12 @@ void geode::cocos::reloadTextures(CreateLayerFunc returnTo) {
         scene->addChild(layer);
         return scene;
     };
-    GameManager::get()->reloadAll(false, false, false, false, true);
+    GameManager::get()->reloadAll(false, false, GEODE_WINDOWS32(true) GEODE_WINDOWS64(false, false, true));  // GD 2.011 port: 3 args in 2.0
 }
 
 void geode::cocos::reloadTextures(CreateSceneFunc returnTo) {
     LOADING_FINISHED_SCENE = std::move(returnTo);
-    GameManager::get()->reloadAll(false, false, false, false, true);
+    GameManager::get()->reloadAll(false, false, GEODE_WINDOWS32(true) GEODE_WINDOWS64(false, false, true));  // GD 2.011 port: 3 args in 2.0
 }
 
 void GEODE_DLL geode::cocos::handleTouchPriorityWith(cocos2d::CCNode* node, int priority, bool force) {

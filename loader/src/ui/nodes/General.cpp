@@ -247,7 +247,13 @@ void geode::pushSceneWithLayer(cocos2d::CCLayer *layer) {
 }
 
 CCMenuItemSpriteExtra* geode::addBackButton(cocos2d::CCNode* to, BackButtonStyle style) {
-    return geode::addBackButton(to, [](cocos2d::CCMenuItem*) { CCDirector::get()->popSceneWithTransition(.5f, PopTransition::kPopTransitionFade); }, style);
+    return geode::addBackButton(to, [](cocos2d::CCMenuItem*) {
+#ifdef GEODE_IS_WINDOWS32
+        CCDirector::get()->popScene();  // GD 2.011 port: no popSceneWithTransition in 2.0
+#else
+        CCDirector::get()->popSceneWithTransition(.5f, PopTransition::kPopTransitionFade);
+#endif
+    }, style);
 }
 
 CCMenuItemSpriteExtra* geode::addBackButton(cocos2d::CCNode* to, geode::Function<void(cocos2d::CCMenuItem*)> callback, BackButtonStyle style) {

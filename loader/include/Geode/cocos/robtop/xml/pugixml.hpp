@@ -374,7 +374,9 @@ namespace pugi
 		// Default constructor. Constructs an empty node.
 		xml_node();
 		// Geode addition: destructor
-		~xml_node();
+		// GD 2.011 port: 2.0's libcocos2d has no ~xml_node export (trivially destructible there)
+		GEODE_WINDOWS32(~xml_node() = default;)
+		GEODE_WINDOWS64(~xml_node();)
 		GEODE_CUSTOM_CONSTRUCTOR_BEGIN(xml_node);
 
 		// Constructs node from internal pointer

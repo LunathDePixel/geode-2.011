@@ -106,6 +106,11 @@ elseif (GEODE_TARGET_PLATFORM STREQUAL "Win32")
 	)
 
 	target_compile_definitions(${PROJECT_NAME} INTERFACE NOMINMAX)
+	# GD 2.011 port: coroutines on i686 clang-cl for mods too (see the top-level CMakeLists.txt)
+	if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+		target_compile_options(${PROJECT_NAME} INTERFACE
+			"$<$<COMPILE_LANGUAGE:CXX>:-D__cpp_impl_coroutine=201902L;-Wno-builtin-macro-redefined;-Wno-coroutines-unsupported-target>")
+	endif()
 
 	target_link_libraries(${PROJECT_NAME} INTERFACE
 		${GEODE_LOADER_PATH}/include/link/win32/libcocos2d.lib

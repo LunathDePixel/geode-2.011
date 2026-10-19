@@ -194,6 +194,16 @@ set(GEODE_LOADER_PATH ${CMAKE_CURRENT_SOURCE_DIR}/loader)
 set(GEODE_ROOT_PATH ${CMAKE_CURRENT_SOURCE_DIR})
 
 include(cmake/Platform.cmake)
+
+# GD 2.011 port: clang implements C++20 coroutines on i686-pc-windows-msvc but withholds
+# __cpp_impl_coroutine there ("not currently supported on the 32-bit x86 Microsoft ABI"), which
+# leaves MSVC's <coroutine> empty. arc needs coroutines; defining the macro makes <coroutine> work.
+# Checked: resume, co_return, try/catch inside, exceptions out via unhandled_exception, destroy
+# while suspended (port/tools/coro_x86_test.cpp).
+set(GEODE_WIN32_CORO_FLAGS -D__cpp_impl_coroutine=201902L -Wno-builtin-macro-redefined -Wno-coroutines-unsupported-target)
+if (GEODE_TARGET_PLATFORM STREQUAL "Win32" AND CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+	add_compile_options("$<$<COMPILE_LANGUAGE:CXX>:${GEODE_WIN32_CORO_FLAGS}>")
+endif()
 include(cmake/GeodeFile.cmake)
 
 # there is now a script that runs over these lines to determine the gd version
