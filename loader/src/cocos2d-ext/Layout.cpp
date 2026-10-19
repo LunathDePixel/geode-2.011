@@ -15,22 +15,40 @@ void CCNode::swapChildIndices(CCNode* first, CCNode* second) {
     std::swap(first->m_uOrderOfArrival, second->m_uOrderOfArrival);
 }
 
+// GD 2.011 port: GD 2.0 renumbers orderOfArrival from 0 when it sorts the children, so "arrival of
+// the neighbour +/- 1" can underflow (an unsigned 0 - 1 sorted the child last). Make room by shifting
+// the arrivals at or above the target instead, and also move the child in the array itself
+static void placeChild(CCArray* children, CCNode* child, CCNode* target, bool after) {
+    unsigned int slot = target->getOrderOfArrival() + (after ? 1 : 0);
+    for (auto other : CCArrayExt<CCNode*>(children)) {
+        if (other != child && other->getOrderOfArrival() >= slot) {
+            other->setOrderOfArrival(other->getOrderOfArrival() + 1);
+        }
+    }
+    child->setZOrder(target->getZOrder());
+    child->setOrderOfArrival(slot);
+
+    child->retain();
+    children->removeObject(child, true);
+    auto idx = children->indexOfObject(target) + (after ? 1 : 0);
+    children->insertObject(child, idx);
+    child->release();
+}
+
 void CCNode::insertBefore(CCNode* child, CCNode* before) {
     this->addChild(child);
     if (
         (before && m_pChildren->containsObject(before)) ||
         (before = static_cast<CCNode*>(m_pChildren->firstObject()))
     ) {
-        child->setZOrder(before->getZOrder());
-        child->setOrderOfArrival(before->getOrderOfArrival() - 1);
+        if (before != child) placeChild(m_pChildren, child, before, false);
     }
 }
 
 void CCNode::insertAfter(CCNode* child, CCNode* after) {
     this->addChild(child);
-    if (m_pChildren->containsObject(after)) {
-        child->setZOrder(after->getZOrder());
-        child->setOrderOfArrival(after->getOrderOfArrival() + 1);
+    if (m_pChildren->containsObject(after) && after != child) {
+        placeChild(m_pChildren, child, after, true);
     }
 }
 
