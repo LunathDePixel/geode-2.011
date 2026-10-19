@@ -1,4 +1,5 @@
 #include <Geode/DefaultInclude.hpp>
+#include <Geode/loader/GameEvent.hpp>
 
 #include "../load.hpp"
 #include <Windows.h>
@@ -197,7 +198,14 @@ int WINAPI gdMainHook(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmd
         }
     }
 
-    return reinterpret_cast<decltype(&wWinMain)>(mainTrampolineAddr)(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
+    auto result = reinterpret_cast<decltype(&wWinMain)>(mainTrampolineAddr)(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
+#ifdef GEODE_IS_WINDOWS32
+    // GD 2.011 port: 2.0 has no CCDirector::purgeDirector hook to send this from, and game::exit
+    // only calls CCDirector::end(), after which the game still runs frames; send it once the
+    // game's main loop has actually finished so the async runtime isn't shut down under it
+    GameEvent(GameEventType::Exiting).send();
+#endif
+    return result;
 }
 
 // incase we're desperate again

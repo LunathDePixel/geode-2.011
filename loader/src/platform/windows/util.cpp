@@ -269,12 +269,16 @@ void geode::utils::game::exit(bool saveData) {
         }
     }
 
-    GameEvent(GameEventType::Exiting).send();
-    if (CCApplication::sharedApplication())
-        // GD 2.011 port: quit the way 2.0's own MenuLayer::endGame (0x51EBE0) does
+    if (CCApplication::sharedApplication()) {
+        // GD 2.011 port: quit the way 2.0's own MenuLayer::endGame (0x51EBE0) does; the game keeps
+        // running until its main loop notices, so the Exiting event is sent after WinMain returns
+        // (platform/windows/main.cpp) instead of here
         CCDirector::sharedDirector()->end();
-    else
+    }
+    else {
+        GameEvent(GameEventType::Exiting).send();
         std::exit(0);
+    }
 }
 
 void geode::utils::game::restart(bool saveData) {
