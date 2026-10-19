@@ -904,6 +904,11 @@ ServerFuture<ServerModUpdateOneCheck> server::checkUpdates(Mod const* mod) {
 
 ServerFuture<ServerModUpdateAllCheck> server::batchedCheckUpdates(std::vector<std::string> const& batch) {
     ARC_FRAME();
+#ifdef GEODE_IS_WINDOWS32
+    // GD 2.011 port: the index only has 64-bit GD 2.2 builds (it also rejects gd=2.011 with a 400), and
+    // an "update" would replace a mod ported to 32-bit with a DLL this game cannot load
+    co_return Ok(ServerModUpdateAllCheck{});
+#endif
     auto req = web::WebRequest();
     req.userAgent(getServerUserAgent());
     req.param("platform", GEODE_PLATFORM_SHORT_IDENTIFIER);
