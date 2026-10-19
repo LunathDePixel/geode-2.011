@@ -338,8 +338,13 @@ void Loader::Impl::updateModResources(Mod* mod) {
             );
         }
         else {
+            // GD 2.011 port: GD leaves the default pixel format at RGBA4444 while loading, which bands
+            // the sheets' gradients into flat blocks; load them at full depth
+            auto oldFormat = CCTexture2D::defaultAlphaPixelFormat();
+            CCTexture2D::setDefaultAlphaPixelFormat(kCCTexture2DPixelFormat_RGBA8888);
             CCTextureCache::get()->addImage(pngPath.c_str(), false);
             CCSpriteFrameCache::get()->addSpriteFramesWithFile(plistPath.c_str());
+            CCTexture2D::setDefaultAlphaPixelFormat(oldFormat);
         }
     }
 }
