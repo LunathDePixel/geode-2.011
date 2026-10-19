@@ -22,7 +22,7 @@ public:
 
     void clearCache();
 public:
-    cocos2d::CCDictionary* m_pDictCache;
+    GD21_ONLY(cocos2d::CCDictionary* m_pDictCache;)  // GD 2.011 port: not in 2.0
 };
 
 #endif

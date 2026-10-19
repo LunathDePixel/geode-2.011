@@ -1021,9 +1021,9 @@ public:
     CCSpriteFrame*  m_pOrigFrame;
        unsigned int    m_uExecutedLoops;
     // @note RobTop Addition
-    CC_SYNTHESIZE_NV(bool, m_bRecenterFrames, RecenterFrames);
+    GD21_ONLY(CC_SYNTHESIZE_NV(bool, m_bRecenterFrames, RecenterFrames);)  // GD 2.011 port: not in 2.0
     // @note RobTop Addition
-    CC_SYNTHESIZE_NV(bool, m_bRecenterChildren, RecenterChildren);
+    GD21_ONLY(CC_SYNTHESIZE_NV(bool, m_bRecenterChildren, RecenterChildren);)  // GD 2.011 port: not in 2.0
 };
 
 /** Overrides the target of an action so that it always runs on the target

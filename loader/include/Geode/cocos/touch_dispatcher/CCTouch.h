@@ -89,7 +89,7 @@ public:
     CCPoint m_point;
     CCPoint m_prevPoint;
     // @note RobTop Addition
-    CC_SYNTHESIZE_NV(double, m_timestamp, Timestamp);
+    GD21_ONLY(CC_SYNTHESIZE_NV(double, m_timestamp, Timestamp);)  // GD 2.011 port: not in 2.0
 };
 
 class CC_DLL CCEvent : public CCObject

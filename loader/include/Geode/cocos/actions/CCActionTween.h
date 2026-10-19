@@ -79,7 +79,7 @@ public:
 
     gd::string        m_strKey;
     // @note RobTop Addition
-    int               m_nIntTag;
+    GD21_ONLY(int               m_nIntTag;)  // GD 2.011 port: not in 2.0
     float            m_fFrom, m_fTo;
     float            m_fDelta;
 };

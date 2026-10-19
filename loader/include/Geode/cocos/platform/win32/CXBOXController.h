@@ -31,14 +31,14 @@ public:
     bool m_buttonB;
     bool m_buttonX;
     bool m_buttonY;
-    bool m_leftThumbUp;
-    bool m_leftThumbDown;
-    bool m_leftThumbLeft;
-    bool m_leftThumbRight;
-    bool m_rightThumbUp;
-    bool m_rightThumbDown;
-    bool m_rightThumbLeft;
-    bool m_rightThumbRight;
+    GD21_ONLY(bool m_leftThumbUp;)  // GD 2.011 port: not in 2.0
+    GD21_ONLY(bool m_leftThumbDown;)  // GD 2.011 port: not in 2.0
+    GD21_ONLY(bool m_leftThumbLeft;)  // GD 2.011 port: not in 2.0
+    GD21_ONLY(bool m_leftThumbRight;)  // GD 2.011 port: not in 2.0
+    GD21_ONLY(bool m_rightThumbUp;)  // GD 2.011 port: not in 2.0
+    GD21_ONLY(bool m_rightThumbDown;)  // GD 2.011 port: not in 2.0
+    GD21_ONLY(bool m_rightThumbLeft;)  // GD 2.011 port: not in 2.0
+    GD21_ONLY(bool m_rightThumbRight;)  // GD 2.011 port: not in 2.0
 };
 
 #endif

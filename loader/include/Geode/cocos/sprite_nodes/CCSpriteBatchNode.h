@@ -203,7 +203,7 @@ public:
     CCArray* m_pobDescendants;
 
     // @note RobTop Addition
-    CC_SYNTHESIZE_NV(bool, m_bManualSortChildren, ManualSortChildren);
+    bool m_bManualSortChildren;  // GD 2.011 port: accessors are the virtuals declared above
     // @note RobTop Addition
     bool m_bManualSortAllChildrenDirty;
 };

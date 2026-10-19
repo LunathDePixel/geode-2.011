@@ -178,7 +178,7 @@ protected:
     virtual void insertText(const char * text, int len);
     virtual void deleteBackward();
     // @note RobTop Addition
-    virtual void deleteForward();
+    GD21_ONLY(virtual void deleteForward();)  // GD 2.011 port: not in 2.0
     virtual const char * getContentText();
 public:
     class LengthStack;

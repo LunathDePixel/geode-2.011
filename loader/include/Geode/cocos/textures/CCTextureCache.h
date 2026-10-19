@@ -63,7 +63,7 @@ protected:
     //pthread_mutex_t                *m_pDictLock;
 
     // @note RobTop Addition
-    bool m_asyncLoadingPrepared;
+    GD21_ONLY(bool m_asyncLoadingPrepared;)  // GD 2.011 port: not in 2.0
 
 private:
     /// todo: void addImageWithAsyncObject(CCAsyncObject* async);

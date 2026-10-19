@@ -93,7 +93,7 @@ protected:
     /**
     @brief    Called by CCIMEDispatcher after the user clicks the delete-forward key.
      */
-    virtual void deleteForward() {}
+    GD21_ONLY(virtual void deleteForward() {})  // GD 2.011 port: not in 2.0
 
     /**
     @brief    Called by CCIMEDispatcher for text stored in delegate.

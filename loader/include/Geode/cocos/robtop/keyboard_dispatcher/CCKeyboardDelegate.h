@@ -195,9 +195,9 @@ NS_CC_BEGIN
 class CC_DLL CCKeyboardDelegate
 {
 public:
-    virtual void keyDown(enumKeyCodes key, double) {}
+    virtual void keyDown(enumKeyCodes key) {}  // GD 2.011 port: no timestamp in 2.0
 
-    virtual void keyUp(enumKeyCodes key, double) {}
+    virtual void keyUp(enumKeyCodes key) {}  // GD 2.011 port: no timestamp in 2.0
 
     //pretty certain there's no fields, based on initializer
 };

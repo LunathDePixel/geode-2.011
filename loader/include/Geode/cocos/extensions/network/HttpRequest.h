@@ -120,7 +120,9 @@ public:
      */
     inline void setRequestData(const char* buffer, unsigned int len)
     {
-        _requestData.assign(buffer, buffer + len);
+        auto vec = std::vector<char>(_requestData);
+        vec.assign(buffer, buffer + len);
+        _requestData = gd::vector<char>(vec);
     };
     /** Get the request data pointer back */
     inline char* getRequestData()
@@ -130,7 +132,7 @@ public:
     /** Get the size of request data back */
     inline int getRequestDataSize()
     {
-        return _requestData.size();
+        return std::vector<char>(_requestData).size();
     }
 
     /** Option field. You can set a string tag to identify your request, this tag can be found in HttpResponse->getHttpRequest->getTag()
@@ -251,15 +253,16 @@ public:
 
     inline void setReadTimeout(int readTimeout) {
         _readTimeout = readTimeout;
+// GD 2.011 port: no connect timeout in 2.0
     }
 
-    inline int getConnectTimeout() {
-        return _connectTimeout;
-    }
-
-    inline void setConnectTimeout(int connectTimeout) {
-        _connectTimeout = connectTimeout;
-    }
+//     inline int getConnectTimeout() {
+//         return _connectTimeout;
+//     }
+// 
+//     inline void setConnectTimeout(int connectTimeout) {
+//         _connectTimeout = connectTimeout;
+//     }
 
 public:
     // properties
@@ -281,7 +284,7 @@ public:
     // @note RobTop Addition
     int _readTimeout;
     // @note RobTop Addition
-    int _connectTimeout;
+    GD21_ONLY(int _connectTimeout;)  // GD 2.011 port: not in 2.0
 };
 
 NS_CC_EXT_END

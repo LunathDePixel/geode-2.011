@@ -71,7 +71,7 @@ public:
     virtual void setEnabled(bool enabled);
 
     // @note RobTop Addition
-    virtual void registerWithTouchDispatcher();
+    GD21_ONLY(virtual void registerWithTouchDispatcher();)  // GD 2.011 port: not in 2.0
 protected:
     void updateSliderPosition(CCPoint location);
     bool checkSliderPosition(CCPoint location);

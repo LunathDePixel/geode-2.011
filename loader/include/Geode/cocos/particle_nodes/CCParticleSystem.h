@@ -363,7 +363,7 @@ public:
     */
 public:
     bool m_bIsAutoRemoveOnFinish;
-    CC_SYNTHESIZE_NV(bool, m_bDontCleanupOnFinish, DontCleanupOnFinish)
+    GD21_ONLY(CC_SYNTHESIZE_NV(bool, m_bDontCleanupOnFinish, DontCleanupOnFinish))  // GD 2.011 port: not in 2.0
 public:
     virtual bool isAutoRemoveOnFinish();
     virtual void setAutoRemoveOnFinish(bool var);

@@ -141,7 +141,7 @@ void ccArrayFullRemoveArray(ccArray *arr, ccArray *minusArr);
 typedef struct _ccCArray {
     unsigned int num, max;
     // 2.2 additions
-    unsigned int unknown;
+    GD21_ONLY(unsigned int unknown;)  // GD 2.011 port: not in 2.0
     void** arr;
 } ccCArray;
 

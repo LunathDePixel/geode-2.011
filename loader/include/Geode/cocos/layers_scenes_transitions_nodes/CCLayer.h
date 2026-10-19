@@ -387,7 +387,7 @@ public:
     */
 protected:
     bool m_bCompressedInterpolation;
-    CC_SYNTHESIZE_NV(bool, m_bShouldPremultiply, ShouldPremultiply)
+    GD21_ONLY(CC_SYNTHESIZE_NV(bool, m_bShouldPremultiply, ShouldPremultiply))  // GD 2.011 port: not in 2.0
 public:
     virtual void setCompressedInterpolation(bool bCompressedInterpolation);
     virtual bool isCompressedInterpolation();

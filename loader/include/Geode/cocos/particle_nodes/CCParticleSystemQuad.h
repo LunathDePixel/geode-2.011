@@ -154,13 +154,13 @@ public:
     GLuint                m_pBuffersVBO[2]; //0: vertex  1: indices
 
     // @note Robtop Addition
-    CCRect m_tTextureRect;
+    GD21_ONLY(CCRect m_tTextureRect;)  // GD 2.011 port: not in 2.0
     // @note Robtop Addition
-    ccColor4B m_tQuadColor;
+    GD21_ONLY(ccColor4B m_tQuadColor;)  // GD 2.011 port: not in 2.0
     // @note Robtop Addition
-    GLushort m_uParticleIdx;
+    GD21_ONLY(GLushort m_uParticleIdx;)  // GD 2.011 port: not in 2.0
     // @note Robtop Addition
-    GLubyte m_uOpacity;
+    GD21_ONLY(GLubyte m_uOpacity;)  // GD 2.011 port: not in 2.0
 
 public:
     /**
@@ -177,7 +177,7 @@ public:
     /** creates an initializes a CCParticleSystemQuad from a plist file.
     This plist files can be created manually or with Particle Designer:
     */
-    static CCParticleSystemQuad * create(const char *plistFile, bool unk);
+    static CCParticleSystemQuad * create(const char *plistFile);  // GD 2.011 port: no bool in 2.0
 
     /** initializes the indices for the vertices*/
     void initIndices();

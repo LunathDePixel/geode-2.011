@@ -1945,11 +1945,11 @@ public:
 
     // 2.2 additions
     // @note RobTop Addition
-    bool m_bPositionDirty;
+    GD21_ONLY(bool m_bPositionDirty;)  // GD 2.011 port: not in 2.0
     // @note RobTop Addition
-    float m_fTransformX;
+    GD21_ONLY(float m_fTransformX;)  // GD 2.011 port: not in 2.0
     // @note RobTop Addition
-    float m_fTransformY;
+    GD21_ONLY(float m_fTransformY;)  // GD 2.011 port: not in 2.0
 
     bool m_bInverseDirty;               ///< transform dirty flag
     bool m_bAdditionalTransformDirty;   ///< The flag to check whether the additional transform is dirty

@@ -148,19 +148,19 @@ public:
     /** Touch events are handled by default; if you want to customize your handlers, please override these functions:
      * @lua NA
      */
-    virtual void handleTouchesBegin(int num, int ids[], float xs[], float ys[], double timestamp);
+    virtual void handleTouchesBegin(int num, int ids[], float xs[], float ys[]);  // GD 2.011 port: no timestamp in 2.0
     /**
      * @lua NA
      */
-    virtual void handleTouchesMove(int num, int ids[], float xs[], float ys[], double timestamp);
+    virtual void handleTouchesMove(int num, int ids[], float xs[], float ys[]);  // GD 2.011 port: no timestamp in 2.0
     /**
      * @lua NA
      */
-    virtual void handleTouchesEnd(int num, int ids[], float xs[], float ys[], double timestamp);
+    virtual void handleTouchesEnd(int num, int ids[], float xs[], float ys[]);  // GD 2.011 port: no timestamp in 2.0
     /**
      * @lua NA
      */
-    virtual void handleTouchesCancel(int num, int ids[], float xs[], float ys[], double timestamp);
+    virtual void handleTouchesCancel(int num, int ids[], float xs[], float ys[]);  // GD 2.011 port: no timestamp in 2.0
 
     // exported virtual, the protocol's last slot (missing from the 2.113-era header)
     virtual void pollInputEvents();
@@ -180,7 +180,7 @@ public:
      */
     float getScaleY() const;
 private:
-    void getSetOfTouchesEndOrCancel(CCSet& set, int num, int ids[], float xs[], float ys[], double timestamp);
+    void getSetOfTouchesEndOrCancel(CCSet& set, int num, int ids[], float xs[], float ys[]);  // GD 2.011 port: no timestamp in 2.0
 
 public:
     EGLTouchDelegate* m_pDelegate;
@@ -199,7 +199,7 @@ public:
     ResolutionPolicy m_eResolutionPolicy;
 
     // RobTop addition, seemingly unused and set to 1.0 in ctor
-    float  m_unkFloat;
+    GD21_ONLY(float  m_unkFloat;)  // GD 2.011 port: not in 2.0
 };
 
 // end of platform group

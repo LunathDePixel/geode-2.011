@@ -187,13 +187,13 @@ public:
     bool         m_bAutoDraw;
 
     // @note RobTop Addition
-    float m_fInternalScaleX;
+    GD21_ONLY(float m_fInternalScaleX;)  // GD 2.011 port: not in 2.0
     // @note RobTop Addition
-    float m_fInternalScaleY;
+    GD21_ONLY(float m_fInternalScaleY;)  // GD 2.011 port: not in 2.0
     // @note RobTop Addition
-    int m_nWidth;
+    GD21_ONLY(int m_nWidth;)  // GD 2.011 port: not in 2.0
     // @note RobTop Addition
-    int m_nHeight;
+    GD21_ONLY(int m_nHeight;)  // GD 2.011 port: not in 2.0
 };
 
 // end of textures group
