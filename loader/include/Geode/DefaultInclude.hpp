@@ -6,7 +6,8 @@
 #include <variant>
 
 #if defined(GEODE_EXPOSE_SECRET_INTERNALS_IN_HEADERS_DO_NOT_DEFINE_PLEASE)
-    #if !defined(__clang__)
+    // GD 2.011 port: the Win32 loader builds with MSVC (no 32-bit clang toolchain set up)
+    #if !defined(__clang__) && !defined(GEODE_IS_WINDOWS32)
         #error Geode Loader only compiles with Clang.
     #endif
 #endif

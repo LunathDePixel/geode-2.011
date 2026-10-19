@@ -1,3 +1,14 @@
+if (GEODE_TARGET_PLATFORM STREQUAL "Win32")
+	# GD 2.011 port: geode-sdk/net_libs has no 32-bit Windows build. curl is the static Schannel
+	# libcurl from port/deps/build_curl32.bat (linked in cmake/Platform.cmake, headers in
+	# include/link/win32/include); zlib comes from minizip's own fetch (MZ_FORCE_FETCH_LIBS)
+	target_include_directories(${PROJECT_NAME} PRIVATE ${GEODE_LOADER_PATH}/include/link/win32/include)
+	target_compile_definitions(${PROJECT_NAME} PRIVATE CURL_STATICLIB)
+	CPMAddPackage("gh:geode-sdk/net_libs#b5b810c")
+	target_link_libraries(${PROJECT_NAME} ca-bundle)
+	return()
+endif()
+
 if (GEODE_TARGET_PLATFORM STREQUAL "iOS")
 	set(net_libs_plat "ios")
 	set(net_libs_hash "SHA256=bfa29fc3a088db4729aa63e92ead6038b70300dca47263e1800290054677eb82")

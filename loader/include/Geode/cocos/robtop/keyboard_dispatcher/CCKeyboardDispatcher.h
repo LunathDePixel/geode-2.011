@@ -10,6 +10,7 @@ RT_ADD(
 	class CC_DLL CCKeyboardDispatcher : public CCObject 
 	{
 	public:
+	    GEODE_CUSTOM_CONSTRUCTOR_COCOS(CCKeyboardDispatcher, CCObject)
 		CCKeyboardDispatcher();
 		virtual ~CCKeyboardDispatcher();
 

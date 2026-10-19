@@ -74,7 +74,7 @@ protected:
 
     bool init();
 
-    void keyDown(enumKeyCodes key, double) override;
+    void keyDown(enumKeyCodes key) override;
     void keyBackClicked() override;
 #ifndef GEODE_IS_WINDOWS32
     void setIDPopupClosed(SetIDPopup*, int value) override;

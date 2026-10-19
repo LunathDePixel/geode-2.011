@@ -106,6 +106,7 @@ class CC_DLL CCTextFieldTTF : public CCLabelTTF, public CCIMEDelegate
 {
     GEODE_FRIEND_MODIFY
 public:
+    GEODE_CUSTOM_CONSTRUCTOR_COCOS(CCTextFieldTTF, CCLabelTTF)
     /**
      *  @lua NA
      */

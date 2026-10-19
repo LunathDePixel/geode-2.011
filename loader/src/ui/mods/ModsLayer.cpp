@@ -728,7 +728,7 @@ void ModsLayer::gotoTab(ModListSource* src, bool searchingDev) {
     m_lists.at(m_currentSource)->updateState();
 }
 
-void ModsLayer::keyDown(enumKeyCodes key, double p1) {
+void ModsLayer::keyDown(enumKeyCodes key) {  // GD 2.011 port: no timestamp in 2.0
     auto list = m_lists.at(m_currentSource);
 
     switch(key) {
@@ -745,7 +745,7 @@ void ModsLayer::keyDown(enumKeyCodes key, double p1) {
             }
             break;
         default:
-            CCLayer::keyDown(key, p1);
+            CCLayer::keyDown(key);
     }
 }
 

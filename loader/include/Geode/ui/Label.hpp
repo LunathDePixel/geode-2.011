@@ -349,7 +349,7 @@ namespace geode {
         cocos2d::ccBlendFunc getBlendFunc() override;
 
         cocos2d::CCSize const& getContentSize() const override;
-        cocos2d::CCSize getScaledContentSize() override;
+        cocos2d::CCSize getScaledContentSize();  // GD 2.011 port: not virtual in 2.0 (CCNode has an inline stand-in)
         float getScale() override;
         float getScaleX() override;
         float getScaleY() override;

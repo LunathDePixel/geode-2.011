@@ -1859,9 +1859,10 @@ public:
 
 	inline cocos2d::CCAffineTransform getTransformTemp() { return m_sTransform; }
 
-	inline bool getUseChildIndex() { return m_bUseChildIndex; }
-	void setUseChildIndex(bool);
-	void qsortAllChildrenWithIndex();
+	// GD 2.011 port: 2.2 child-index sorting, not in 2.0
+	GD21_ONLY(inline bool getUseChildIndex() { return m_bUseChildIndex; })
+	GD21_ONLY(void setUseChildIndex(bool);)
+	GD21_ONLY(void qsortAllChildrenWithIndex();)
 
 protected:
 	static void resetGlobalOrderOfArrival();

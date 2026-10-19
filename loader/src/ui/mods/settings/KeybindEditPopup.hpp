@@ -29,7 +29,7 @@ protected:
     void onSet(CCObject*);
 
     void keyBackClicked();
-    void keyDown(enumKeyCodes, double);
+    void keyDown(enumKeyCodes) override;  // GD 2.011 port: no timestamp in 2.0
 
     void updateLabel();
 

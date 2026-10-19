@@ -127,6 +127,8 @@ class CC_DLL CCAccelDeccelAmplitude : public CCActionInterval
 {
     GEODE_FRIEND_MODIFY
 public:
+    GEODE_CUSTOM_CONSTRUCTOR_COCOS(CCAccelDeccelAmplitude, CCActionInterval)
+    CCAccelDeccelAmplitude() {}
     /**
      *  @js NA
      *  @lua NA
@@ -158,6 +160,8 @@ class CC_DLL CCAccelAmplitude : public CCActionInterval
 {
     GEODE_FRIEND_MODIFY
 public:
+    GEODE_CUSTOM_CONSTRUCTOR_COCOS(CCAccelAmplitude, CCActionInterval)
+    CCAccelAmplitude() {}
     /**
      *  @js NA
      *  @lua NA
@@ -188,6 +192,8 @@ class CC_DLL CCDeccelAmplitude : public CCActionInterval
 {
     GEODE_FRIEND_MODIFY
 public:
+    GEODE_CUSTOM_CONSTRUCTOR_COCOS(CCDeccelAmplitude, CCActionInterval)
+    CCDeccelAmplitude() {}
     /**
      *  @js NA
      *  @lua NA

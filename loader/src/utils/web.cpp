@@ -671,7 +671,9 @@ public:
 
         // Enable TLS early data for 0-rtt resumption, if appropriate
         if (m_method == "GET" || m_method == "HEAD" || m_method == "OPTIONS") {
+#ifdef CURLSSLOPT_EARLYDATA  // GD 2.011 port: the Win32 static libcurl (8.10.1) predates it
             sslOptions |= CURLSSLOPT_EARLYDATA;
+#endif
         }
 
         curl_easy_setopt(curl, CURLOPT_SSL_OPTIONS, sslOptions);

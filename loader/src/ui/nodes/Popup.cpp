@@ -131,9 +131,9 @@ void Popup::keyBackClicked() {
     this->onClose(nullptr);
 }
 
-void Popup::keyDown(enumKeyCodes key, double p1) {
+void Popup::keyDown(enumKeyCodes key) {
     if (key == KEY_Space) return;
-    return FLAlertLayer::keyDown(key, p1);
+    return FLAlertLayer::keyDown(key);
 }
 
 void Popup::onClose(CCObject*) {

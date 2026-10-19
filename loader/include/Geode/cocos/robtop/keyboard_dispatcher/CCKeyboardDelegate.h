@@ -188,7 +188,14 @@ NS_CC_BEGIN
         CONTROLLER_Up = 0x3F3,
         CONTROLLER_Down = 0x3F4,
         CONTROLLER_Left = 0x3F5,
-        CONTROLLER_Right = 0x3F6
+        CONTROLLER_Right = 0x3F6,
+
+        // GD 2.011 port: not GD 2.0 keycodes; Geode's extra mouse-button codes (as in 2.2's enum)
+        MOUSE_4 = 0x1100,
+        MOUSE_5 = 0x1101,
+        MOUSE_6 = 0x1102,
+        MOUSE_7 = 0x1103,
+        MOUSE_8 = 0x1104,
     } enumKeyCodes;
 
 // @note RobTop Addition

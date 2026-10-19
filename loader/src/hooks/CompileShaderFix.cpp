@@ -10,7 +10,9 @@ $on_mod(Loaded) {
     // for some reason cocos only properly returns false on winRT, everywhere
     // else it just closes the whole game
 
-#if defined(GEODE_IS_WINDOWS)
+#if defined(GEODE_IS_WINDOWS32)
+    // GD 2.011 port: the +0xbb offset and the mangled name are the x64 libcocos2d's; not ported
+#elif defined(GEODE_IS_WINDOWS64)
     auto addr = reinterpret_cast<uintptr_t>(
         GetProcAddress(
             GetModuleHandle("libcocos2d.dll"), "?compileShader@CCGLProgram@cocos2d@@AEAA_NPEAIIPEBD@Z"

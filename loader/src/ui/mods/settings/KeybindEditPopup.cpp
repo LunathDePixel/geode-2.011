@@ -162,7 +162,7 @@ void KeybindEditPopup::keyBackClicked() {
     // do nothing
 }
 
-void KeybindEditPopup::keyDown(enumKeyCodes, double) {
+void KeybindEditPopup::keyDown(enumKeyCodes) {
     // do nothing
 }
 

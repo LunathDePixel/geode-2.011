@@ -43,7 +43,7 @@ namespace geode {
         );
 
         void keyBackClicked() override;
-        void keyDown(cocos2d::enumKeyCodes key, double p1) override;
+        void keyDown(cocos2d::enumKeyCodes key) override;  // GD 2.011 port: no timestamp in 2.0
         virtual void onClose(CCObject*);
 
         void setTitle(

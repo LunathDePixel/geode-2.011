@@ -8,6 +8,7 @@
 #include <matjson.hpp>
 #include <memory>
 #include <string>
+#include <unordered_set>
 
 namespace geode {
     namespace utils::file {
