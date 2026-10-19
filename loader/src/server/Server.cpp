@@ -704,7 +704,8 @@ ServerFuture<ServerModsList> server::getMods(ModsQuery query, bool useCache) {
         req.param("query", *query.query);
     }
 
-    req.param("gd", GEODE_GD_VERSION_STR);
+    // GD 2.011 port: the index has no 2.011 entry (400 "unknown variant"); browse every version
+    req.param("gd", GEODE_WINDOWS32("*") GEODE_WINDOWS64(GEODE_GD_VERSION_STR) GEODE_ANDROID(GEODE_GD_VERSION_STR) GEODE_MACOS(GEODE_GD_VERSION_STR) GEODE_IOS(GEODE_GD_VERSION_STR));
     req.param("geode", Loader::get()->getVersion().toNonVString());
     if (Loader::get()->isPatchless())
         req.param("jitless", "true");
