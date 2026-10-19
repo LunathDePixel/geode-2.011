@@ -896,7 +896,9 @@ std::atomic_size_t WebRequest::Impl::s_idCounter = 0;
 WebRequest::WebRequest() : m_impl(std::make_shared<Impl>()) {}
 WebRequest::~WebRequest() {}
 
-WebFuture WebRequest::send(std::string method, std::string url, Mod* mod) {
+WebFuture WebRequest::send(std::string_view method_sv, std::string_view url_sv, Mod* mod) {
+    std::string method(method_sv);
+    std::string url(url_sv);
     if (m_impl->m_inInterceptor) utils::terminate("Cannot call send again within an interceptor.", mod);
 
     m_impl->m_mod = mod;
@@ -912,37 +914,49 @@ WebFuture WebRequest::send(std::string method, std::string url, Mod* mod) {
 
     return WebFuture{m_impl};
 }
-WebFuture WebRequest::post(std::string url, Mod* mod) {
+WebFuture WebRequest::post(std::string_view url_sv, Mod* mod) {
+    std::string url(url_sv);
     return this->send("POST", std::move(url), mod);
 }
-WebFuture WebRequest::get(std::string url, Mod* mod) {
+WebFuture WebRequest::get(std::string_view url_sv, Mod* mod) {
+    std::string url(url_sv);
     return this->send("GET", std::move(url), mod);
 }
-WebFuture WebRequest::put(std::string url, Mod* mod) {
+WebFuture WebRequest::put(std::string_view url_sv, Mod* mod) {
+    std::string url(url_sv);
     return this->send("PUT", std::move(url), mod);
 }
-WebFuture WebRequest::patch(std::string url, Mod* mod) {
+WebFuture WebRequest::patch(std::string_view url_sv, Mod* mod) {
+    std::string url(url_sv);
     return this->send("PATCH", std::move(url), mod);
 }
 
-WebResponse WebRequest::sendSync(std::string method, std::string url, Mod* mod) {
+WebResponse WebRequest::sendSync(std::string_view method_sv, std::string_view url_sv, Mod* mod) {
+    std::string method(method_sv);
+    std::string url(url_sv);
     auto fut = this->send(std::move(method), std::move(url), mod);
     return async::runtime().blockOn(std::move(fut));
 }
-WebResponse WebRequest::postSync(std::string url, Mod* mod) {
+WebResponse WebRequest::postSync(std::string_view url_sv, Mod* mod) {
+    std::string url(url_sv);
     return this->sendSync("POST", std::move(url), mod);
 }
-WebResponse WebRequest::getSync(std::string url, Mod* mod) {
+WebResponse WebRequest::getSync(std::string_view url_sv, Mod* mod) {
+    std::string url(url_sv);
     return this->sendSync("GET", std::move(url), mod);
 }
-WebResponse WebRequest::putSync(std::string url, Mod* mod) {
+WebResponse WebRequest::putSync(std::string_view url_sv, Mod* mod) {
+    std::string url(url_sv);
     return this->sendSync("PUT", std::move(url), mod);
 }
-WebResponse WebRequest::patchSync(std::string url, Mod* mod) {
+WebResponse WebRequest::patchSync(std::string_view url_sv, Mod* mod) {
+    std::string url(url_sv);
     return this->sendSync("PATCH", std::move(url), mod);
 }
 
-WebRequest& WebRequest::header(std::string name, std::string value) {
+WebRequest& WebRequest::header(std::string_view name_sv, std::string_view value_sv) {
+    std::string name(name_sv);
+    std::string value(value_sv);
     if (equalsIgnoreCase(name, "User-Agent")) {
         this->userAgent(std::move(value));
         return *this;
@@ -989,7 +1003,9 @@ WebRequest& WebRequest::removeHeader(std::string_view name) {
     return *this;
 }
 
-WebRequest& WebRequest::param(std::string name, std::string value) {
+WebRequest& WebRequest::param(std::string_view name_sv, std::string_view value_sv) {
+    std::string name(name_sv);
+    std::string value(value_sv);
     m_impl->m_urlParameters.insert_or_assign(std::move(name), std::move(value));
     return *this;
 }
@@ -1002,17 +1018,20 @@ WebRequest& WebRequest::removeParam(std::string_view name) {
     return *this;
 }
 
-WebRequest& WebRequest::method(std::string method) {
+WebRequest& WebRequest::method(std::string_view method_sv) {
+    std::string method(method_sv);
     m_impl->m_method = std::move(method);
     return *this;
 }
 
-WebRequest& WebRequest::url(std::string url) {
+WebRequest& WebRequest::url(std::string_view url_sv) {
+    std::string url(url_sv);
     m_impl->m_url = std::move(url);
     return *this;
 }
 
-WebRequest& WebRequest::userAgent(std::string name) {
+WebRequest& WebRequest::userAgent(std::string_view name_sv) {
+    std::string name(name_sv);
     m_impl->m_userAgent = std::move(name);
     return *this;
 }
@@ -1046,7 +1065,8 @@ WebRequest& WebRequest::ignoreContentLength(bool enabled) {
     return *this;
 }
 
-WebRequest& WebRequest::CABundleContent(std::string content) {
+WebRequest& WebRequest::CABundleContent(std::string_view content_sv) {
+    std::string content(content_sv);
     m_impl->m_CABundleContent = std::move(content);
     return *this;
 }
@@ -1061,7 +1081,8 @@ WebRequest& WebRequest::version(HttpVersion httpVersion) {
     return *this;
 }
 
-WebRequest& WebRequest::acceptEncoding(std::string str) {
+WebRequest& WebRequest::acceptEncoding(std::string_view str_sv) {
+    std::string str(str_sv);
     m_impl->m_acceptEncodingType = std::move(str);
     return *this;
 }
@@ -1517,7 +1538,7 @@ public:
             if (!heldRequests.empty() && !m_probingDns.load(std::memory_order::relaxed)) {
                 for (auto& req : heldRequests) {
                     log::trace("Resuming request that was put on hold: {}", req->request->m_url);
-                    this->workerAddRequest(std::move(req));
+                    GEODE_CORO_ARGS(this->workerAddRequest(std::move(req)));
                 }
                 heldRequests.clear();
             }
@@ -1540,7 +1561,7 @@ public:
                         heldRequests.push_back(std::move(req));
                         return;
                     }
-                    this->workerAddRequest(std::move(req));
+                    GEODE_CORO_ARGS(this->workerAddRequest(std::move(req)));
                 }),
 
                 arc::selectee(crx.recv(), [&](auto r) {
@@ -1731,7 +1752,7 @@ arc::Future<float> WebRequestsManager::Impl::testOne(std::string_view url, DnsSe
     req.m_impl->m_silentFailure = !verboseLog();
     req.m_impl->m_timeout = asp::Duration::fromMillis(1500);
 
-    auto res = co_await arc::timeout(asp::Duration::fromSecs(2), req.get(std::string{url}));
+    auto res = co_await GEODE_CORO_ARGS(arc::timeout(asp::Duration::fromSecs(2), req.get(std::string{url})));
     if (!res) {
         // timed out (shouldn't happen)
         log::debug("Request to {} (via {} DNS) timed out", url, server.name);

@@ -148,7 +148,9 @@ namespace geode {
             m_tag = tag;
         }
 
-        static Result<VersionInfo> parse(std::string string);
+        // GD 2.011 port: string_view, not a by-value std::string (an `inalloca` argument on 32-bit
+        // MSVC ABI, miscompiled when called from a coroutine; see GEODE_CORO_ARGS)
+        static Result<VersionInfo> parse(std::string_view string);
 
         constexpr size_t getMajor() const {
             return m_major;
@@ -208,7 +210,7 @@ namespace geode {
             VersionCompare const& compare
         ) : m_version(version), m_compare(compare) {}
 
-        static Result<ComparableVersionInfo> parse(std::string string);
+        static Result<ComparableVersionInfo> parse(std::string_view string);  // GD 2.011 port: see VersionInfo::parse
 
         constexpr bool compare(VersionInfo const& version) const {
             return compareWithReason(version) == VersionCompareResult::Match;

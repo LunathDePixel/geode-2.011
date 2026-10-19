@@ -112,7 +112,7 @@ server::ServerFuture<std::optional<std::string>> ModSource::fetchAbout() const {
             co_return Ok(mod->getMetadata().getDetails());
         }
     }
-    auto result = co_await server::getMod(this->getID());
+    auto result = co_await GEODE_CORO_ARGS(server::getMod(this->getID()));
     if (result.isOk()) {
         co_return Ok(result.unwrap().about);
     }
@@ -125,7 +125,7 @@ server::ServerFuture<std::optional<std::string>> ModSource::fetchChangelog() con
         }
     }
 
-    auto result = co_await server::getMod(this->getID());
+    auto result = co_await GEODE_CORO_ARGS(server::getMod(this->getID()));
     if (result.isOk()) {
         co_return Ok(result.unwrap().changelog);
     }

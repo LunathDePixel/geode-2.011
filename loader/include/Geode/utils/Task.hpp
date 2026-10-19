@@ -1103,8 +1103,14 @@ namespace geode {
     }
 }
 
+// GD 2.011 port: by reference -- a Task taken by value is an `inalloca` argument on 32-bit MSVC
+// ABI, which clang miscompiles inside the awaiting coroutine (see GEODE_CORO_ARGS)
 template <class T, class P>
-auto operator co_await(geode::Task<T, P> task) {
+auto operator co_await(geode::Task<T, P>&& task) {
+    return geode::geode_internal::TaskAwaiter<T, P>{task};
+}
+template <class T, class P>
+auto operator co_await(geode::Task<T, P> const& task) {
     return geode::geode_internal::TaskAwaiter<T, P>{task};
 }
 

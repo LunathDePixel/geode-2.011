@@ -12,6 +12,20 @@
     #endif
 #endif
 
+/**
+ * GD 2.011 port: call a function that takes a class by value from inside a coroutine.
+ * On 32-bit MSVC ABI such arguments are passed `inalloca`, and clang's coroutine lowering moves
+ * that argument area into the coroutine frame, so the callee reads garbage (clang does not support
+ * coroutines on this target). Wrapping the call in a non-inlined lambda keeps the by-value argument
+ * passing in an ordinary function: `co_await GEODE_CORO_ARGS(server::getMod(id, true));`
+ * port/tools/scan_coro_inalloca.py lists the call sites that need it. A no-op elsewhere.
+ */
+#if defined(GEODE_IS_WINDOWS32) && defined(__clang__)
+    #define GEODE_CORO_ARGS(...) ([&]() __attribute__((noinline)) -> decltype(auto) { return __VA_ARGS__; }())
+#else
+    #define GEODE_CORO_ARGS(...) (__VA_ARGS__)
+#endif
+
 #if !defined(GEODE_CONCAT)
     #define GEODE_WRAPPER_CONCAT(x, y) x##y
     #define GEODE_CONCAT(x, y) GEODE_WRAPPER_CONCAT(x, y)

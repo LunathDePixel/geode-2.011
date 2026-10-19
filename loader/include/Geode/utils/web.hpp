@@ -260,23 +260,27 @@ namespace geode::utils::web {
         WebRequest();
         ~WebRequest();
 
-        WebFuture send(std::string method, std::string url, Mod* mod = geode::getMod());
-        WebFuture post(std::string url, Mod* mod = geode::getMod());
-        WebFuture get(std::string url, Mod* mod = geode::getMod());
-        WebFuture put(std::string url, Mod* mod = geode::getMod());
-        WebFuture patch(std::string url, Mod* mod = geode::getMod());
+        // GD 2.011 port: std::string_view, not std::string by value -- clang passes a by-value class
+        // argument `inalloca` on 32-bit MSVC ABI and miscompiles that inside coroutines, where these
+        // are usually called (see port/tools/scan_coro_inalloca.py)
 
-        WebResponse sendSync(std::string method, std::string url, Mod* mod = geode::getMod());
-        WebResponse postSync(std::string url, Mod* mod = geode::getMod());
-        WebResponse getSync(std::string url, Mod* mod = geode::getMod());
-        WebResponse putSync(std::string url, Mod* mod = geode::getMod());
-        WebResponse patchSync(std::string url, Mod* mod = geode::getMod());
+        WebFuture send(std::string_view method, std::string_view url, Mod* mod = geode::getMod());
+        WebFuture post(std::string_view url, Mod* mod = geode::getMod());
+        WebFuture get(std::string_view url, Mod* mod = geode::getMod());
+        WebFuture put(std::string_view url, Mod* mod = geode::getMod());
+        WebFuture patch(std::string_view url, Mod* mod = geode::getMod());
 
-        WebRequest& header(std::string name, std::string value);
+        WebResponse sendSync(std::string_view method, std::string_view url, Mod* mod = geode::getMod());
+        WebResponse postSync(std::string_view url, Mod* mod = geode::getMod());
+        WebResponse getSync(std::string_view url, Mod* mod = geode::getMod());
+        WebResponse putSync(std::string_view url, Mod* mod = geode::getMod());
+        WebResponse patchSync(std::string_view url, Mod* mod = geode::getMod());
+
+        WebRequest& header(std::string_view name, std::string_view value);
         WebRequest& removeHeader(std::string_view name);
-        WebRequest& param(std::string name, std::string value);
+        WebRequest& param(std::string_view name, std::string_view value);
         template <std::integral T>
-        WebRequest& param(std::string name, T value) {
+        WebRequest& param(std::string_view name, T value) {
             return this->param(std::move(name), fmt::to_string(value));
         }
         WebRequest& removeParam(std::string_view name);
@@ -289,7 +293,7 @@ namespace geode::utils::web {
          * @param method
          * @return WebRequest&
          */
-        WebRequest& method(std::string method);
+        WebRequest& method(std::string_view method);
 
         /**
          * Sets the request's URL.
@@ -299,7 +303,7 @@ namespace geode::utils::web {
          * @param url
          * @return WebRequest&
          */
-        WebRequest& url(std::string url);
+        WebRequest& url(std::string_view url);
 
         /**
          * Sets the request's user agent.
@@ -308,7 +312,7 @@ namespace geode::utils::web {
          * @param name
          * @return WebRequest&
          */
-        WebRequest& userAgent(std::string name);
+        WebRequest& userAgent(std::string_view name);
 
         /**
          * Sets the response's encoding. Valid values include: br, gzip, deflate, ...
@@ -324,7 +328,7 @@ namespace geode::utils::web {
          * @param encodingType Target response encoding type. An empty string ("") will use all built-in supported encodings.
          * @return WebRequest&
          */
-        WebRequest& acceptEncoding(std::string encodingType);
+        WebRequest& acceptEncoding(std::string_view encodingType);
 
         /**
          * Sets the maximum amount of seconds to allow the entire transfer operation to take.
@@ -390,7 +394,7 @@ namespace geode::utils::web {
          * @param content
          * @return WebRequest&
          */
-        WebRequest& CABundleContent(std::string content);
+        WebRequest& CABundleContent(std::string_view content);
 
         /**
          * Sets the request's proxy.

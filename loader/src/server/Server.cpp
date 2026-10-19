@@ -744,7 +744,7 @@ ServerFuture<ServerModsList> server::getMods(ModsQuery query, bool useCache) {
             co_return Err(std::move(payload).unwrapErr());
         }
         // Parse response
-        auto list = ServerModsList::parse(std::move(payload).unwrap());
+        auto list = GEODE_CORO_ARGS(ServerModsList::parse(std::move(payload).unwrap()));
         if (!list) {
             co_return Err(ServerError(response.code(), "Unable to parse response: {}", list.unwrapErr()));
         }
@@ -774,7 +774,7 @@ ServerFuture<ServerModMetadata> server::getMod(std::string id, bool useCache) {
             co_return Err(std::move(payload).unwrapErr());
         }
         // Parse response
-        auto list = ServerModMetadata::parse(std::move(payload).unwrap());
+        auto list = GEODE_CORO_ARGS(ServerModMetadata::parse(std::move(payload).unwrap()));
         if (!list) {
             co_return Err(ServerError(response.code(), "Unable to parse response: {}", list.unwrapErr()));
         }
@@ -836,7 +836,7 @@ ServerFuture<ServerModVersion> server::getModVersion(std::string id, ModVersion 
             co_return Err(payload.unwrapErr());
         }
         // Parse response
-        auto list = ServerModVersion::parse(std::move(payload).unwrap());
+        auto list = GEODE_CORO_ARGS(ServerModVersion::parse(std::move(payload).unwrap()));
         if (!list) {
             co_return Err(ServerError(response.code(), "Unable to parse response: {}", list.unwrapErr()));
         }
@@ -876,7 +876,7 @@ ServerFuture<std::vector<ServerTag>> server::getTags(bool useCache) {
         if (!payload) {
             co_return Err(std::move(payload).unwrapErr());
         }
-        auto list = ServerTag::parseList(std::move(payload).unwrap());
+        auto list = GEODE_CORO_ARGS(ServerTag::parseList(std::move(payload).unwrap()));
         if (!list) {
             co_return Err(ServerError(response.code(), "Unable to parse response: {}", list.unwrapErr()));
         }
@@ -922,7 +922,7 @@ ServerFuture<ServerModUpdateAllCheck> server::batchedCheckUpdates(std::vector<st
             co_return Err(payload.unwrapErr());
         }
         // Parse response
-        auto list = ServerModUpdateAllCheck::parse(std::move(payload).unwrap());
+        auto list = GEODE_CORO_ARGS(ServerModUpdateAllCheck::parse(std::move(payload).unwrap()));
         if (!list) {
             co_return Err(ServerError(response.code(), "Unable to parse response: {}", list.unwrapErr()));
         }
@@ -1001,7 +1001,7 @@ ServerFuture<ServerLoaderVersion> server::getLoaderVersion(std::string tag, bool
         if (!payload) {
             co_return Err(payload.unwrapErr());
         }
-        auto ver = ServerLoaderVersion::parse(std::move(payload).unwrap());
+        auto ver = GEODE_CORO_ARGS(ServerLoaderVersion::parse(std::move(payload).unwrap()));
         if (!ver) {
             co_return Err(ServerError(response.code(), "Unable to parse response: {}", ver.unwrapErr()));
         }
@@ -1031,7 +1031,7 @@ ServerFuture<ServerLoaderVersion> server::getLatestLoaderVersion(bool useCache) 
         if (!payload) {
             co_return Err(std::move(payload).unwrapErr());
         }
-        auto ver = ServerLoaderVersion::parse(std::move(payload).unwrap());
+        auto ver = GEODE_CORO_ARGS(ServerLoaderVersion::parse(std::move(payload).unwrap()));
         if (!ver) {
             co_return Err(ServerError(response.code(), "Unable to parse response: {}", ver.unwrapErr()));
         }

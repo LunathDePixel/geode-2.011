@@ -61,7 +61,8 @@ std::string VersionTag::toString() const {
 
 // VersionInfo
 
-Result<VersionInfo> VersionInfo::parse(std::string string) {
+Result<VersionInfo> VersionInfo::parse(std::string_view string_sv) {
+    std::string string(string_sv);
     std::stringstream str (std::move(string));
 
     // allow leading v
@@ -129,7 +130,8 @@ std::string geode::format_as(VersionInfo const& version) {
 
 // ComparableVersionInfo
 
-Result<ComparableVersionInfo> ComparableVersionInfo::parse(std::string string) {
+Result<ComparableVersionInfo> ComparableVersionInfo::parse(std::string_view string_sv) {
+    std::string string(string_sv);
     VersionCompare compare;
 
     if (string == "*") {

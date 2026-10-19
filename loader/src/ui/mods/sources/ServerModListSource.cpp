@@ -7,9 +7,9 @@ void ServerModListSource::resetQuery() {
 ServerModListSource::ProviderTask ServerModListSource::fetchPage(size_t page, bool forceUpdate) {
     m_query.page = page;
     m_query.pageSize = m_pageSize;
-    auto result = co_await server::getMods(m_query, !forceUpdate);
+    auto result = co_await GEODE_CORO_ARGS(server::getMods(m_query, !forceUpdate));
     if (!result) {
-        co_return Err(LoadPageError("Error loading mods", result.unwrapErr().details));
+        co_return GEODE_CORO_ARGS(Err(LoadPageError("Error loading mods", result.unwrapErr().details)));
     } 
 
     auto list = std::move(result).unwrap();

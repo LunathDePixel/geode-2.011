@@ -199,9 +199,13 @@ void Loader::Impl::updateResources(bool forceReload) {
         "GJ_commentSide2_001.png", "GJ_commentTop2_001.png", "backArrowPlain_01_001.png",
         // v3 loader UI (mods list, mod popups, tags)
         "GJ_filterIcon_001.png", "GJ_sortIcon_001.png", "dailyLevelCorner_001.png", "folderIcon_001.png",
-        "gauntletCorner_001.png", "gj_discordIcon_001.png", "gj_navDotBtn_on_001.png", "rewardCorner_001.png"
+        "gauntletCorner_001.png", "gj_discordIcon_001.png", "gj_navDotBtn_on_001.png", "rewardCorner_001.png",
+        // v5 loader UI
+        "GJ_extendedIcon_001.png"
     }) {
-        if (CCSpriteFrameCache::get()->spriteFrameByName(name)) continue;
+        // the frame cache itself, not spriteFrameByName: v5's FallbackSprite hook makes that return
+        // a placeholder for missing frames
+        if (CCSpriteFrameCache::get()->m_pSpriteFrames->objectForKey(name)) continue;
         // the quality variant matching the game's texture quality, by absolute path
         auto scale = CCDirector::get()->getContentScaleFactor();
         auto file = std::string(name);

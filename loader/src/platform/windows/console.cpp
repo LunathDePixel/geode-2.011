@@ -83,7 +83,7 @@ bool redirectStd(FILE* which, ZStringView name, const Severity sev) {
                 if (c == '\r') continue;
                 if (c == '\n') {
                     // complete line
-                    log::Logger::get()->push(sev, 0, line, "", name, nullptr);
+                    GEODE_CORO_ARGS(log::Logger::get()->push(sev, 0, line, "", name, nullptr));
                     line.clear();
                     continue;
                 }

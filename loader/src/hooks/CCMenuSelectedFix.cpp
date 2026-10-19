@@ -1,5 +1,7 @@
 #include <Geode/Geode.hpp>
-#ifndef GEODE_IS_IOS
+// GD 2.011 port: off on Win32 -- the per-instance VMTHookManager hook crashed in 2.0's
+// CCNode::removeAllChildren (garbage removeAllChildrenWithCleanup slot); not investigated yet
+#if !defined(GEODE_IS_IOS) && !defined(GEODE_IS_WINDOWS32)
 #include <Geode/utils/VMTHookManager.hpp>
 #include <Geode/modify/Traits.hpp>
 #include <Geode/modify/CCMenu.hpp>
