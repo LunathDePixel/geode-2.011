@@ -67,6 +67,11 @@ if (DEFINED ENV{GEODE_BINDINGS_REPO_PATH})
 	string(REPLACE "\\" "/" GEODE_BINDINGS_REPO_PATH ${temp})
 endif()
 
+# 2.011 bindings
+if (NOT GEODE_BINDINGS_REPO_PATH AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/bindings/bindings/2.011")
+	set(GEODE_BINDINGS_REPO_PATH "${CMAKE_CURRENT_SOURCE_DIR}/bindings")
+endif()
+
 if (NOT GEODE_BINDINGS_REPO_PATH)
 	message(STATUS
 		"No override path for bindings provided, using CPM to clone default. "
