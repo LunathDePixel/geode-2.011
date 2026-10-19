@@ -1,3 +1,4 @@
+#include <fstream>
 #include <Geode/DefaultInclude.hpp>
 
 #include <Geode/loader/Mod.hpp>
@@ -69,7 +70,30 @@ std::string getLastWinError() {
     return formatSystemError(err);
 }
 
+#ifdef GEODE_IS_WINDOWS32
+// GD 2.011 port: the index only carries 64-bit Windows builds; say so instead of the loader's
+// "%1 is not a valid Win32 application"
+static Result<> checkBinaryIs32Bit(std::filesystem::path const& path) {
+    std::ifstream f(path, std::ios::binary);
+    IMAGE_DOS_HEADER dos{};
+    IMAGE_NT_HEADERS32 nt{};
+    if (!f.read(reinterpret_cast<char*>(&dos), sizeof(dos)) || dos.e_magic != IMAGE_DOS_SIGNATURE) return Ok();
+    f.seekg(dos.e_lfanew);
+    if (!f.read(reinterpret_cast<char*>(&nt), 6) || nt.Signature != IMAGE_NT_SIGNATURE) return Ok();
+    if (nt.FileHeader.Machine == IMAGE_FILE_MACHINE_AMD64 || nt.FileHeader.Machine == IMAGE_FILE_MACHINE_ARM64) {
+        return Err(
+            "This mod is built for 64-bit Windows, but this game (GD 2.011) is 32-bit. "
+            "It has to be recompiled for 32-bit (x86); the Geode index has no such builds."
+        );
+    }
+    return Ok();
+}
+#endif
+
 Result<> Mod::Impl::loadPlatformBinary() {
+#ifdef GEODE_IS_WINDOWS32
+    GEODE_UNWRAP(checkBinaryIs32Bit(this->getBinaryPath()));
+#endif
     auto load = LoadLibraryW(this->getBinaryPath().c_str());
     if (load) {
         if (m_platformInfo) {
