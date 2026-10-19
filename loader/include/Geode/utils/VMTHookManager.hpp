@@ -150,6 +150,13 @@ namespace geode {
                 auto const vtableSize = addresser::getVirtualOffset(
                     &MeasureTableSize<decltype(Function)>::measureTableSize
                 );
+            #ifdef GEODE_IS_WINDOWS32
+                // GD 2.011 port: virtuals are thiscall on x86, and tulip's Default convention
+                // leaves ecx to the handler; the manager wraps the thiscall detours to match
+                if (convention == tulip::hook::TulipConvention::Default) {
+                    convention = tulip::hook::TulipConvention::Thiscall;
+                }
+            #endif
                 auto const handlerMetadata = tulip::hook::HandlerMetadata{
                     .m_convention = geode::hook::createConvention(convention),
                     .m_abstract = tulip::hook::AbstractFunction::from(

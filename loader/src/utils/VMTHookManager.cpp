@@ -73,7 +73,23 @@ public:
 
     Result<> forceDisableFunction(void* instance, std::string typeName, ptrdiff_t thunkOffset, ptrdiff_t vtableOffset);
     Result<> forceEnableFunction(void* instance, std::string typeName, ptrdiff_t thunkOffset, ptrdiff_t vtableOffset);
+
+    Result<void*> wrapDetour(void* function, tulip::hook::HandlerMetadata const& handlerMetadata);
 };
+
+// GD 2.011 port: on x86 the detours (GD's original and the mod's member function) are thiscall,
+// while a Thiscall-convention handler calls its detours as cdecl (self, ...) like Modify's static
+// functions; tulip's wrapper bridges the two, as for the bindings' function calls
+Result<void*> VMTHookManager::Impl::wrapDetour(void* function, tulip::hook::HandlerMetadata const& handlerMetadata) {
+#ifdef GEODE_IS_WINDOWS32
+    return geode::hook::createWrapper(function, tulip::hook::WrapperMetadata{
+        .m_convention = handlerMetadata.m_convention,
+        .m_abstract = handlerMetadata.m_abstract,
+    });
+#else
+    return Ok(function);
+#endif
+}
 
 void*& VMTHookManager::Impl::getTable(void* instance, ptrdiff_t thunkOffset) {
     auto i1 = reinterpret_cast<uintptr_t>(instance);
@@ -176,7 +192,8 @@ Result<std::optional<std::shared_ptr<Hook>>> VMTHookManager::Impl::addHook(
         // instances with different types but still replace the table
         if (m_physicalHooks.count({ emptyFunc, originalFunc }) == 0) {
             // log::debug("Creating the original");
-            auto hook = Hook::create(emptyFunc, originalFunc, displayName, handlerMetadata, tulip::hook::HookMetadata{
+            GEODE_UNWRAP_INTO(auto originalDetour, this->wrapDetour(originalFunc, handlerMetadata));
+            auto hook = Hook::create(emptyFunc, originalDetour, displayName, handlerMetadata, tulip::hook::HookMetadata{
                 .m_priority = INT_MAX
             });
             // log::debug("Claiming the hook");
@@ -211,7 +228,8 @@ Result<std::optional<std::shared_ptr<Hook>>> VMTHookManager::Impl::addHook(
 
     // need to generate the hook based on the existing original
     // log::debug("Adding new detour: {}", newFunc);
-    auto hook = Hook::create(value.empty, newFunc, std::move(displayName), std::move(handlerMetadata), std::move(hookMetadata));
+    GEODE_UNWRAP_INTO(auto newDetour, this->wrapDetour(newFunc, handlerMetadata));
+    auto hook = Hook::create(value.empty, newDetour, std::move(displayName), std::move(handlerMetadata), std::move(hookMetadata));
     // log::debug("Done");
     detours.push_back(newFunc);
     return Ok(std::move(hook));
